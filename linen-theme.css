@@ -1,0 +1,417 @@
+/* ==========================================================================
+   GLOBAL MAHANSHI BUILDERS — ARCHITECTURAL LINEN THEME (#e6e2d3)
+   Exact restored theme from estate-1-chi.vercel.app with #e6e2d3 linen palette:
+   - Canvas: #e6e2d3 (Warm Architectural Sand / Linen)
+   - Deep Primary / Headings: #1F3630 / #152622 (Rich Forest Pine)
+   - Body Copy: #384641 (Deep Olive Charcoal — crisp 7.5:1+ contrast)
+   - Accent & Eyebrows: #9E3F1C / #B84A24 (Warm Terracotta / Clay)
+   - Card Surfaces: #FFFFFF / #F8F6EF (Elevated Chalk & Warm Ivory)
+   - Borders: #D4CEBF / rgba(31, 54, 48, 0.14)
+   ========================================================================== */
+
+:root {
+  --color-linen-base: #e6e2d3;
+  --color-linen-subtle: #eeebe1;
+  --color-linen-border: #d4cebf;
+  --color-pine-deep: #1F3630;
+  --color-pine-darkest: #152622;
+  --color-pine-body: #384641;
+  --color-pine-muted: #5e6d67;
+  --color-terracotta-accent: #9E3F1C;
+  --color-terracotta-hover: #b84a24;
+  --color-clay-btn: #ff7738;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #384641;
+  background-color: #1F3630;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Fraunces', 'Syne', Georgia, serif !important;
+}
+
+.font-serif {
+  font-family: 'Fraunces', Georgia, serif !important;
+}
+
+/* Base Linen Canvas for Section 2 through Footer */
+.bg-linen-canvas {
+  background-color: #e6e2d3 !important;
+  color: #384641 !important;
+}
+
+/* Card surfaces */
+.card-linen-white {
+  background-color: #ffffff !important;
+  border: 1px solid #d6cfbe !important;
+  box-shadow: 0 10px 25px -5px rgba(31, 54, 48, 0.06), 0 4px 10px -2px rgba(31, 54, 48, 0.03);
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.card-linen-white:hover {
+  border-color: #9E3F1C !important;
+  box-shadow: 0 16px 36px -6px rgba(31, 54, 48, 0.12), 0 6px 14px -3px rgba(31, 54, 48, 0.05);
+  transform: translateY(-2px);
+}
+
+.card-linen-soft {
+  background-color: #f7f5ed !important;
+  border: 1px solid #d6cfbe !important;
+  box-shadow: 0 4px 16px -2px rgba(31, 54, 48, 0.04);
+}
+
+/* Dark Pine Accent Card on Linen */
+.card-pine-accent {
+  background-color: #1F3630 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 20px 45px -10px rgba(31, 54, 48, 0.35);
+  color: #fdfcee;
+}
+
+/* Headings & Text */
+.text-pine-heading {
+  color: #1F3630 !important;
+}
+
+.text-pine-copy {
+  color: #384641 !important;
+  line-height: 1.68;
+}
+
+/* Card & Section Heading Explanation Copy - Enhanced Prominence */
+.heading-explanation,
+.card-explanation,
+.card-desc {
+  font-size: 1.25rem !important; /* 20px */
+  line-height: 1.72 !important;
+}
+
+@media (min-width: 640px) {
+  .heading-explanation,
+  .card-explanation,
+  .card-desc {
+    font-size: 1.3125rem !important; /* 21px */
+    line-height: 1.74 !important;
+  }
+}
+
+/* Featured Story Lead Paragraph & Quote (Pasted Image Section) */
+.story-lead-copy,
+.story-quote-copy {
+  font-size: 1.375rem !important; /* 22px */
+  line-height: 1.75 !important;
+}
+
+@media (min-width: 640px) {
+  .story-lead-copy,
+  .story-quote-copy {
+    font-size: 1.4375rem !important; /* 23px */
+    line-height: 1.78 !important;
+  }
+}
+
+.text-pine-subtle {
+  color: #5c6c66 !important;
+}
+
+.text-terracotta-tag {
+  color: #9E3F1C !important;
+}
+
+/* Dividers & Borders */
+.border-linen-edge {
+  border-color: #d4cebf !important;
+}
+
+.border-linen-light {
+  border-color: rgba(31, 54, 48, 0.12) !important;
+}
+
+/* Buttons */
+.btn-terracotta-primary {
+  background-color: #9E3F1C !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-terracotta-primary:hover {
+  background-color: #1F3630 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.btn-pine-outline {
+  border: 1.5px solid #1F3630 !important;
+  color: #1F3630 !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-pine-outline:hover {
+  background-color: #1F3630 !important;
+  color: #ffffff !important;
+}
+
+/* Brand Top Logo - Pure Emblem, NO White Box */
+.brand-top-logo {
+  height: 64px !important;
+  width: auto !important;
+  max-height: 68px !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45)) !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  transition: transform 0.25s ease !important;
+}
+
+.brand-top-logo:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Interactive Tabs for Section 2 Themes */
+.theme-tab {
+  transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+  border: 1.5px solid #d4cebf;
+  background-color: #f7f5ed;
+  color: #1F3630;
+  cursor: pointer;
+}
+
+.theme-tab:hover {
+  background-color: #ffffff;
+  border-color: #9E3F1C;
+  transform: translateX(4px);
+}
+
+.theme-tab.active {
+  background-color: #1F3630 !important;
+  color: #ffffff !important;
+  border-color: #9E3F1C !important;
+  box-shadow: 0 12px 28px -6px rgba(31, 54, 48, 0.3);
+  transform: translateX(6px) scale(1.01);
+}
+
+.theme-tab.active .tab-num {
+  color: #ff7738 !important;
+}
+
+.theme-tab.active .tab-badge {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ff7738 !important;
+}
+
+.theme-tab.active .tab-sub {
+  color: #e6e2d3 !important;
+}
+
+/* Range input styling for Calculator */
+input[type="range"].linen-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #d4cebf;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"].linen-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #9E3F1C;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(31, 54, 48, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"].linen-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #1F3630;
+}
+
+/* Form input fields on Linen */
+.linen-input {
+  background-color: #ffffff !important;
+  border: 1.5px solid #d4cebf !important;
+  color: #1F3630 !important;
+  transition: all 0.2s ease;
+}
+
+.linen-input:focus {
+  border-color: #9E3F1C !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(158, 63, 28, 0.15);
+}
+
+.linen-input::placeholder {
+  color: #8c9993 !important;
+}
+
+/* Glass panel adjustments */
+.glass-panel {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(31, 54, 48, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-panel-linen {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(212, 206, 191, 0.8);
+  box-shadow: 0 16px 40px rgba(31, 54, 48, 0.08);
+}
+
+/* Micro-animations */
+.sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom img {
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Bracket Frame Architectural Accents */
+.bracket-frame {
+  position: relative;
+}
+.bracket-frame::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #D4AF37;
+  border-left: 2px solid #D4AF37;
+  pointer-events: none;
+  z-index: 5;
+}
+.bracket-frame::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #D4AF37;
+  border-right: 2px solid #D4AF37;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Plot Tile Styles */
+.plot-tile {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+.plot-tile.available {
+  background-color: rgba(16, 185, 129, 0.2);
+  border: 1.5px solid #10B981;
+  color: #34D399;
+}
+.plot-tile.available:hover, .plot-tile.selected {
+  background-color: #10B981;
+  color: #04120E;
+  border-color: #6EE7B7;
+  transform: scale(1.08);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.6);
+  z-index: 10;
+}
+.plot-tile.booked {
+  background-color: rgba(245, 158, 11, 0.2);
+  border: 1.5px solid #F59E0B;
+  color: #FCD34D;
+}
+.plot-tile.booked:hover {
+  background-color: #F59E0B;
+  color: #04120E;
+  border-color: #FDE68A;
+  transform: scale(1.08);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+  z-index: 10;
+}
+.plot-tile.sold {
+  background-color: rgba(100, 116, 139, 0.15);
+  border: 1.5px solid #475569;
+  color: #64748B;
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Hero Backdrop with High Clarity & Natural Transparency */
+.hero-plain-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(31, 54, 48, 0.60) 0%,
+    rgba(31, 54, 48, 0.50) 38%,
+    rgba(31, 54, 48, 0.28) 58%,
+    rgba(31, 54, 48, 0.08) 72%,
+    rgba(31, 54, 48, 0) 84%
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 75%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 75%);
+}
+
+@media (max-width: 1023px) {
+  .hero-plain-backdrop {
+    background: linear-gradient(
+      to bottom,
+      rgba(31, 54, 48, 0.68) 0%,
+      rgba(31, 54, 48, 0.58) 65%,
+      rgba(31, 54, 48, 0.35) 100%
+    );
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
+
+
