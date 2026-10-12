@@ -36,6 +36,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.55;
   color: #384641;
   background-color: #1F3630;
   overflow-x: hidden;
@@ -90,46 +92,46 @@ body {
 
 .text-pine-copy {
   color: #384641 !important;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.875rem !important; /* 14px */
+  line-height: 1.55 !important;
 }
 
 @media (min-width: 640px) {
   .text-pine-copy {
-    font-size: 1.0625rem;
-    line-height: 1.68;
+    font-size: 0.90625rem !important; /* 14.5px clean medium */
+    line-height: 1.58 !important;
   }
 }
 
-/* Card & Section Heading Explanation Copy - Standard Professional Medium Size */
+/* Card & Section Heading Explanation Copy - Refined Clean Medium Size */
 .heading-explanation,
 .card-explanation,
 .card-desc {
-  font-size: 1rem !important; /* 16px medium standard */
-  line-height: 1.65 !important;
+  font-size: 0.875rem !important; /* 14px */
+  line-height: 1.55 !important;
 }
 
 @media (min-width: 640px) {
   .heading-explanation,
   .card-explanation,
   .card-desc {
-    font-size: 1.0625rem !important; /* 17px clean medium */
-    line-height: 1.68 !important;
+    font-size: 0.90625rem !important; /* 14.5px clean medium */
+    line-height: 1.58 !important;
   }
 }
 
 /* Featured Story Lead Paragraph & Quote */
 .story-lead-copy,
 .story-quote-copy {
-  font-size: 1.0625rem !important; /* 17px */
-  line-height: 1.68 !important;
+  font-size: 0.9375rem !important; /* 15px */
+  line-height: 1.6 !important;
 }
 
 @media (min-width: 640px) {
   .story-lead-copy,
   .story-quote-copy {
-    font-size: 1.125rem !important; /* 18px medium */
-    line-height: 1.7 !important;
+    font-size: 0.975rem !important; /* 15.5px */
+    line-height: 1.62 !important;
   }
 }
 
