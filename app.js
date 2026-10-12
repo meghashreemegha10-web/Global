@@ -379,4 +379,236 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- 8. CLIENT LOGIN PORTAL POPUP MODAL CONTROLLER ---
+  function initLoginModal() {
+    let loginModal = document.getElementById('login-portal-modal');
+
+    // If modal is not in static HTML, inject dynamically so it functions across all pages
+    if (!loginModal) {
+      const modalWrapper = document.createElement('div');
+      modalWrapper.innerHTML = `
+        <div id="login-portal-modal" class="portal-modal-backdrop fixed inset-0 z-[100] hidden items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+          <div class="relative w-full max-w-md portal-modal-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-linen my-8">
+            <button id="close-login-modal-btn" type="button" class="absolute top-4 right-4 text-linen/60 hover:text-white bg-white/5 hover:bg-white/15 border border-white/10 rounded-full w-8 h-8 flex items-center justify-center transition-all duration-200" aria-label="Close login dialog">
+              <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div class="text-center mb-5">
+              <div class="inline-flex items-center justify-center size-14 rounded-2xl bg-gradient-to-br from-amber-400/20 to-emerald-500/10 border border-amber-400/40 mb-3 shadow-inner">
+                <svg class="size-7 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <p class="text-[11px] font-bold tracking-[0.2em] uppercase text-amber-300">Global Mahanshi Builders</p>
+              <h3 id="login-modal-title" class="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Client &amp; Member Portal</h3>
+              <p class="text-xs sm:text-sm text-linen/70 mt-1">Sign in with your details to access verified site blueprints, master layouts, and price quotes.</p>
+            </div>
+            <div class="bg-[#0e221c] border border-amber-400/35 rounded-xl p-3.5 mb-5 shadow-sm">
+              <div class="flex items-center justify-between pb-2 border-b border-white/10 mb-2.5">
+                <div class="flex items-center gap-1.5 text-amber-300 text-xs font-bold uppercase tracking-wider">
+                  <svg class="size-3.5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-1-1l-3 3m-2-2l-2 2m-1-1l-3 3M3 21l9-9m0 0l-3-3m3 3l3-3"/></svg>
+                  <span>Login Access Details</span>
+                </div>
+                <button type="button" id="quick-fill-login-btn" class="inline-flex items-center gap-1 text-[11px] font-bold text-amber-300 bg-amber-400/20 hover:bg-amber-400/30 border border-amber-400/40 px-2.5 py-0.5 rounded-md transition-all active:scale-95">
+                  <span>⚡</span> Auto-Fill
+                </button>
+              </div>
+              <div class="space-y-1.5 text-xs">
+                <div class="flex items-center justify-between">
+                  <span class="text-linen/70">Username / Email:</span>
+                  <span class="text-amber-200 font-mono font-bold bg-black/40 px-2 py-0.5 rounded border border-white/10">admin@globalmahanshi.com</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-linen/70">Password:</span>
+                  <span class="text-amber-200 font-mono font-bold bg-black/40 px-2 py-0.5 rounded border border-white/10">mahanshi2026</span>
+                </div>
+              </div>
+            </div>
+            <form id="client-login-form" class="space-y-4">
+              <div>
+                <label for="login-username-input" class="block text-xs font-bold uppercase tracking-wider text-linen/80 mb-1.5">Email or Mobile Number</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-linen/40">
+                    <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  </div>
+                  <input type="text" id="login-username-input" value="admin@globalmahanshi.com" required autocomplete="username" class="portal-input w-full pl-10 pr-3.5 py-2.5 rounded-xl text-sm font-medium" placeholder="admin@globalmahanshi.com" />
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <label for="login-password-input" class="block text-xs font-bold uppercase tracking-wider text-linen/80">Password</label>
+                  <span class="text-[11px] text-amber-300/80 font-medium cursor-pointer hover:underline" id="login-hint-trigger">Hint: mahanshi2026</span>
+                </div>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-linen/40">
+                    <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  </div>
+                  <input type="password" id="login-password-input" value="mahanshi2026" required autocomplete="current-password" class="portal-input w-full pl-10 pr-10 py-2.5 rounded-xl text-sm font-medium" placeholder="••••••••" />
+                  <button type="button" id="toggle-password-vis-btn" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-linen/40 hover:text-white transition-colors" aria-label="Toggle password visibility">
+                    <svg class="size-4" id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-1">
+                <label class="flex items-center gap-2 cursor-pointer text-linen/80 hover:text-white">
+                  <input type="checkbox" id="remember-device-check" checked class="rounded border-white/20 bg-[#122822] text-[#ff7738] focus:ring-0 focus:ring-offset-0 size-3.5 accent-[#ff7738]">
+                  <span>Keep me logged in</span>
+                </label>
+                <span class="text-linen/60 text-[11px]">DC &amp; E-Khata Verified</span>
+              </div>
+              <div id="login-feedback-alert" class="hidden rounded-xl p-3 text-xs font-semibold"></div>
+              <button type="submit" id="login-submit-btn" class="w-full rounded-xl bg-gradient-to-r from-[#ff7738] to-[#b84a24] hover:from-[#ff884d] hover:to-[#c9522a] text-white font-bold text-sm uppercase tracking-wider py-3 px-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98]">
+                <span>Sign In to Portal</span>
+                <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+              <div class="text-center pt-2">
+                <button type="button" id="dismiss-login-guest-btn" class="text-xs text-linen/70 hover:text-amber-200 transition-colors inline-flex items-center gap-1.5 py-1">
+                  <span>Continue Browsing Website as Guest</span>
+                  <span>→</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modalWrapper.firstElementChild);
+      loginModal = document.getElementById('login-portal-modal');
+    }
+
+    const closeBtn = document.getElementById('close-login-modal-btn');
+    const dismissBtn = document.getElementById('dismiss-login-guest-btn');
+    const quickFillBtn = document.getElementById('quick-fill-login-btn');
+    const hintTrigger = document.getElementById('login-hint-trigger');
+    const loginForm = document.getElementById('client-login-form');
+    const usernameInput = document.getElementById('login-username-input');
+    const passwordInput = document.getElementById('login-password-input');
+    const togglePassBtn = document.getElementById('toggle-password-vis-btn');
+    const feedbackAlert = document.getElementById('login-feedback-alert');
+
+    function openModal() {
+      if (!loginModal) return;
+      loginModal.classList.remove('hidden');
+      loginModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      if (!loginModal) return;
+      loginModal.classList.add('hidden');
+      loginModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    // Auto open popup when opening website (after smooth 700ms delay)
+    setTimeout(() => {
+      openModal();
+    }, 700);
+
+    // Close on ✕ button click
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    // Dismiss on guest button click
+    if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
+
+    // Close on backdrop click outside card
+    if (loginModal) {
+      loginModal.addEventListener('click', (e) => {
+        if (e.target === loginModal) {
+          closeModal();
+        }
+      });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && loginModal && !loginModal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    // Auto-fill button click
+    if (quickFillBtn && usernameInput && passwordInput) {
+      quickFillBtn.addEventListener('click', () => {
+        usernameInput.value = 'admin@globalmahanshi.com';
+        passwordInput.value = 'mahanshi2026';
+        usernameInput.style.borderColor = '#f5c344';
+        passwordInput.style.borderColor = '#f5c344';
+        setTimeout(() => {
+          usernameInput.style.borderColor = '';
+          passwordInput.style.borderColor = '';
+        }, 800);
+      });
+    }
+
+    // Hint trigger click
+    if (hintTrigger && passwordInput) {
+      hintTrigger.addEventListener('click', () => {
+        passwordInput.value = 'mahanshi2026';
+      });
+    }
+
+    // Toggle password visibility
+    if (togglePassBtn && passwordInput) {
+      togglePassBtn.addEventListener('click', () => {
+        const isPass = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPass ? 'text' : 'password');
+        togglePassBtn.innerHTML = isPass ? `
+          <svg class="size-4 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
+        ` : `
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+        `;
+      });
+    }
+
+    // Form submit validation & success
+    if (loginForm) {
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const u = usernameInput ? usernameInput.value.trim() : '';
+        const p = passwordInput ? passwordInput.value.trim() : '';
+
+        if (!u || !p) {
+          if (feedbackAlert) {
+            feedbackAlert.className = 'rounded-xl p-3 text-xs font-semibold bg-red-500/20 text-red-300 border border-red-500/30';
+            feedbackAlert.textContent = 'Please provide both username and password.';
+            feedbackAlert.classList.remove('hidden');
+          }
+          return;
+        }
+
+        // Verification success
+        if (feedbackAlert) {
+          feedbackAlert.className = 'rounded-xl p-3 text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-2';
+          feedbackAlert.innerHTML = `
+            <svg class="size-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Access Granted! Welcome to Global Mahanshi Builders Portal.</span>
+          `;
+          feedbackAlert.classList.remove('hidden');
+        }
+
+        // Update header login button status
+        document.querySelectorAll('.open-login-modal-btn').forEach(btn => {
+          btn.innerHTML = `
+            <span class="inline-flex items-center gap-1.5 text-emerald-300 font-bold">
+              <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Logged In (${u.split('@')[0]})</span>
+            </span>
+          `;
+        });
+
+        setTimeout(() => {
+          closeModal();
+        }, 900);
+      });
+    }
+
+    // Bind all Client Login buttons in header / drawers
+    document.querySelectorAll('.open-login-modal-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+    });
+  }
+
+  initLoginModal();
 });
+
