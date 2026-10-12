@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 8. CLIENT LOGIN PORTAL POPUP MODAL CONTROLLER ---
+  // --- 8. CLIENT LOGIN PORTAL POPUP MODAL CONTROLLER (UNIQUE ARCHITECTURAL VAULT) ---
   function initLoginModal() {
     let loginModal = document.getElementById('login-portal-modal');
 
@@ -388,84 +388,167 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!loginModal) {
       const modalWrapper = document.createElement('div');
       modalWrapper.innerHTML = `
-        <div id="login-portal-modal" class="portal-modal-backdrop fixed inset-0 z-[100] hidden items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
-          <div class="relative w-full max-w-md portal-modal-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-linen my-8">
-            <button id="close-login-modal-btn" type="button" class="absolute top-4 right-4 text-linen/60 hover:text-white bg-white/5 hover:bg-white/15 border border-white/10 rounded-full w-8 h-8 flex items-center justify-center transition-all duration-200" aria-label="Close login dialog">
+        <div id="login-portal-modal" class="portal-modal-backdrop fixed inset-0 z-[100] hidden items-center justify-center p-3 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+          <div class="relative w-full max-w-4xl portal-modal-card rounded-2xl sm:rounded-3xl p-0 text-linen my-6 overflow-hidden shadow-2xl border border-amber-400/40">
+            <span class="vault-bracket-tl"></span>
+            <span class="vault-bracket-tr"></span>
+            <span class="vault-bracket-bl"></span>
+            <span class="vault-bracket-br"></span>
+
+            <button id="close-login-modal-btn" type="button" class="absolute top-3.5 right-3.5 z-20 text-linen/70 hover:text-white bg-black/40 hover:bg-black/70 border border-white/20 rounded-full w-8 h-8 flex items-center justify-center transition-all duration-200" aria-label="Close login dialog">
               <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
-            <div class="text-center mb-5">
-              <div class="inline-flex items-center justify-center size-14 rounded-2xl bg-gradient-to-br from-amber-400/20 to-emerald-500/10 border border-amber-400/40 mb-3 shadow-inner">
-                <svg class="size-7 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
-              </div>
-              <p class="text-[11px] font-bold tracking-[0.2em] uppercase text-amber-300">Global Mahanshi Builders</p>
-              <h3 id="login-modal-title" class="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Client &amp; Member Portal</h3>
-              <p class="text-xs sm:text-sm text-linen/70 mt-1">Sign in with your details to access verified site blueprints, master layouts, and price quotes.</p>
-            </div>
-            <div class="bg-[#0e221c] border border-amber-400/35 rounded-xl p-3.5 mb-5 shadow-sm">
-              <div class="flex items-center justify-between pb-2 border-b border-white/10 mb-2.5">
-                <div class="flex items-center gap-1.5 text-amber-300 text-xs font-bold uppercase tracking-wider">
-                  <svg class="size-3.5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-1-1l-3 3m-2-2l-2 2m-1-1l-3 3M3 21l9-9m0 0l-3-3m3 3l3-3"/></svg>
-                  <span>Login Access Details</span>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[520px]">
+              <div class="lg:col-span-5 relative p-6 sm:p-8 flex flex-col justify-between overflow-hidden border-b lg:border-b-0 lg:border-r border-amber-400/25">
+                <div class="absolute inset-0 z-0">
+                  <img src="photos/hero-architectural-villa.webp" alt="Global Mahanshi Landmark Architecture" class="h-full w-full object-cover object-center filter brightness-60 contrast-110" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#0e221c] via-[#0e221c]/90 to-[#1F3630]/75"></div>
                 </div>
-                <button type="button" id="quick-fill-login-btn" class="inline-flex items-center gap-1 text-[11px] font-bold text-amber-300 bg-amber-400/20 hover:bg-amber-400/30 border border-amber-400/40 px-2.5 py-0.5 rounded-md transition-all active:scale-95">
-                  <span>⚡</span> Auto-Fill
-                </button>
-              </div>
-              <div class="space-y-1.5 text-xs">
-                <div class="flex items-center justify-between">
-                  <span class="text-linen/70">Username / Email:</span>
-                  <span class="text-amber-200 font-mono font-bold bg-black/40 px-2 py-0.5 rounded border border-white/10">admin@globalmahanshi.com</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span class="text-linen/70">Password:</span>
-                  <span class="text-amber-200 font-mono font-bold bg-black/40 px-2 py-0.5 rounded border border-white/10">mahanshi2026</span>
-                </div>
-              </div>
-            </div>
-            <form id="client-login-form" class="space-y-4">
-              <div>
-                <label for="login-username-input" class="block text-xs font-bold uppercase tracking-wider text-linen/80 mb-1.5">Email or Mobile Number</label>
-                <div class="relative">
-                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-linen/40">
-                    <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+
+                <div class="relative z-10">
+                  <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/15 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-amber-300 mb-3.5">
+                    <span>ESTD 2026 · BENGALURU</span>
                   </div>
-                  <input type="text" id="login-username-input" value="admin@globalmahanshi.com" required autocomplete="username" class="portal-input w-full pl-10 pr-3.5 py-2.5 rounded-xl text-sm font-medium" placeholder="admin@globalmahanshi.com" />
+                  <h3 id="login-modal-title" class="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight leading-[1.15]">
+                    Client &amp; Investor <br/><span class="text-amber-200">Executive Vault</span>
+                  </h3>
+                  <p class="text-xs sm:text-sm text-linen/80 mt-2 font-light">
+                    Direct authenticated access for verified plot owners, landmark landowners &amp; custom home builders.
+                  </p>
+                </div>
+
+                <div class="relative z-10 space-y-3.5 my-6 text-xs">
+                  <div class="flex items-start gap-2.5">
+                    <span class="size-6 rounded-lg bg-amber-400/20 text-amber-300 border border-amber-400/40 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">📐</span>
+                    <div>
+                      <strong class="text-white block font-semibold text-xs">Master CAD Layout Blueprints</strong>
+                      <span class="text-linen/70 text-[11px]">Sanctioned layout boundaries &amp; 30×40, 30×50 dimension charts.</span>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <span class="size-6 rounded-lg bg-emerald-400/20 text-emerald-300 border border-emerald-400/40 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">📜</span>
+                    <div>
+                      <strong class="text-white block font-semibold text-xs">E-Khata &amp; Title Verification</strong>
+                      <span class="text-linen/70 text-[11px]">DC-conversion papers, BMRDA clear title documentation trail.</span>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <span class="size-6 rounded-lg bg-amber-400/20 text-amber-300 border border-amber-400/40 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">💎</span>
+                    <div>
+                      <strong class="text-white block font-semibold text-xs">Live Allotment Tracker</strong>
+                      <span class="text-linen/70 text-[11px]">Real-time available vs booked plot matrix for Sai Roots Layout.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative z-10 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-linen/75">
+                  <span class="flex items-center gap-1.5 font-medium">
+                    <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Jigani &amp; South Bengaluru</span>
+                  </span>
+                  <span class="text-amber-300 font-mono font-bold tracking-wider">VAULT v2.6</span>
                 </div>
               </div>
-              <div>
-                <div class="flex items-center justify-between mb-1.5">
-                  <label for="login-password-input" class="block text-xs font-bold uppercase tracking-wider text-linen/80">Password</label>
-                  <span class="text-[11px] text-amber-300/80 font-medium cursor-pointer hover:underline" id="login-hint-trigger">Hint: mahanshi2026</span>
-                </div>
-                <div class="relative">
-                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-linen/40">
-                    <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+
+              <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between bg-[#122822]/95 backdrop-blur-md">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <p class="text-[11px] font-bold tracking-[0.2em] uppercase text-amber-300">Authorized Access</p>
+                      <h4 class="font-display text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Sign In to Continue</h4>
+                    </div>
+                    <span class="text-xs font-mono text-amber-300/80 bg-amber-400/10 px-2.5 py-1 rounded-md border border-amber-400/30">
+                      🔒 256-Bit SSL
+                    </span>
                   </div>
-                  <input type="password" id="login-password-input" value="mahanshi2026" required autocomplete="current-password" class="portal-input w-full pl-10 pr-10 py-2.5 rounded-xl text-sm font-medium" placeholder="••••••••" />
-                  <button type="button" id="toggle-password-vis-btn" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-linen/40 hover:text-white transition-colors" aria-label="Toggle password visibility">
-                    <svg class="size-4" id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+
+                  <div id="vip-keycard-widget" class="vip-keycard rounded-2xl p-4 mb-5 border border-amber-400/40" title="Click anywhere on card to auto-fill credentials">
+                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-white/15">
+                      <div class="flex items-center gap-2.5">
+                        <div class="w-7 h-5 rounded bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 border border-amber-300 shadow-sm flex items-center justify-center">
+                          <div class="w-5 h-3.5 border border-amber-900/60 rounded-xs grid grid-cols-2 gap-0.5 p-0.5">
+                            <span class="bg-amber-100/60 rounded-xs"></span><span class="bg-amber-100/60 rounded-xs"></span>
+                            <span class="bg-amber-100/60 rounded-xs"></span><span class="bg-amber-100/60 rounded-xs"></span>
+                          </div>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-300">VIP MASTER KEYCARD</span>
+                      </div>
+                      <span id="keycard-status-badge" class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1">
+                        <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Tap To Insert</span>
+                      </span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs mb-3 font-mono">
+                      <div class="bg-black/50 rounded-xl p-2.5 border border-white/10">
+                        <span class="text-[10px] uppercase text-linen/60 font-sans font-bold block mb-0.5">Authorized User</span>
+                        <span class="text-amber-200 font-bold tracking-tight text-[11px] sm:text-xs truncate block">admin@globalmahanshi.com</span>
+                      </div>
+                      <div class="bg-black/50 rounded-xl p-2.5 border border-white/10">
+                        <span class="text-[10px] uppercase text-linen/60 font-sans font-bold block mb-0.5">Security Passkey</span>
+                        <span class="text-amber-200 font-bold tracking-widest text-[11px] sm:text-xs block">mahanshi2026</span>
+                      </div>
+                    </div>
+
+                    <button type="button" id="quick-fill-login-btn" class="w-full bg-gradient-to-r from-amber-400/25 via-amber-300/35 to-amber-400/25 hover:from-amber-400/40 hover:to-amber-400/40 border border-amber-400/60 rounded-xl py-2 px-3 text-xs font-bold text-amber-200 hover:text-white uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-sm active:scale-[0.98]">
+                      <svg class="size-3.5 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                      <span>⚡ Tap Card to Auto-Fill Credentials</span>
+                    </button>
+                  </div>
+
+                  <form id="client-login-form" class="space-y-3.5">
+                    <div>
+                      <label for="login-username-input" class="block text-xs font-bold uppercase tracking-wider text-linen/80 mb-1">Email or Mobile Number</label>
+                      <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-linen/40">
+                          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <input type="text" id="login-username-input" value="admin@globalmahanshi.com" required autocomplete="username" class="portal-input w-full pl-10 pr-3.5 py-2.5 rounded-xl text-sm font-medium" placeholder="admin@globalmahanshi.com" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex items-center justify-between mb-1">
+                        <label for="login-password-input" class="block text-xs font-bold uppercase tracking-wider text-linen/80">Security Password</label>
+                        <span class="text-[11px] text-amber-300/80 font-medium cursor-pointer hover:underline" id="login-hint-trigger">Hint: mahanshi2026</span>
+                      </div>
+                      <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-linen/40">
+                          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <input type="password" id="login-password-input" value="mahanshi2026" required autocomplete="current-password" class="portal-input w-full pl-10 pr-10 py-2.5 rounded-xl text-sm font-medium" placeholder="••••••••" />
+                        <button type="button" id="toggle-password-vis-btn" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-linen/40 hover:text-white transition-colors" aria-label="Toggle password visibility">
+                          <svg class="size-4" id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-xs pt-0.5">
+                      <label class="flex items-center gap-2 cursor-pointer text-linen/80 hover:text-white">
+                        <input type="checkbox" id="remember-device-check" checked class="rounded border-white/20 bg-[#122822] text-[#ff7738] focus:ring-0 focus:ring-offset-0 size-3.5 accent-[#ff7738]">
+                        <span>Remember this device</span>
+                      </label>
+                      <span class="text-linen/60 text-[11px]">DC &amp; E-Khata Verified</span>
+                    </div>
+
+                    <div id="login-feedback-alert" class="hidden rounded-xl p-3 text-xs font-semibold"></div>
+
+                    <button type="submit" id="login-submit-btn" class="w-full rounded-xl bg-gradient-to-r from-[#ff7738] to-[#b84a24] hover:from-[#ff884d] hover:to-[#c9522a] text-white font-bold text-sm uppercase tracking-wider py-3 px-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98]">
+                      <span>Unlock Client Vault</span>
+                      <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                  </form>
+                </div>
+
+                <div class="text-center pt-3 mt-1 border-t border-white/10">
+                  <button type="button" id="dismiss-login-guest-btn" class="text-xs text-linen/75 hover:text-amber-200 transition-colors inline-flex items-center gap-1.5 py-1">
+                    <span>Continue Browsing Website as Guest</span>
+                    <span>→</span>
                   </button>
                 </div>
               </div>
-              <div class="flex items-center justify-between text-xs pt-1">
-                <label class="flex items-center gap-2 cursor-pointer text-linen/80 hover:text-white">
-                  <input type="checkbox" id="remember-device-check" checked class="rounded border-white/20 bg-[#122822] text-[#ff7738] focus:ring-0 focus:ring-offset-0 size-3.5 accent-[#ff7738]">
-                  <span>Keep me logged in</span>
-                </label>
-                <span class="text-linen/60 text-[11px]">DC &amp; E-Khata Verified</span>
-              </div>
-              <div id="login-feedback-alert" class="hidden rounded-xl p-3 text-xs font-semibold"></div>
-              <button type="submit" id="login-submit-btn" class="w-full rounded-xl bg-gradient-to-r from-[#ff7738] to-[#b84a24] hover:from-[#ff884d] hover:to-[#c9522a] text-white font-bold text-sm uppercase tracking-wider py-3 px-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98]">
-                <span>Sign In to Portal</span>
-                <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </button>
-              <div class="text-center pt-2">
-                <button type="button" id="dismiss-login-guest-btn" class="text-xs text-linen/70 hover:text-amber-200 transition-colors inline-flex items-center gap-1.5 py-1">
-                  <span>Continue Browsing Website as Guest</span>
-                  <span>→</span>
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       `;
@@ -476,6 +559,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('close-login-modal-btn');
     const dismissBtn = document.getElementById('dismiss-login-guest-btn');
     const quickFillBtn = document.getElementById('quick-fill-login-btn');
+    const keycardWidget = document.getElementById('vip-keycard-widget');
+    const keycardStatus = document.getElementById('keycard-status-badge');
     const hintTrigger = document.getElementById('login-hint-trigger');
     const loginForm = document.getElementById('client-login-form');
     const usernameInput = document.getElementById('login-username-input');
@@ -524,18 +609,44 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Auto-fill button click
-    if (quickFillBtn && usernameInput && passwordInput) {
-      quickFillBtn.addEventListener('click', () => {
-        usernameInput.value = 'admin@globalmahanshi.com';
-        passwordInput.value = 'mahanshi2026';
+    // Interactive Keycard Fill & Glow Trigger
+    function fillCredentials() {
+      if (usernameInput) usernameInput.value = 'admin@globalmahanshi.com';
+      if (passwordInput) passwordInput.value = 'mahanshi2026';
+
+      if (keycardWidget) {
+        keycardWidget.classList.add('card-activated');
+        setTimeout(() => keycardWidget.classList.remove('card-activated'), 700);
+      }
+
+      if (keycardStatus) {
+        keycardStatus.className = 'text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/30 text-emerald-300 border border-emerald-400 flex items-center gap-1';
+        keycardStatus.innerHTML = '<span class="size-1.5 rounded-full bg-emerald-400"></span><span>Key Loaded ✓</span>';
+        setTimeout(() => {
+          keycardStatus.className = 'text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1';
+          keycardStatus.innerHTML = '<span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span><span>Tap To Insert</span>';
+        }, 2200);
+      }
+
+      if (usernameInput && passwordInput) {
         usernameInput.style.borderColor = '#f5c344';
         passwordInput.style.borderColor = '#f5c344';
         setTimeout(() => {
           usernameInput.style.borderColor = '';
           passwordInput.style.borderColor = '';
         }, 800);
+      }
+    }
+
+    if (quickFillBtn) {
+      quickFillBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fillCredentials();
       });
+    }
+
+    if (keycardWidget) {
+      keycardWidget.addEventListener('click', fillCredentials);
     }
 
     // Hint trigger click
@@ -579,7 +690,7 @@ document.addEventListener('DOMContentLoaded', () => {
           feedbackAlert.className = 'rounded-xl p-3 text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-2';
           feedbackAlert.innerHTML = `
             <svg class="size-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
-            <span>Access Granted! Welcome to Global Mahanshi Builders Portal.</span>
+            <span>Access Granted! Welcome to Global Mahanshi Builders Vault.</span>
           `;
           feedbackAlert.classList.remove('hidden');
         }
@@ -589,7 +700,7 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.innerHTML = `
             <span class="inline-flex items-center gap-1.5 text-emerald-300 font-bold">
               <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Logged In (${u.split('@')[0]})</span>
+              <span>Vault Unlocked (${u.split('@')[0]})</span>
             </span>
           `;
         });
