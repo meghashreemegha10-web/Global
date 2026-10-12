@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: 'Teak · Travertine · Expansive Double Glass',
       desc: 'Seamless indoor-outdoor living with floor-to-ceiling glass, cantilevered canopies, and warm travertine stone facades.',
       specs: 'Teak · Travertine · Expansive Double Glass',
-      image: '/photos/site-road-demarcated-plots.jpeg'
+      image: 'photos/site-road-demarcated-plots.jpeg'
     },
     {
       num: '02',
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: '25–50 Ft Concrete Roads · Underground Utilities · Green Corridors',
       desc: 'Master-planned residential plotted layouts with 50 ft main approaches, underground sewage lines, individual E-Khata, and ready title documentation.',
       specs: 'Concrete Roads · Underground Sewage · Street Lighting',
-      image: '/photos/images-sai-roots-entrance.webp'
+      image: 'photos/images-sai-roots-entrance.webp'
     },
     {
       num: '03',
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: '550-Grade TMT Steel · 53-Grade Cement · Teak Main Doors',
       desc: 'Custom turnkey homes built from foundation to final coat. Built with 550-grade TMT steel, branded 53-grade cement, and premium teak main door fixtures.',
       specs: 'TMT Steel 550D · Ultratech Cement · Solid Teak Wood',
-      image: '/photos/site-infrastructure-drainage.jpeg'
+      image: 'photos/site-infrastructure-drainage.jpeg'
     },
     {
       num: '04',
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: 'Exposed Brick & Stone · Cantilever Terraces · Warm Ambient Glow',
       desc: 'Understated private residences featuring earthy natural stone, interior courtyards, natural cross-ventilation, and shaded outdoor terraces.',
       specs: 'Natural Granite · Porotherm Clay · Warm Lighting',
-      image: '/photos/site-sanctioned-layout-blueprint.jpeg'
+      image: 'photos/site-sanctioned-layout-blueprint.jpeg'
     },
     {
       num: '05',
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: '53 Sites · Grand Entrance Arch · Landscaped Green Corridors',
       desc: 'Boutique residential plotted developments designed around central parks, security gates, and immediate building clearances.',
       specs: 'Avenue Plantations · Rainwater Harvesting · Children\'s Park',
-      image: '/photos/images-sri-sai-prasanthi-entrance.webp'
+      image: 'photos/images-sri-sai-prasanthi-entrance.webp'
     },
     {
       num: '06',
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: 'Granite Flooring · UPVC Acoustic Windows · Modular Living',
       desc: 'High-spec interior appointments including mirror-polish granite, Jaquar bathware, custom modular provisions, and acoustic glass.',
       specs: 'Black Pearl Granite · 4-Track UPVC · Concealed Wiring',
-      image: '/photos/site-entrance-arch-clear.jpeg'
+      image: 'photos/site-entrance-arch-clear.jpeg'
     }
   ];
 
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const concept = btn.dataset.concept;
         if (concept === 'blend' || concept === 'villa') {
-          heroImg.src = '/photos/hero-architectural-villa.webp';
+          heroImg.src = 'photos/hero-architectural-villa.webp';
           heroImg.style.filter = 'brightness(0.95) contrast(1.05)';
         }
       });
