@@ -124,27 +124,105 @@
       </div>
 
       <div class="relative z-10 mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12">
-        <div class="max-w-4xl space-y-4">
-          <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-amber-400/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-[#F5C344]">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#F5C344]"></span>
-            <span>TRANSPARENT PRICING · MILESTONE BILLING</span>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-14 items-center">
+          
+          <!-- Left Column: Big Bold Typography & Pricing Philosophy (7 Cols) -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-amber-400/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-[#F5C344]">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#F5C344]"></span>
+              <span>TRANSPARENT PRICING · MILESTONE BILLING</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+              Construction Packages &amp; Cost Calculator
+            </h1>
+
+            <p class="text-xl sm:text-2xl text-linen/95 leading-relaxed font-sans max-w-3xl">
+              Every package comes with a complete written scope of work — no hidden charges within the agreed scope. Check packages and calculate live estimates.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center gap-4 text-base font-semibold text-amber-200">
+              <span>✓ Fixed Cost Guarantee</span>
+              <span>·</span>
+              <span>✓ 550D TMT Steel &amp; 53-Grade Cement</span>
+              <span>·</span>
+              <span>✓ 12-Month Handover Warranty</span>
+            </div>
+
+            <div class="pt-4 flex flex-wrap gap-4">
+              <a href="#package-details" class="btn-terracotta-primary rounded-full px-8 py-3.5 text-base font-bold uppercase tracking-wider shadow-lg">
+                Compare Packages
+              </a>
+              <a href="#calculator" class="btn-pine-outline rounded-full px-8 py-3.5 text-base font-bold uppercase tracking-wider text-white border-white/30 hover:border-white">
+                Launch Calculator
+              </a>
+            </div>
           </div>
 
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-            Construction Packages &amp; Cost Calculator
-          </h1>
+          <!-- Right Column: Live Rate Snapshot Widget (5 Cols) -->
+          <div class="lg:col-span-5 w-full">
+            <div class="rounded-3xl border border-white/20 bg-white/[0.08] p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden">
+              <div class="flex items-center justify-between gap-2 border-b border-white/10 pb-4 mb-5">
+                <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
+                  <span class="size-2 rounded-full bg-amber-400"></span>
+                  Transparent Turnkey Rates
+                </span>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-linen/70 bg-white/10 px-2.5 py-1 rounded-full">
+                  No Hidden Extras
+                </span>
+              </div>
 
-          <p class="text-xl sm:text-2xl text-linen/95 leading-relaxed font-sans max-w-3xl">
-            Every package comes with a complete written scope of work — no hidden charges within the agreed scope. Check packages and calculate live estimates.
-          </p>
+              <!-- 2 Package Rate Cards -->
+              <div class="space-y-3.5 mb-5">
+                <div class="rounded-2xl bg-[#152622]/80 border border-white/10 p-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h2 class="text-base font-bold text-white">Standard Vitrified Tier</h2>
+                      <p class="text-xs text-linen/70">Turnkey Complete Package</p>
+                    </div>
+                    <div class="text-right">
+                      <span class="font-display text-2xl font-bold text-amber-300">&#8377;1,950</span>
+                      <span class="text-xs text-linen/60 block">/ sq.ft</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-linen/80 mt-2">
+                    550D TMT Steel &bull; 53-Grade Cement &bull; 2x2 Vitrified Tiles &bull; Teakwood Main Frame
+                  </p>
+                </div>
 
-          <div class="pt-2 flex flex-wrap items-center gap-4 text-base font-semibold text-amber-200">
-            <span>✓ Fixed Cost Guarantee</span>
-            <span>·</span>
-            <span>✓ 550D TMT Steel &amp; 53-Grade Cement</span>
-            <span>·</span>
-            <span>✓ 12-Month Handover Warranty</span>
+                <div class="rounded-2xl bg-[#152622]/80 border border-amber-400/30 p-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h2 class="text-base font-bold text-white">Granite &amp; Teak Premium</h2>
+                      <p class="text-xs text-amber-300 font-semibold">Most Popular Specification</p>
+                    </div>
+                    <div class="text-right">
+                      <span class="font-display text-2xl font-bold text-amber-200">&#8377;2,200</span>
+                      <span class="text-xs text-linen/60 block">/ sq.ft</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-linen/80 mt-2">
+                    Sadarahalli Polished Granite &bull; Full Teakwood Doors &bull; Jaquar/Kohler Fittings
+                  </p>
+                </div>
+              </div>
+
+              <!-- Milestone Strip -->
+              <div class="flex items-center justify-between text-xs text-linen/90 border-t border-white/10 pt-3 mb-5 px-1">
+                <span>&#10003; 5-Stage Milestone Schedule</span>
+                <span>&#10003; 1-Year Structural Defect Warranty</span>
+              </div>
+
+              <!-- Action Link -->
+              <a href="#calculator" class="flex items-center justify-between rounded-2xl bg-amber-300/15 border border-amber-300/40 px-4 py-3 text-linen hover:bg-amber-300/25 hover:border-amber-300 transition-all group">
+                <span class="text-sm font-bold tracking-wide text-white">Calculate Instant Cost Estimate</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-300 group-hover:translate-x-1 transition-transform">
+                  Go to Calculator &darr;
+                </span>
+              </a>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
