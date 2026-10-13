@@ -582,10 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
 
-    // Auto open popup when opening website (after smooth 700ms delay)
-    setTimeout(() => {
-      openModal();
-    }, 700);
+    // Auto open popup removed as Client Login has been removed
 
     // Close on ✕ button click
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
