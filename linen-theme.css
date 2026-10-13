@@ -191,6 +191,17 @@ body {
   transform: scale(1.05) !important;
 }
 
+.brand-subtitle {
+  color: #FCD34D !important;
+  letter-spacing: 0.42em !important;
+  text-indent: 0.42em !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+  display: block !important;
+  width: 100% !important;
+  margin-top: 2px !important;
+}
+
 /* Interactive Tabs for Section 2 Themes */
 .theme-tab {
   transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);

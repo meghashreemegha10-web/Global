@@ -82,9 +82,20 @@ header a .font-display {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55) !important;
 }
 
-header a span.tracking-\[0\.22em\] {
+header a span.brand-subtitle,
+header a span.tracking-\[0\.22em\],
+header a span.tracking-\[0\.42em\],
+.brand-subtitle {
   color: #FCD34D !important;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+  letter-spacing: 0.42em !important;
+  text-indent: 0.42em !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  display: block !important;
+  width: 100% !important;
+  margin-top: 3px !important;
 }
 
 /* Header Navigation Links */
