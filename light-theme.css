@@ -29,17 +29,17 @@
   --color-border-sage: #D5E2D9;
 }
 
+html {
+  font-size: 92%;
+  -webkit-text-size-adjust: 100%;
+}
+
 /* Base Body with Soft Organic Warmth (Not stark clinical white) */
 body {
   background-color: #F6F3EC !important;
   color: #32443E !important;
   font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif !important;
-}
-
-@media screen and (min-width: 640px) {
-  body {
-    zoom: 0.9;
-  }
+  zoom: 0.85;
 }
 
 /* Selection Color */
