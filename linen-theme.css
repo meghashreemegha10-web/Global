@@ -41,6 +41,18 @@ body {
   overflow-x: hidden;
 }
 
+/* ==========================================================================
+   DEFAULT 80% VIEWPORT PROPORTIONS (CALIBRATED DISPLAY SCALE)
+   Calibrates standard 100% browser rendering to match 80% zoom proportions,
+   giving generous architectural margins, balanced typography, and optimal
+   layout on desktop, laptop, and tablet screens without requiring manual browser zoom.
+   ========================================================================== */
+@media screen and (min-width: 640px) {
+  body {
+    zoom: 0.8;
+  }
+}
+
 .font-display {
   font-family: 'Fraunces', 'Syne', Georgia, serif !important;
 }
