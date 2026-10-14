@@ -281,7 +281,7 @@
           
           <!-- Left: Official Layout Blueprint Card -->
           <div class="bg-[#162723] border border-white/15 rounded-3xl p-6 sm:p-8 bracket-frame shadow-2xl flex flex-col justify-between text-white">
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex flex-wrap justify-between items-center gap-3 mb-4">
               <div class="flex items-center gap-2.5">
                 <h4 class="text-white font-bold text-lg sm:text-xl">Official Layout Blueprint</h4>
                 <span class="inline-flex items-center gap-1 text-sm font-bold bg-[#122822] border border-[#2A4B42] text-[#F5C344] px-3.5 py-1 rounded-full">
@@ -291,15 +291,25 @@
               <span class="text-base font-bold text-[#F5C344] tracking-wider">DC Converted · E-Khata</span>
             </div>
 
-            <div class="relative overflow-hidden rounded-2xl border border-white/15 cursor-pointer group bracket-frame bg-[#0d1d19]" id="blueprint-zoom-trigger">
-              <img src="photos/master-layout.webp" alt="Sai Roots Official Layout Blueprint" class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 text-center text-base font-bold text-white group-hover:text-[#F5C344] transition-colors">
-                🔍 Click to zoom full-resolution master layout blueprint
+            <!-- View Switcher Tabs -->
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              <button type="button" id="tab-btn-sketch" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#F5C344] text-[#122822] shadow transition-all">
+                📜 Sanctioned Layout Sketch (Gram Panchayat Seal)
+              </button>
+              <button type="button" id="tab-btn-master" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/10 text-white/80 hover:bg-white/20 transition-all">
+                🎨 Plotted Master Grid
+              </button>
+            </div>
+
+            <div class="relative overflow-hidden rounded-2xl border border-white/15 cursor-pointer group bracket-frame bg-[#091511] flex items-center justify-center p-3" id="blueprint-zoom-trigger">
+              <img id="blueprint-display-img" src="photos/sai_roots_gate.jpg" alt="Sai Roots Official Layout Blueprint" class="w-full max-h-[520px] object-contain transition-transform duration-500 group-hover:scale-102" />
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 text-center text-sm sm:text-base font-bold text-white group-hover:text-[#F5C344] transition-colors pointer-events-none">
+                🔍 Click to zoom full-resolution official layout sketch
               </div>
             </div>
 
-            <p class="text-lg sm:text-xl text-[#CBD5E1] mt-4 leading-relaxed heading-explanation">
-              Sanctioned master plan featuring 50 ft main road, 40 ft entrance road, 25 ft internal concrete roads, parks, and underground services.
+            <p class="text-base sm:text-lg text-[#CBD5E1] mt-4 leading-relaxed heading-explanation">
+              Gram Panchayat Sanctioned Layout in Sy.No. 41/1, Bukkasagara, Jigani Hobli. 53 residential sites, 50 ft main road, 40 ft entrance arch, 25 ft internal concrete roads, parks, and underground services.
             </p>
           </div>
 
@@ -426,13 +436,13 @@
     <div class="relative max-w-5xl w-full bg-[#0b1f1a] border border-amber-400/40 rounded-2xl p-4 sm:p-6 shadow-2xl overflow-hidden">
       <div class="flex justify-between items-center mb-3">
         <div class="flex items-center gap-2">
-          <h4 class="text-white font-bold text-base sm:text-lg">Sai Roots Layout — Official Master Blueprint</h4>
-          <span class="text-sm text-amber-300 font-bold bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/30">Jigani Phase - 1</span>
+          <h4 id="blueprint-modal-title" class="text-white font-bold text-base sm:text-lg">Sai Roots Layout — Official Sanctioned Layout Sketch</h4>
+          <span class="text-sm text-amber-300 font-bold bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/30">Gram Panchayat Approved</span>
         </div>
         <button id="blueprint-modal-close" class="text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold transition-all">✕</button>
       </div>
-      <div class="overflow-auto max-h-[80vh] rounded-xl bg-black/40 p-2 flex justify-center">
-        <img src="photos/master-layout.webp" alt="Full resolution blueprint" class="max-w-full h-auto rounded-lg shadow-lg" />
+      <div class="overflow-auto max-h-[80vh] rounded-xl bg-black/50 p-2 sm:p-4 flex justify-center">
+        <img id="blueprint-modal-img" src="photos/sai_roots_gate.jpg" alt="Full resolution blueprint" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl" />
       </div>
     </div>
   </div>

@@ -265,6 +265,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const blueprintTrigger = document.getElementById('blueprint-zoom-trigger');
   const blueprintModal = document.getElementById('blueprint-modal');
   const blueprintClose = document.getElementById('blueprint-modal-close');
+  const blueprintDisplayImg = document.getElementById('blueprint-display-img');
+  const blueprintModalImg = document.getElementById('blueprint-modal-img');
+  const blueprintModalTitle = document.getElementById('blueprint-modal-title');
+  const tabBtnSketch = document.getElementById('tab-btn-sketch');
+  const tabBtnMaster = document.getElementById('tab-btn-master');
+
+  if (tabBtnSketch && tabBtnMaster) {
+    tabBtnSketch.addEventListener('click', (e) => {
+      e.stopPropagation();
+      tabBtnSketch.classList.add('bg-[#F5C344]', 'text-[#122822]');
+      tabBtnSketch.classList.remove('bg-white/10', 'text-white/80');
+      tabBtnMaster.classList.remove('bg-[#F5C344]', 'text-[#122822]');
+      tabBtnMaster.classList.add('bg-white/10', 'text-white/80');
+      if (blueprintDisplayImg) blueprintDisplayImg.src = 'photos/sai_roots_gate.jpg';
+      if (blueprintModalImg) blueprintModalImg.src = 'photos/sai_roots_gate.jpg';
+      if (blueprintModalTitle) blueprintModalTitle.textContent = 'Sai Roots Layout — Official Sanctioned Layout Sketch';
+    });
+    tabBtnMaster.addEventListener('click', (e) => {
+      e.stopPropagation();
+      tabBtnMaster.classList.add('bg-[#F5C344]', 'text-[#122822]');
+      tabBtnMaster.classList.remove('bg-white/10', 'text-white/80');
+      tabBtnSketch.classList.remove('bg-[#F5C344]', 'text-[#122822]');
+      tabBtnSketch.classList.add('bg-white/10', 'text-white/80');
+      if (blueprintDisplayImg) blueprintDisplayImg.src = 'photos/master-layout.webp';
+      if (blueprintModalImg) blueprintModalImg.src = 'photos/master-layout.webp';
+      if (blueprintModalTitle) blueprintModalTitle.textContent = 'Sai Roots Layout — Plotted Master Grid';
+    });
+  }
 
   if (blueprintTrigger && blueprintModal && blueprintClose) {
     blueprintTrigger.addEventListener('click', () => {
