@@ -56,9 +56,9 @@
 </head>
 <body class="bg-[#1F3630] font-sans text-pine-body antialiased">
 
-  <!-- ==================== TOP NAVIGATION HEADER ==================== -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-[#1F3630]/95 backdrop-blur-md text-linen transition-all">
-    <div class="mx-auto flex h-20 sm:h-22 w-full max-w-[1720px] items-center justify-between px-4 sm:px-8 lg:px-12">
+  <!-- ==================== TOP NAVIGATION HEADER (TRANSPARENT BACKGROUND) ==================== -->
+  <header class="absolute top-0 inset-x-0 z-50 h-20 sm:h-22 lg:h-24 border-b border-white/10 bg-transparent text-[#FDFCEE] transition-all">
+    <div class="mx-auto flex h-full w-full max-w-[1720px] items-center justify-between px-4 sm:px-8 lg:px-12">
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3.5 group">
@@ -124,13 +124,13 @@
     </div>
   </header>
 
-  <main class="pt-20 sm:pt-22">
+  <main>
 
-    <!-- ==================== PAGE BANNER (DARK PINE CANVAS #1F3630) ==================== -->
-    <section class="relative min-h-[380px] sm:min-h-[440px] flex items-center bg-[#1F3630] text-linen py-16 overflow-hidden border-b border-white/10">
-      <div class="absolute inset-0 z-0">
-        <img src="photos/site-road-demarcated-plots.jpeg" alt="Global Mahanshi Projects" class="h-full w-full object-cover object-center filter brightness-70 contrast-105" />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#1F3630]/95 via-[#1F3630]/85 to-[#1F3630]/90"></div>
+    <!-- ==================== PAGE BANNER (TRANSPARENT BACKGROUND & BACKDROP) ==================== -->
+    <section class="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[580px] flex items-center bg-[#0e221c] text-white pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 overflow-hidden border-b border-white/15">
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="photos/site-road-demarcated-plots.jpeg" alt="Global Mahanshi Projects" class="h-full w-full object-cover object-center filter brightness-95 contrast-105 opacity-85" />
+        <div class="hero-plain-backdrop"></div>
       </div>
 
       <div class="relative z-10 mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12">
@@ -171,7 +171,7 @@
 
           <!-- Right Column: Featured Flagship Status Widget (5 Cols) -->
           <div class="lg:col-span-5 w-full">
-            <div class="rounded-3xl border border-white/20 bg-white/[0.08] p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden">
+            <div class="rounded-3xl border border-white/25 bg-white/[0.07] p-6 sm:p-8 backdrop-blur-xl shadow-2xl relative overflow-hidden">
               <div class="flex items-center justify-between gap-2 border-b border-white/10 pb-4 mb-5">
                 <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
                   <span class="size-2 rounded-full bg-emerald-400"></span>
@@ -183,7 +183,7 @@
               </div>
 
               <!-- Flagship Card Content -->
-              <div class="rounded-2xl bg-[#152622]/80 border border-white/10 p-5 mb-5 shadow-inner">
+              <div class="rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 p-5 mb-5 shadow-inner">
                 <div class="flex items-center justify-between">
                   <h2 class="font-display text-2xl font-bold text-white">Sai Roots Layout</h2>
                   <span class="text-xs font-bold text-amber-300 uppercase">Jigani, Bengaluru</span>

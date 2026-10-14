@@ -57,7 +57,7 @@
 <body class="bg-[#1F3630] font-sans text-pine-body antialiased">
 
   <!-- ==================== TOP NAVIGATION HEADER ==================== -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-[#1F3630]/95 backdrop-blur-md text-linen transition-all">
+  <header class="absolute top-0 inset-x-0 z-50 h-20 sm:h-22 lg:h-24 border-b border-white/10 bg-transparent text-[#FDFCEE] transition-all">
     <div class="mx-auto flex h-20 sm:h-22 w-full max-w-[1720px] items-center justify-between px-4 sm:px-8 lg:px-12">
       
       <!-- Brand Logo -->
@@ -124,13 +124,13 @@
     </div>
   </header>
 
-  <main class="pt-20 sm:pt-22">
+  <main>
 
     <!-- ==================== PAGE BANNER (DARK PINE CANVAS #1F3630) ==================== -->
-    <section class="relative min-h-[380px] sm:min-h-[440px] flex items-center bg-[#1F3630] text-linen py-16 overflow-hidden border-b border-white/10">
-      <div class="absolute inset-0 z-0">
-        <img src="photos/images-mr-rajendra-residence-proposed-design.webp" alt="Construction Packages & Estimates" class="h-full w-full object-cover object-center filter brightness-70 contrast-105" />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#1F3630]/95 via-[#1F3630]/85 to-[#1F3630]/90"></div>
+    <section class="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[580px] flex items-center bg-[#0e221c] text-white pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 overflow-hidden border-b border-white/15">
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="photos/images-mr-rajendra-residence-proposed-design.webp" alt="Global Mahanshi" class="h-full w-full object-cover object-center filter brightness-95 contrast-105 opacity-88" />
+        <div class="hero-plain-backdrop"></div>
       </div>
 
       <div class="relative z-10 mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12">
@@ -171,7 +171,7 @@
 
           <!-- Right Column: Live Rate Snapshot Widget (5 Cols) -->
           <div class="lg:col-span-5 w-full">
-            <div class="rounded-3xl border border-white/20 bg-white/[0.08] p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden">
+            <div class="rounded-3xl border border-white/20 bg-white/[0.07] backdrop-blur-xl p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden">
               <div class="flex items-center justify-between gap-2 border-b border-white/10 pb-4 mb-5">
                 <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
                   <span class="size-2 rounded-full bg-amber-400"></span>
@@ -184,7 +184,7 @@
 
               <!-- 2 Package Rate Cards -->
               <div class="space-y-3.5 mb-5">
-                <div class="rounded-2xl bg-[#152622]/80 border border-white/10 p-4">
+                <div class="rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 p-4">
                   <div class="flex items-center justify-between">
                     <div>
                       <h2 class="text-base font-bold text-white">Standard Vitrified Tier</h2>
@@ -200,7 +200,7 @@
                   </p>
                 </div>
 
-                <div class="rounded-2xl bg-[#152622]/80 border border-amber-400/30 p-4">
+                <div class="rounded-2xl bg-black/40 backdrop-blur-md border border-amber-400/30 p-4">
                   <div class="flex items-center justify-between">
                     <div>
                       <h2 class="text-base font-bold text-white">Granite &amp; Teak Premium</h2>
