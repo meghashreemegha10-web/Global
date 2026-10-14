@@ -1121,8 +1121,8 @@
         </div>
 
         
-        <!-- Sticky Category Navigation Bar -->
-        <div class="sticky top-20 z-40 bg-linen-canvas/95 backdrop-blur-md py-4 mb-10 border-b border-linen-edge">
+        <!-- Category Navigation Bar (Scoped inside Gallery only; not sticky while scrolling) -->
+        <div class="relative py-4 mb-10 border-b border-linen-edge">
           <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
             <button class="section-filter-btn active rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge transition-all" data-target="all">
               All Sections (27)
@@ -2324,7 +2324,6 @@
             sections.forEach(s => {
               if (s.id === target) {
                 s.classList.remove('hidden');
-                s.scrollIntoView({ behavior: 'smooth', block: 'start' });
               } else {
                 s.classList.add('hidden');
               }
