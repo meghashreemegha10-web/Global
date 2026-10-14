@@ -238,365 +238,542 @@
     </section>
 
     <!-- ==================== GALLERY SECTION ==================== -->
-    <section id="gallery-grid" class="bg-linen-canvas py-16 lg:py-24 text-pine border-b border-linen-edge">
+    
+    <!-- ==================== GALLERY WITH SEPARATE SECTIONS ==================== -->
+    <div id="gallery-grid" class="bg-linen-canvas py-16 lg:py-24 text-pine border-b border-linen-edge">
       <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12">
         
-        <!-- Category Filter Tabs -->
-        <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
-          <button class="gallery-filter-btn active rounded-full px-6 py-2.5 text-base font-bold border border-linen-edge transition-all" data-category="all">
-            All Photos (17)
-          </button>
-          <button class="gallery-filter-btn rounded-full px-6 py-2.5 text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-category="construction">
-            Construction Work (2)
-          </button>
-          <button class="gallery-filter-btn rounded-full px-6 py-2.5 text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-category="funactivities">
-            Fun Activities &amp; Celebrations (3)
-          </button>
-          <button class="gallery-filter-btn rounded-full px-6 py-2.5 text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-category="layouts">
-            Plotted Layouts (3)
-          </button>
-          <button class="gallery-filter-btn rounded-full px-6 py-2.5 text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-category="infrastructure">
-            Civil Infrastructure (2)
-          </button>
-          <button class="gallery-filter-btn rounded-full px-6 py-2.5 text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-category="blueprints">
-            Sanctioned Blueprints (2)
-          </button>
-          <button class="gallery-filter-btn rounded-full px-6 py-2.5 text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-category="villas">
-            Residences &amp; Villas (5)
-          </button>
+        <!-- Sticky Category Navigation Bar -->
+        <div class="sticky top-20 z-40 bg-linen-canvas/95 backdrop-blur-md py-4 mb-10 border-b border-linen-edge">
+          <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+            <button class="section-filter-btn active rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge transition-all" data-target="all">
+              All Sections (20)
+            </button>
+            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-construction">
+              🏗️ Construction Work (3)
+            </button>
+            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-celebrations">
+              🌸 Fun Activities &amp; Celebrations (5)
+            </button>
+            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-layouts">
+              🏡 Plotted Layouts (3)
+            </button>
+            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-infrastructure">
+              🛣️ Civil Infrastructure (2)
+            </button>
+            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-blueprints">
+              📜 Sanctioned Blueprints (2)
+            </button>
+            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-villas">
+              ✨ Residences &amp; Villas (5)
+            </button>
+          </div>
         </div>
 
-        <!-- Gallery Grid (17 Items) -->
-        <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
-          
-          <!-- Photo A: RCC Column Footing Concrete Pouring -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="construction" data-src="photos/construction-rcc-concrete-pouring.jpg" data-title="Live RCC Column Footing Concrete Pouring" data-sub="Sai Roots Layout, Jigani — Villa Foundation Concreting" data-badge="Construction Work">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/construction-rcc-concrete-pouring.jpg" alt="Workers pouring fresh concrete into steel rebar column footing formwork" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Construction Work
-              </span>
+      <!-- ==================== CONSTRUCTION WORK ==================== -->
+      <section id="section-construction" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-clay/30 bg-clay/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-clay mb-2">
+              <span>Section 01 · LIVE ON-GROUND WORKS</span>
             </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">RCC Column Footing Pouring</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Precision concrete pouring into heavy steel rebar cages for robust structural foundation.</p>
-            </div>
+            <h3 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-pine-heading">
+              Construction Work
+            </h3>
           </div>
-
-          <!-- Photo B: Site Excavation, Water Sump & Column Rebar Reinforcements -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="construction" data-src="photos/construction-footing-columns-sump.jpg" data-title="Excavation, Water Sump &amp; Column Rebar Reinforcements" data-sub="Sai Roots Layout, Jigani — Independent Villa Footprint" data-badge="Construction Work">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/construction-footing-columns-sump.jpg" alt="Site excavation, underground water sump, and vertical column rebar cages" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Construction Work
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Site Excavation &amp; Sump Tank</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Structural layout with concrete water sump tank and vertical column reinforcements in place.</p>
-            </div>
+          <div class="md:text-right max-w-xl">
+            <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">3 Items (1 Video, 2 Photos)</span>
+            <p class="text-sm sm:text-base text-pine-copy">Unedited, real-time footage of civil engineering works at Sai Roots Layout, Jigani: heavy excavator earthworks, foundation plinth reinforcements, column rebar cages, and concrete casting.</p>
           </div>
-
-          <!-- Photo C: Auspicious Bhoomi Pooja Groundbreaking Ceremony -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/ceremony-bhoomi-pooja-water-blessing.jpg" data-title="Auspicious Bhoomi Pooja Groundbreaking Ceremony" data-sub="Sai Roots Layout, Jigani — Founder G. Muniswamy Performing Rituals" data-badge="Fun Activities &amp; Celebrations">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/ceremony-bhoomi-pooja-water-blessing.jpg" alt="Founder G. Muniswamy and priest pouring sacred water at plot cornerstone during Bhoomi Pooja" class="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Bhoomi Pooja
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Bhoomi Pooja Water Blessing</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Founder G. Muniswamy pouring consecrated holy water at the plot cornerstone during Vedic groundbreaking.</p>
-            </div>
-          </div>
-
-          <!-- Photo D: Vedic Foundation Stone Consecration Rituals -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/ceremony-vedic-stone-blessing.jpg" data-title="Vedic Foundation Stone Consecration Rituals" data-sub="Sai Roots Layout, Jigani — Sacred Boundary Stone Consecration" data-badge="Fun Activities &amp; Celebrations">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/ceremony-vedic-stone-blessing.jpg" alt="Priest and Founder G. Muniswamy performing foundation stone rituals on plot" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Sacred Rituals
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Foundation Stone Blessings</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Vedic priest and Founder G. Muniswamy offering floral tributes and mantras to consecrate the site.</p>
-            </div>
-          </div>
-
-          <!-- Photo E: Family Milestone & Handover Celebration -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/activities-family-celebration-handover.jpg" data-title="Joyous Family Groundbreaking &amp; Plot Celebration" data-sub="Sai Roots Layout, Jigani — Homeowners &amp; Global Mahanshi Leadership" data-badge="Fun Activities &amp; Celebrations">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/activities-family-celebration-handover.jpg" alt="Homeowner family celebrating groundbreaking ceremony with Global Mahanshi leadership" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Family Celebrations
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Family Milestone Celebration</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Proud client family celebrating the commencement of their home construction alongside the leadership team.</p>
-            </div>
-          </div>
-          
-          <!-- Photo 1: Sai Roots Grand Entrance Arch -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="layouts" data-src="photos/site-entrance-arch-cropped.jpeg" data-title="Sai Roots Layout Grand Entrance Arch" data-sub="Jigani Industrial Corridor, near Electronic City" data-badge="Plotted Layout">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/site-entrance-arch-cropped.jpeg" alt="Sai Roots Layout Grand Entrance Arch, Jigani" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Sai Roots Jigani
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Grand Entrance Arch &amp; Gate</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Monumental security gate with 24/7 guard cabin and paved entry.</p>
-            </div>
-          </div>
-
-          <!-- Photo 2: 50 Ft Concrete Main Road -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="infrastructure" data-src="photos/site-road-demarcated-plots.jpeg" data-title="50 Ft Main Concrete Road &amp; Numbered Demarcated Sites" data-sub="Sai Roots Layout, Jigani" data-badge="Civil Infrastructure">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/site-road-demarcated-plots.jpeg" alt="50 Ft Concrete Main Road & Numbered Plots" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                50 Ft Main Road
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">50 Ft Main Road &amp; Plots</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Wide concrete arterial roadway with stone-marked plot boundary stones.</p>
-            </div>
-          </div>
-
-          <!-- Photo 3: Underground Drainage & Walkways -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="infrastructure" data-src="photos/site-infrastructure-drainage.jpeg" data-title="Underground Drainage &amp; Walkway Infrastructure" data-sub="Sai Roots Layout, Jigani" data-badge="Civil Infrastructure">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/site-infrastructure-drainage.jpeg" alt="Underground Drainage & Paved Walkways" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Underground Utilities
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">UGD &amp; Stormwater Chambers</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Concealed underground sewage pipe network with RCC access manholes.</p>
-            </div>
-          </div>
-
-          <!-- Photo 4: Sanctioned Layout Blueprint -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="blueprints" data-src="photos/site-sanctioned-layout-blueprint.jpeg" data-title="Sanctioned DC Layout Master Plan &amp; Approvals" data-sub="Survey No. 49 &amp; 51, Jigani" data-badge="Official Blueprint">
-            <div class="relative aspect-[4/3] overflow-hidden bg-white p-2">
-              <img src="photos/site-sanctioned-layout-blueprint.jpeg" alt="Sanctioned Master Layout Plan & Government Order" class="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Government Sanction
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">DC Sanctioned Blueprint</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Approved 53-site plan with government seal and road easements.</p>
-            </div>
-          </div>
-
-          <!-- Photo 5: Sri Sai Prasanthi Gated Community -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="layouts" data-src="photos/images-sri-sai-prasanthi-entrance.webp" data-title="Sri Sai Prasanthi Gated Community Entrance" data-sub="Ramasandra, Jigani Hub" data-badge="Plotted Layout">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/images-sri-sai-prasanthi-entrance.webp" alt="Sri Sai Prasanthi layout entrance" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Sri Sai Prasanthi
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Sri Sai Prasanthi Arch</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Peaceful, secured plotted layout in Ramasandra with street plantations.</p>
-            </div>
-          </div>
-
-          <!-- Photo 6: Turnkey Custom Residence -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="villas" data-src="photos/images-mr-rajendra-residence-proposed-design.webp" data-title="Turnkey Independent Residence (Mr. Rajendra Residence)" data-sub="Custom G+1 Construction, Bengaluru" data-badge="House Construction">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/images-mr-rajendra-residence-proposed-design.webp" alt="Architectural 3D villa elevation" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Turnkey Home
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Custom Residence (G+1)</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Turnkey residential construction with granite stairs and teak doors.</p>
-            </div>
-          </div>
-
-          <!-- Photo 7: Contemporary Luxury Villa -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="villas" data-src="photos/hero-architectural-villa.webp" data-title="Contemporary Luxury Villa Architecture" data-sub="Modern Architectural Elevation" data-badge="Luxury Villa">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/hero-architectural-villa.webp" alt="Contemporary luxury villa construction" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Luxury Villa
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Contemporary Villa Study</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Floor-to-ceiling glass fenestration, cantilevered balconies, and stone.</p>
-            </div>
-          </div>
-
-          <!-- Photo 8: Jigani Corridor Landmark Entrance -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="layouts" data-src="photos/images-sai-roots-entrance.webp" data-title="Jigani Development Landmark Corridor" data-sub="Connecting to Electronic City Phase 1 &amp; 2" data-badge="Plotted Layout">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/images-sai-roots-entrance.webp" alt="Jigani Corridor Plotted Development" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Corridor Access
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Jigani Hub Access Road</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Direct connectivity to APC Circle, Electronic City, and Bannerghatta Road.</p>
-            </div>
-          </div>
-
-          <!-- Photo 9: Sai Roots High-Resolution Master Layout -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="blueprints" data-src="photos/master-layout.webp" data-title="High-Resolution Master Plotted Layout" data-sub="53 Sites Master Plan Blueprint" data-badge="Official Blueprint">
-            <div class="relative aspect-[4/3] overflow-hidden bg-white p-2">
-              <img src="photos/master-layout.webp" alt="Sai Roots high resolution master layout" class="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Master Plan
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">53-Plot Master Layout</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Numbered plot grid with park areas, civic amenities, and road widths.</p>
-            </div>
-          </div>
-
-          <!-- Photo 10: Designer House Poster -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="villas" data-src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" data-title="Architectural Elevation — Designer Residence" data-sub="Contemporary Residential Facade" data-badge="House Architecture">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" alt="Architectural Designer House poster" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Designer Home
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Designer Residence Elevation</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Contemporary clean geometry, wooden louvers, and expansive balconies.</p>
-            </div>
-          </div>
-
-          <!-- Photo 11: Modern Residence Poster -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="villas" data-src="photos/Modern_RESIDENCE_Horizontal_Logo_Poster_No_For_Sale.jpg" data-title="Modern Residence Architectural Study" data-sub="Two-Tier Residential Villa" data-badge="House Architecture">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/Modern_RESIDENCE_Horizontal_Logo_Poster_No_For_Sale.jpg" alt="Modern Residence Architectural Study" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Modern Residence
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Modern Residence Study</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Multi-level duplex configuration with covered car porch and rooftop deck.</p>
-            </div>
-          </div>
-
-          <!-- Photo 12: Urban Home Poster -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="villas" data-src="photos/Urban_HOME_Poster_No_For_Sale.jpg" data-title="Urban Home 30×40 Living Design" data-sub="Compact Smart Residence" data-badge="House Architecture">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/Urban_HOME_Poster_No_For_Sale.jpg" alt="Urban Home 30x40 design" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                Urban Home 30×40
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Urban Home Design</h3>
-              <p class="mt-1 text-sm font-bold text-pine-muted">Optimized 30×40 plot construction with high natural ventilation and light.</p>
-            </div>
-          </div>
-
         </div>
 
+        <!-- Section Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Video Card: Live JCB Site Excavation & Column Reinforcements -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group transition-all hover:shadow-xl hover:-translate-y-1" data-category="construction" data-src="photos/video-live-jcb-excavation.mp4" data-type="video" data-title="Live JCB Site Excavation & Column Reinforcements" data-sub="Sai Roots Layout, Jigani — Villa Foundation Digging & Ground Levelling" data-badge="LIVE VIDEO · JCB EXCAVATION">
+            <div class="relative aspect-[4/3] overflow-hidden bg-black flex items-center justify-center">
+              <video preload="metadata" muted playsinline loop class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <source src="photos/video-live-jcb-excavation.mp4" type="video/mp4">
+              </video>
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center cursor-pointer">
+                <div class="size-14 rounded-full bg-amber-400 text-pine-dark flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                  <svg class="size-7 translate-x-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <span class="absolute top-3 left-3 bg-amber-500/90 text-pine-dark text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow flex items-center gap-1.5">
+                <span class="size-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span>LIVE VIDEO · JCB EXCAVATION</span>
+              </span>
+              <span class="absolute bottom-3 right-3 bg-black/75 text-white text-[11px] font-mono px-2 py-0.5 rounded-md">0:18</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Live JCB Site Excavation & Column Reinforcements</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Sai Roots Layout, Jigani — Villa Foundation Digging & Ground Levelling</p>
+            </div>
+          </div>
+          <!-- Photo: Live RCC Column Footing Concrete Pouring -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/construction-rcc-concrete-pouring.jpg" data-type="image" data-title="Live RCC Column Footing Concrete Pouring" data-sub="Sai Roots Layout, Jigani — Precision concrete pouring into heavy steel rebar cages" data-badge="CONSTRUCTION WORK">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/construction-rcc-concrete-pouring.jpg" alt="Live RCC Column Footing Concrete Pouring" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                CONSTRUCTION WORK
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Live RCC Column Footing Concrete Pouring</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Sai Roots Layout, Jigani — Precision concrete pouring into heavy steel rebar cages</p>
+            </div>
+          </div>
+          <!-- Photo: Foundation Column Rebar Cages & Sump Tank Excavation -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/construction-footing-columns-sump.jpg" data-type="image" data-title="Foundation Column Rebar Cages & Sump Tank Excavation" data-sub="Sai Roots Layout, Jigani — Plinth beam framework and underground concrete water sump" data-badge="CONSTRUCTION WORK">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/construction-footing-columns-sump.jpg" alt="Foundation Column Rebar Cages & Sump Tank Excavation" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                CONSTRUCTION WORK
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Foundation Column Rebar Cages & Sump Tank Excavation</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Sai Roots Layout, Jigani — Plinth beam framework and underground concrete water sump</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== FUN ACTIVITIES & CELEBRATIONS ==================== -->
+      <section id="section-celebrations" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-clay/30 bg-clay/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-clay mb-2">
+              <span>Section 02 · SACRED MILESTONES & CELEBRATIONS</span>
+            </div>
+            <h3 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-pine-heading">
+              Fun Activities & Celebrations
+            </h3>
+          </div>
+          <div class="md:text-right max-w-xl">
+            <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">5 Items</span>
+            <p class="text-sm sm:text-base text-pine-copy">Auspicious Bhoomi Pooja groundbreaking ceremonies, Vedic foundation stone consecrations, and joyous family celebrations with homeowners at Sai Roots Layout.</p>
+          </div>
+        </div>
+
+        <!-- Section Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Photo: Auspicious Bhoomi Pooja Water Blessing Ceremony -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/ceremony-bhoomi-pooja-water-blessing.jpg" data-type="image" data-title="Auspicious Bhoomi Pooja Water Blessing Ceremony" data-sub="Founder G. Muniswamy and Vedic priest pouring consecrated holy water at plot cornerstone" data-badge="BHOOMI POOJA">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/ceremony-bhoomi-pooja-water-blessing.jpg" alt="Auspicious Bhoomi Pooja Water Blessing Ceremony" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                BHOOMI POOJA
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Auspicious Bhoomi Pooja Water Blessing Ceremony</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Founder G. Muniswamy and Vedic priest pouring consecrated holy water at plot cornerstone</p>
+            </div>
+          </div>
+          <!-- Photo: Sacred Boundary Stone Consecration Rituals -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/ceremony-boundary-stone-consecration.jpg" data-type="image" data-title="Sacred Boundary Stone Consecration Rituals" data-sub="Founder G. Muniswamy holding the ceremonial staff alongside the Vedic priest" data-badge="SACRED RITUALS">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/ceremony-boundary-stone-consecration.jpg" alt="Sacred Boundary Stone Consecration Rituals" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                SACRED RITUALS
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Sacred Boundary Stone Consecration Rituals</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Founder G. Muniswamy holding the ceremonial staff alongside the Vedic priest</p>
+            </div>
+          </div>
+          <!-- Photo: Vedic Foundation Stone Consecration & Floral Offerings -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/ceremony-vedic-stone-blessing.jpg" data-type="image" data-title="Vedic Foundation Stone Consecration & Floral Offerings" data-sub="Traditional Vedic priest and leadership performing sacred havan and floral offerings" data-badge="SACRED RITUALS">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/ceremony-vedic-stone-blessing.jpg" alt="Vedic Foundation Stone Consecration & Floral Offerings" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                SACRED RITUALS
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Vedic Foundation Stone Consecration & Floral Offerings</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Traditional Vedic priest and leadership performing sacred havan and floral offerings</p>
+            </div>
+          </div>
+          <!-- Photo: Joyous Family Groundbreaking & Plot Celebration -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/activities-family-celebration-handover.jpg" data-type="image" data-title="Joyous Family Groundbreaking & Plot Celebration" data-sub="Homeowners and family celebrating their construction commencement with leadership team" data-badge="FAMILY CELEBRATIONS">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/activities-family-celebration-handover.jpg" alt="Joyous Family Groundbreaking & Plot Celebration" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-emerald-800/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                FAMILY CELEBRATIONS
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Joyous Family Groundbreaking & Plot Celebration</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Homeowners and family celebrating their construction commencement with leadership team</p>
+            </div>
+          </div>
+          <!-- Photo: Homeowner Family Offering Prayers & Flower Blessings -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/activities-family-prayers-flowers.jpg" data-type="image" data-title="Homeowner Family Offering Prayers & Flower Blessings" data-sub="Traditional Vedic rituals for prosperity, peace and long life in their new home" data-badge="FAMILY PRAYERS">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/activities-family-prayers-flowers.jpg" alt="Homeowner Family Offering Prayers & Flower Blessings" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-emerald-800/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                FAMILY PRAYERS
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Homeowner Family Offering Prayers & Flower Blessings</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Traditional Vedic rituals for prosperity, peace and long life in their new home</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== PLOTTED LAYOUTS ==================== -->
+      <section id="section-layouts" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-clay/30 bg-clay/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-clay mb-2">
+              <span>Section 03 · RESIDENTIAL PLOTTED COMMUNITIES</span>
+            </div>
+            <h3 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-pine-heading">
+              Plotted Layouts
+            </h3>
+          </div>
+          <div class="md:text-right max-w-xl">
+            <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">3 Items</span>
+            <p class="text-sm sm:text-base text-pine-copy">Grand entrance arches, compound wall security gates, and strategic connectivity corridors for Sai Roots and Sri Sai Prasanthi gated layouts.</p>
+          </div>
+        </div>
+
+        <!-- Section Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Photo: Sai Roots Layout Grand Entrance Arch & Security Gate -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/site-entrance-arch-cropped.jpeg" data-type="image" data-title="Sai Roots Layout Grand Entrance Arch & Security Gate" data-sub="Jigani Industrial Corridor, near Electronic City Phase 1 & 2" data-badge="SAI ROOTS JIGANI">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/site-entrance-arch-cropped.jpeg" alt="Sai Roots Layout Grand Entrance Arch & Security Gate" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                SAI ROOTS JIGANI
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Sai Roots Layout Grand Entrance Arch & Security Gate</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Jigani Industrial Corridor, near Electronic City Phase 1 & 2</p>
+            </div>
+          </div>
+          <!-- Photo: Sri Sai Prasanthi Gated Community Entrance -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/images-sri-sai-prasanthi-entrance.webp" data-type="image" data-title="Sri Sai Prasanthi Gated Community Entrance" data-sub="Peaceful, secured plotted layout in Ramasandra, Jigani Hub" data-badge="SRI SAI PRASANTHI">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/images-sri-sai-prasanthi-entrance.webp" alt="Sri Sai Prasanthi Gated Community Entrance" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                SRI SAI PRASANTHI
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Sri Sai Prasanthi Gated Community Entrance</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Peaceful, secured plotted layout in Ramasandra, Jigani Hub</p>
+            </div>
+          </div>
+          <!-- Photo: Jigani Development Landmark Corridor -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/images-sai-roots-entrance.webp" data-type="image" data-title="Jigani Development Landmark Corridor" data-sub="Connecting directly to APC Circle, Electronic City, and Bannerghatta Road" data-badge="CORRIDOR ACCESS">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/images-sai-roots-entrance.webp" alt="Jigani Development Landmark Corridor" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                CORRIDOR ACCESS
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Jigani Development Landmark Corridor</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Connecting directly to APC Circle, Electronic City, and Bannerghatta Road</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== CIVIL INFRASTRUCTURE ==================== -->
+      <section id="section-infrastructure" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-clay/30 bg-clay/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-clay mb-2">
+              <span>Section 04 · ROADS & UNDERGROUND UTILITIES</span>
+            </div>
+            <h3 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-pine-heading">
+              Civil Infrastructure
+            </h3>
+          </div>
+          <div class="md:text-right max-w-xl">
+            <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">2 Items</span>
+            <p class="text-sm sm:text-base text-pine-copy">50 ft wide concrete avenue roadways, kerbing, storm water drainage chambers, and underground sewage networks built to municipal specifications.</p>
+          </div>
+        </div>
+
+        <!-- Section Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Photo: 50 Ft Main Concrete Road & Numbered Sites -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/site-road-demarcated-plots.jpeg" data-type="image" data-title="50 Ft Main Concrete Road & Numbered Sites" data-sub="Wide concrete arterial roadway with stone-marked plot boundary stones" data-badge="50 FT MAIN ROAD">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/site-road-demarcated-plots.jpeg" alt="50 Ft Main Concrete Road & Numbered Sites" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                50 FT MAIN ROAD
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">50 Ft Main Concrete Road & Numbered Sites</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Wide concrete arterial roadway with stone-marked plot boundary stones</p>
+            </div>
+          </div>
+          <!-- Photo: Underground Drainage & Walkway Infrastructure -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/site-infrastructure-drainage.jpeg" data-type="image" data-title="Underground Drainage & Walkway Infrastructure" data-sub="Concealed underground sewage pipe network with RCC access manholes" data-badge="UNDERGROUND UTILITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/site-infrastructure-drainage.jpeg" alt="Underground Drainage & Walkway Infrastructure" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                UNDERGROUND UTILITIES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Underground Drainage & Walkway Infrastructure</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Concealed underground sewage pipe network with RCC access manholes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== SANCTIONED BLUEPRINTS ==================== -->
+      <section id="section-blueprints" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-clay/30 bg-clay/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-clay mb-2">
+              <span>Section 05 · 100% LEGAL CLEARANCES</span>
+            </div>
+            <h3 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-pine-heading">
+              Sanctioned Blueprints
+            </h3>
+          </div>
+          <div class="md:text-right max-w-xl">
+            <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">2 Items</span>
+            <p class="text-sm sm:text-base text-pine-copy">Official DC conversion orders, master plotted layout survey demarcations, and approved blueprints open for independent verification.</p>
+          </div>
+        </div>
+
+        <!-- Section Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Photo: Sanctioned DC Layout Master Plan & Approvals -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/site-sanctioned-layout-blueprint.jpeg" data-type="image" data-title="Sanctioned DC Layout Master Plan & Approvals" data-sub="Survey No. 49 & 51, Jigani — Approved 53-site plan with government seal" data-badge="OFFICIAL BLUEPRINT">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/site-sanctioned-layout-blueprint.jpeg" alt="Sanctioned DC Layout Master Plan & Approvals" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICIAL BLUEPRINT
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Sanctioned DC Layout Master Plan & Approvals</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Survey No. 49 & 51, Jigani — Approved 53-site plan with government seal</p>
+            </div>
+          </div>
+          <!-- Photo: High-Resolution Master Plotted Layout -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/master-layout.webp" data-type="image" data-title="High-Resolution Master Plotted Layout" data-sub="53-Plot master grid with park areas, civic amenities, and road widths" data-badge="MASTER PLAN">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/master-layout.webp" alt="High-Resolution Master Plotted Layout" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                MASTER PLAN
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">High-Resolution Master Plotted Layout</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">53-Plot master grid with park areas, civic amenities, and road widths</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== RESIDENCES & VILLAS ==================== -->
+      <section id="section-villas" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-clay/30 bg-clay/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-clay mb-2">
+              <span>Section 06 · TURNKEY HOME ARCHITECTURE</span>
+            </div>
+            <h3 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-pine-heading">
+              Residences & Villas
+            </h3>
+          </div>
+          <div class="md:text-right max-w-xl">
+            <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">5 Items</span>
+            <p class="text-sm sm:text-base text-pine-copy">Architectural designs, elevations, and delivered independent homes constructed with premium branded materials and 12-month delivery guarantee.</p>
+          </div>
+        </div>
+
+        <!-- Section Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Photo: Turnkey Independent Residence (Mr. Rajendra Residence) -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/images-mr-rajendra-residence-proposed-design.webp" data-type="image" data-title="Turnkey Independent Residence (Mr. Rajendra Residence)" data-sub="Custom G+1 Construction with granite stairs and teak doors, Bengaluru" data-badge="TURNKEY HOME">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/images-mr-rajendra-residence-proposed-design.webp" alt="Turnkey Independent Residence (Mr. Rajendra Residence)" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                TURNKEY HOME
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Turnkey Independent Residence (Mr. Rajendra Residence)</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Custom G+1 Construction with granite stairs and teak doors, Bengaluru</p>
+            </div>
+          </div>
+          <!-- Photo: Contemporary Luxury Villa Architecture -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/hero-architectural-villa.webp" data-type="image" data-title="Contemporary Luxury Villa Architecture" data-sub="Floor-to-ceiling glass fenestration, cantilevered balconies, and natural stone" data-badge="LUXURY VILLA">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/hero-architectural-villa.webp" alt="Contemporary Luxury Villa Architecture" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                LUXURY VILLA
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Contemporary Luxury Villa Architecture</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Floor-to-ceiling glass fenestration, cantilevered balconies, and natural stone</p>
+            </div>
+          </div>
+          <!-- Photo: Architectural Elevation — Designer Residence -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" data-type="image" data-title="Architectural Elevation — Designer Residence" data-sub="Contemporary clean geometry, wooden louvers, and expansive balconies" data-badge="DESIGNER RESIDENCE">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" alt="Architectural Elevation — Designer Residence" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                DESIGNER RESIDENCE
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Architectural Elevation — Designer Residence</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Contemporary clean geometry, wooden louvers, and expansive balconies</p>
+            </div>
+          </div>
+          <!-- Photo: Modern Residence Architectural Study -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/Modern_RESIDENCE_Horizontal_Logo_Poster_No_For_Sale.jpg" data-type="image" data-title="Modern Residence Architectural Study" data-sub="Multi-level duplex configuration with covered car porch and rooftop deck" data-badge="MODERN RESIDENCE">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/Modern_RESIDENCE_Horizontal_Logo_Poster_No_For_Sale.jpg" alt="Modern Residence Architectural Study" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                MODERN RESIDENCE
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Modern Residence Architectural Study</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Multi-level duplex configuration with covered car porch and rooftop deck</p>
+            </div>
+          </div>
+          <!-- Photo: Urban Home 30×40 Living Design -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/Urban_HOME_Poster_No_For_Sale.jpg" data-type="image" data-title="Urban Home 30×40 Living Design" data-sub="Optimized 30×40 plot construction with high natural ventilation and light" data-badge="URBAN HOME 30×40">
+            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
+              <img src="photos/Urban_HOME_Poster_No_For_Sale.jpg" alt="Urban Home 30×40 Living Design" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                URBAN HOME 30×40
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Urban Home 30×40 Living Design</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Optimized 30×40 plot construction with high natural ventilation and light</p>
+            </div>
+          </div>
+        </div>
+      </section>
       </div>
-    </section>
-
+    </div>
   </main>
 
   <!-- ==================== LIGHTBOX MODAL ==================== -->
@@ -789,5 +966,150 @@
     });
   </script>
   <script src="app.js?v=20261012-v4"></script>
+</body>
+</html>
+  <!-- ==================== GALLERY LIGHTBOX MODAL (IMAGE & VIDEO) ==================== -->
+  <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/92 p-4 backdrop-blur-md transition-all">
+    <div class="relative max-w-5xl w-full flex flex-col items-center">
+      <!-- Close Button -->
+      <button id="lightbox-close-btn" class="absolute -top-12 right-0 sm:right-2 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold transition-all shadow-lg">
+        ✕
+      </button>
+
+      <!-- Media Container -->
+      <div class="w-full flex justify-center items-center overflow-hidden rounded-2xl bg-black/40 p-2 shadow-2xl border border-white/10 max-h-[75vh]">
+        <img id="lightbox-img" src="" alt="Enlarged project view" class="max-h-[72vh] max-w-full object-contain rounded-xl shadow-lg hidden" />
+        <video id="lightbox-video" controls playsinline class="max-h-[72vh] max-w-full rounded-xl shadow-lg hidden">
+          <source id="lightbox-video-source" src="" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Caption & Inquiry Bar -->
+      <div class="mt-4 w-full flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#122822]/90 border border-white/15 rounded-2xl px-6 py-4 text-linen shadow-xl backdrop-blur-md">
+        <div class="text-center sm:text-left">
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <span id="lightbox-badge" class="inline-block rounded-full bg-clay px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-white"></span>
+            <span class="text-xs text-amber-300 font-bold uppercase tracking-wider">Global Mahanshi Builders</span>
+          </div>
+          <h4 id="lightbox-title" class="font-display text-lg sm:text-xl font-bold text-white mt-1"></h4>
+          <p id="lightbox-sub" class="text-xs sm:text-sm text-linen/80 mt-0.5"></p>
+        </div>
+        <div class="shrink-0 flex items-center gap-3">
+          <a id="lightbox-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="sweep inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1ebe5b] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all">
+            <span>Inquire on WhatsApp</span>
+            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Section Filter / Jump Buttons
+      const filterBtns = document.querySelectorAll('.section-filter-btn');
+      const sections = document.querySelectorAll('.gallery-category-section');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('active', 'bg-[#1F3630]', 'text-white');
+            b.classList.add('bg-white/70', 'text-pine');
+          });
+          btn.classList.add('active');
+          btn.classList.remove('bg-white/70', 'text-pine');
+
+          const target = btn.dataset.target;
+          if (target === 'all') {
+            sections.forEach(s => s.classList.remove('hidden'));
+          } else {
+            sections.forEach(s => {
+              if (s.id === target) {
+                s.classList.remove('hidden');
+                s.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              } else {
+                s.classList.add('hidden');
+              }
+            });
+          }
+        });
+      });
+
+      // 2. Lightbox Controller
+      const lightbox = document.getElementById('gallery-lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxVideo = document.getElementById('lightbox-video');
+      const lightboxVideoSource = document.getElementById('lightbox-video-source');
+      const lightboxTitle = document.getElementById('lightbox-title');
+      const lightboxSub = document.getElementById('lightbox-sub');
+      const lightboxBadge = document.getElementById('lightbox-badge');
+      const lightboxWaBtn = document.getElementById('lightbox-wa-btn');
+      const closeBtn = document.getElementById('lightbox-close-btn');
+
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const type = item.dataset.type || 'image';
+          const src = item.dataset.src;
+          const title = item.dataset.title;
+          const sub = item.dataset.sub;
+          const badge = item.dataset.badge;
+
+          if (lightboxTitle) lightboxTitle.textContent = title;
+          if (lightboxSub) lightboxSub.textContent = sub;
+          if (lightboxBadge) lightboxBadge.textContent = badge;
+          if (lightboxWaBtn) {
+            lightboxWaBtn.href = 'https://wa.me/919632734110?text=' + encodeURIComponent("Hi, I am inquiring about the project: '" + title + "' on your gallery.");
+          }
+
+          if (type === 'video') {
+            if (lightboxImg) lightboxImg.classList.add('hidden');
+            if (lightboxVideo && lightboxVideoSource) {
+              lightboxVideoSource.src = src;
+              lightboxVideo.load();
+              lightboxVideo.classList.remove('hidden');
+              lightboxVideo.play().catch(() => {});
+            }
+          } else {
+            if (lightboxVideo) {
+              lightboxVideo.pause();
+              lightboxVideo.classList.add('hidden');
+            }
+            if (lightboxImg) {
+              lightboxImg.src = src;
+              lightboxImg.classList.remove('hidden');
+            }
+          }
+
+          if (lightbox) {
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      function closeLightbox() {
+        if (lightbox) {
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+          if (lightboxVideo) {
+            lightboxVideo.pause();
+            if (lightboxVideoSource) lightboxVideoSource.src = '';
+          }
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    });
+  </script>
 </body>
 </html>
