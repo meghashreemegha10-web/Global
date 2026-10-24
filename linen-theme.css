@@ -178,11 +178,11 @@ body {
   color: #ffffff !important;
 }
 
-/* Brand Top Logo - Pure Emblem, NO White Box */
+/* Brand Top Logo - Pure Emblem, Crisp, Clear & Beautiful */
 .brand-top-logo {
-  height: 64px !important;
+  height: 66px !important;
   width: auto !important;
-  max-height: 68px !important;
+  max-height: 70px !important;
   object-fit: contain !important;
   display: block !important;
   background: transparent !important;
@@ -190,14 +190,16 @@ body {
   box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45)) !important;
-  image-rendering: -webkit-optimize-contrast !important;
-  image-rendering: crisp-edges !important;
-  transition: transform 0.25s ease !important;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4)) contrast(1.08) brightness(1.04) !important;
+  image-rendering: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  transform: translateZ(0) !important;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), filter 0.25s ease !important;
 }
 
 .brand-top-logo:hover {
-  transform: scale(1.05) !important;
+  transform: scale(1.05) translateZ(0) !important;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.5)) contrast(1.1) brightness(1.08) !important;
 }
 
 .brand-subtitle {
@@ -334,8 +336,8 @@ input[type="range"].linen-slider::-webkit-slider-thumb:hover {
   left: 8px;
   width: 14px;
   height: 14px;
-  border-top: 2px solid #D4AF37;
-  border-left: 2px solid #D4AF37;
+  border-top: 2px solid #B85D26;
+  border-left: 2px solid #B85D26;
   pointer-events: none;
   z-index: 5;
 }
@@ -346,8 +348,8 @@ input[type="range"].linen-slider::-webkit-slider-thumb:hover {
   right: 8px;
   width: 14px;
   height: 14px;
-  border-bottom: 2px solid #D4AF37;
-  border-right: 2px solid #D4AF37;
+  border-bottom: 2px solid #B85D26;
+  border-right: 2px solid #B85D26;
   pointer-events: none;
   z-index: 5;
 }
@@ -366,52 +368,50 @@ input[type="range"].linen-slider::-webkit-slider-thumb:hover {
   user-select: none;
 }
 .plot-tile.available {
-  background-color: rgba(16, 185, 129, 0.2);
+  background-color: #E8F8F0;
   border: 1.5px solid #10B981;
-  color: #34D399;
+  color: #046A47;
 }
 .plot-tile.available:hover, .plot-tile.selected {
   background-color: #10B981;
-  color: #04120E;
-  border-color: #6EE7B7;
+  color: #FFFFFF;
+  border-color: #059669;
   transform: scale(1.08);
-  box-shadow: 0 0 14px rgba(16, 185, 129, 0.6);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
   z-index: 10;
 }
 .plot-tile.booked {
-  background-color: rgba(245, 158, 11, 0.2);
+  background-color: #FEF6E6;
   border: 1.5px solid #F59E0B;
-  color: #FCD34D;
+  color: #92400E;
 }
 .plot-tile.booked:hover {
   background-color: #F59E0B;
-  color: #04120E;
-  border-color: #FDE68A;
+  color: #FFFFFF;
+  border-color: #D97706;
   transform: scale(1.08);
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
   z-index: 10;
 }
 .plot-tile.sold {
-  background-color: rgba(100, 116, 139, 0.15);
-  border: 1.5px solid #475569;
-  color: #64748B;
+  background-color: #F1F4F3;
+  border: 1.5px solid #CBD5E1;
+  color: #94A3B8;
   cursor: not-allowed;
-  opacity: 0.55;
+  opacity: 0.75;
 }
 
-/* Hero Backdrop with Soft Atmospheric Semi-Transparency */
+/* Hero Backdrop with Soft Atmospheric Semi-Transparency (Bright with Protective Left Text Zone) */
 .hero-plain-backdrop {
   display: block !important;
   position: absolute !important;
   inset: 0 !important;
   background: linear-gradient(
     to right,
-    rgba(12, 28, 22, 0.72) 0%,
-    rgba(12, 28, 22, 0.58) 35%,
-    rgba(12, 28, 22, 0.20) 55%,
-    rgba(12, 28, 22, 0.04) 70%,
-    rgba(12, 28, 22, 0) 82%,
-    rgba(12, 28, 22, 0) 100%
+    rgba(6, 16, 12, 0.65) 0%,
+    rgba(6, 16, 12, 0.44) 36%,
+    rgba(6, 16, 12, 0.14) 62%,
+    rgba(6, 16, 12, 0.00) 100%
   ) !important;
   opacity: 1 !important;
   pointer-events: none !important;
@@ -422,10 +422,10 @@ input[type="range"].linen-slider::-webkit-slider-thumb:hover {
     display: block !important;
     background: linear-gradient(
       to bottom,
-      rgba(12, 28, 22, 0.75) 0%,
-      rgba(12, 28, 22, 0.52) 50%,
-      rgba(12, 28, 22, 0.15) 80%,
-      rgba(12, 28, 22, 0) 100%
+      rgba(6, 16, 12, 0.72) 0%,
+      rgba(6, 16, 12, 0.45) 48%,
+      rgba(6, 16, 12, 0.16) 80%,
+      rgba(6, 16, 12, 0.00) 100%
     ) !important;
     opacity: 1 !important;
   }
@@ -554,4 +554,94 @@ input[type="range"].linen-slider::-webkit-slider-thumb:hover {
 .portal-input::placeholder {
   color: rgba(253, 252, 238, 0.4);
 }
+
+/* ==========================================================================
+   INTERACTIVE HOME EMI CALCULATOR — ARCHITECTURAL LIGHT PALETTE
+   ========================================================================== */
+#calculator,
+.card-calculator-warm {
+  background: linear-gradient(145deg, #FAF4EB 0%, #F1E5D6 100%) !important;
+  background-color: #FAF4EB !important;
+  border: 2px solid #D6C2AB !important;
+  box-shadow: 0 16px 36px -8px rgba(158, 63, 28, 0.10), 0 6px 18px -3px rgba(31, 54, 48, 0.05) !important;
+  color: #1F3630 !important;
+}
+
+#calculator h3,
+#calculator h4 {
+  color: #1F3630 !important;
+}
+
+#calculator h3 span {
+  color: #9E3F1C !important;
+}
+
+#calculator p {
+  color: #384641 !important;
+}
+
+#calculator .bg-white,
+#calculator .card-linen-soft,
+#calculator .card-result-secondary {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #E6DCD0 !important;
+  box-shadow: 0 2px 8px rgba(31, 54, 48, 0.04) !important;
+}
+
+#calculator label {
+  color: #1F3630 !important;
+}
+
+#calculator input,
+#calculator select {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #D8CBB9 !important;
+  color: #1F3630 !important;
+}
+
+#calculator input:focus,
+#calculator select:focus {
+  border-color: #9E3F1C !important;
+  box-shadow: 0 0 0 3px rgba(158, 63, 28, 0.18) !important;
+  outline: none !important;
+}
+
+#calculator #emi-calc-btn,
+#calculator .btn-terracotta-primary {
+  background-color: #9E3F1C !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(158, 63, 28, 0.3) !important;
+}
+
+#calculator #emi-calc-btn:hover,
+#calculator .btn-terracotta-primary:hover {
+  background-color: #1F3630 !important;
+}
+
+#calculator #emi-reset-btn {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #D8CBB9 !important;
+  color: #1F3630 !important;
+}
+
+#calculator #emi-reset-btn:hover {
+  background-color: #FAF4EB !important;
+  border-color: #9E3F1C !important;
+}
+
+#calculator .card-result-emi {
+  background: linear-gradient(135deg, #FFFDF8 0%, #FAEDE0 100%) !important;
+  border: 2px solid #9E3F1C !important;
+  box-shadow: 0 4px 14px rgba(158, 63, 28, 0.12) !important;
+}
+
+#calculator #emi-monthly-result {
+  color: #9E3F1C !important;
+}
+
+#calculator #emi-interest-result,
+#calculator #emi-total-result {
+  color: #1F3630 !important;
+}
+
 

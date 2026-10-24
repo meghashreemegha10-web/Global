@@ -10,16 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: 'Teak · Travertine · Expansive Double Glass',
       desc: 'Seamless indoor-outdoor living with floor-to-ceiling glass, cantilevered canopies, and warm travertine stone facades.',
       specs: 'Teak · Travertine · Expansive Double Glass',
-      image: 'photos/site-road-demarcated-plots.jpeg'
+      image: 'photos/package-turnkey-luxury-villa.jpg'
     },
     {
       num: '02',
-      badge: 'Plotted Development',
-      title: 'DC Converted Plotted Communities',
-      sub: '25–50 Ft Concrete Roads · Underground Utilities · Green Corridors',
-      desc: 'Master-planned residential plotted layouts with 50 ft main approaches, underground sewage lines, individual E-Khata, and ready title documentation.',
-      specs: 'Concrete Roads · Underground Sewage · Street Lighting',
-      image: 'photos/images-sai-roots-entrance.webp'
+      badge: 'Plotted Community',
+      title: 'Sai Roots Layout 🌳🏡',
+      sub: 'Jigani (Near Electronic City) · 53 Sites · Ready E-Khata · 50 Ft Roads',
+      desc: '📌 Location: Jigani Industrial Corridor, near Electronic City, Bengaluru 🚧🚧 | 📐 Plot Sizes: 600, 800, 1,200 & 1,500+ SQ.FT (53 Premium Demarcated Sites). Master-planned DC converted residential layout with individual E-Khata, 50 ft wide main concrete avenue, 25 ft internal concrete roads, underground drainage & storm pipes, complete street lighting, 24*7 security, and avenue plantation. Bank approved for instant loans (Canara, HDFC, SBI). Ready for immediate registration and custom turnkey villa construction 🏡.',
+      specs: 'Jigani · 53 DC Converted Sites · Ready E-Khata · 50 Ft Concrete Roads · Bank Approved',
+      image: 'photos/site-entrance-arch-cropped.jpeg',
+      link: 'projects.html#sai-roots',
+      linkText: 'Explore Sai Roots Layout →'
     },
     {
       num: '03',
@@ -28,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: '550-Grade TMT Steel · 53-Grade Cement · Teak Main Doors',
       desc: 'Custom turnkey homes built from foundation to final coat. Built with 550-grade TMT steel, branded 53-grade cement, and premium teak main door fixtures.',
       specs: 'TMT Steel 550D · Ultratech Cement · Solid Teak Wood',
-      image: 'photos/site-infrastructure-drainage.jpeg'
+      image: 'photos/site-infrastructure-drainage.jpeg',
+      link: 'packages.html',
+      linkText: 'View Turnkey Construction Packages →'
     },
     {
       num: '04',
@@ -37,16 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: 'Exposed Brick & Stone · Cantilever Terraces · Warm Ambient Glow',
       desc: 'Understated private residences featuring earthy natural stone, interior courtyards, natural cross-ventilation, and shaded outdoor terraces.',
       specs: 'Natural Granite · Porotherm Clay · Warm Lighting',
-      image: 'photos/site-sanctioned-layout-blueprint.jpeg'
+      image: 'photos/sai-prashanthi-excavator-blocks.jpg',
+      link: 'projects.html',
+      linkText: 'View Architectural Bungalows →'
     },
     {
       num: '05',
-      badge: 'Townships',
-      title: 'Gated Park Townships',
-      sub: '53 Sites · Grand Entrance Arch · Landscaped Green Corridors',
-      desc: 'Boutique residential plotted developments designed around central parks, security gates, and immediate building clearances.',
-      specs: 'Avenue Plantations · Rainwater Harvesting · Children\'s Park',
-      image: 'photos/images-sri-sai-prasanthi-entrance.webp'
+      badge: 'Gated Community',
+      title: 'Sri Sai Prashanthi',
+      sub: 'Koppa Ramasandra Rd · 20×40 (800 Sq.Ft) · ₹52L Combo · Kaveri Water',
+      desc: 'Location: Koppa Ramasandra Road, Koppa | Plot Sizes: 20×40 = 800 SQ.FT. Master-planned gated community featuring INDUSVAL Kaveri water connection & 24*7 water supply (total site 3 bores), underground drainage, 30 ft concrete roads, street lights, and 24*7 security near multiple industries. Site + Construction combo from ₹52 Lakhs onwards (Just pay 15 Lakhs down payment, booking amount 2 Lakhs, ready for registration and construction).',
+      specs: 'Koppa Ramasandra Rd · 20×40 Plots · Kaveri Water & 3 Bores · 30 Ft Roads · ₹52L Combo',
+      image: 'photos/sai-prashanthi-grand-entrance-arch.jpg',
+      link: 'projects.html#sri-sai-prashanthi',
+      linkText: 'Explore Sri Sai Prashanthi (₹52L) →'
     },
     {
       num: '06',
@@ -55,7 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sub: 'Granite Flooring · UPVC Acoustic Windows · Modular Living',
       desc: 'High-spec interior appointments including mirror-polish granite, Jaquar bathware, custom modular provisions, and acoustic glass.',
       specs: 'Black Pearl Granite · 4-Track UPVC · Concealed Wiring',
-      image: 'photos/site-entrance-arch-clear.jpeg'
+      image: 'photos/package-standard-granite.jpg',
+      link: 'packages.html',
+      linkText: 'Explore Interior Finishing Specs →'
     }
   ];
 
@@ -65,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const showcaseTitle = document.getElementById('showcase-title');
   const showcaseDesc = document.getElementById('showcase-desc');
   const showcaseSpecs = document.getElementById('showcase-specs');
+  const showcaseLink = document.getElementById('showcase-link');
 
   if (tabButtons.length && showcaseImg) {
     tabButtons.forEach((btn, index) => {
@@ -84,12 +95,32 @@ document.addEventListener('DOMContentLoaded', () => {
             showcaseTitle.textContent = theme.title;
             showcaseDesc.textContent = theme.desc;
             showcaseSpecs.textContent = theme.specs;
+            if (showcaseLink) {
+              showcaseLink.href = theme.link || '#contact';
+              showcaseLink.textContent = theme.linkText || 'Request Palette Specs →';
+            }
             showcaseImg.style.opacity = '1';
             showcaseImg.style.transform = 'scale(1)';
           }, 200);
         }
       });
     });
+
+    // Quick toggle buttons between Sai Roots and Sri Sai Prashanthi
+    const quickSaiRoots = document.getElementById('quick-sai-roots-btn');
+    const quickSaiPrashanthi = document.getElementById('quick-sai-prashanthi-btn');
+    if (quickSaiRoots && tabButtons[1]) {
+      quickSaiRoots.addEventListener('click', (e) => {
+        e.stopPropagation();
+        tabButtons[1].click();
+      });
+    }
+    if (quickSaiPrashanthi && tabButtons[4]) {
+      quickSaiPrashanthi.addEventListener('click', (e) => {
+        e.stopPropagation();
+        tabButtons[4].click();
+      });
+    }
   }
 
   // --- 2. SECTION 6: INTERACTIVE HOME EMI CALCULATOR ---
@@ -185,8 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const concept = btn.dataset.concept;
         if (concept === 'blend' || concept === 'villa') {
-          heroImg.src = 'photos/hero-architectural-villa.webp';
-          heroImg.style.filter = 'brightness(0.95) contrast(1.05)';
+          heroImg.src = 'photos/ai-nav-home.jpg';
+          heroImg.style.filter = 'brightness(1.03) contrast(1.05)';
+          heroImg.style.opacity = '0.84';
         }
       });
     });
@@ -260,6 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- 7. SECTION 5B: INTERACTIVE SAI ROOTS MASTER BLUEPRINT & PLOT AVAILABILITY ---
+  // --- 4. SECTION 5B: MASTER BLUEPRINT & PLOT AVAILABILITY TRACKER ---
   const plotGrid = document.getElementById('plotGridVisual');
   const plotDetail = document.getElementById('plotSelectedDetail');
   const blueprintTrigger = document.getElementById('blueprint-zoom-trigger');
@@ -268,37 +301,137 @@ document.addEventListener('DOMContentLoaded', () => {
   const blueprintDisplayImg = document.getElementById('blueprint-display-img');
   const blueprintModalImg = document.getElementById('blueprint-modal-img');
   const blueprintModalTitle = document.getElementById('blueprint-modal-title');
-  const tabBtnSketch = document.getElementById('tab-btn-sketch');
+  const blueprintCardTitle = document.getElementById('blueprint-card-title');
+  const blueprintNorthBadge = document.getElementById('blueprint-north-badge');
+  const blueprintLegalBadge = document.getElementById('blueprint-legal-badge');
+  const blueprintCaptionText = document.getElementById('blueprint-caption-text');
+  const singleBlueprintView = document.getElementById('single-blueprint-view');
+  const dualBlueprintView = document.getElementById('dual-blueprint-view');
+  const dualTriggerSaiRoots = document.getElementById('dual-trigger-sairoots');
+  const dualTriggerSaiPrashanthi = document.getElementById('dual-trigger-saiprashanthi');
+
+  const tabBtnSaiRoots = document.getElementById('tab-btn-sairoots') || document.getElementById('tab-btn-sketch');
+  const tabBtnSaiPrashanthi = document.getElementById('tab-btn-saiprashanthi');
+  const tabBtnCompare = document.getElementById('tab-btn-compare');
   const tabBtnMaster = document.getElementById('tab-btn-master');
 
-  if (tabBtnSketch && tabBtnMaster) {
-    tabBtnSketch.addEventListener('click', (e) => {
-      e.stopPropagation();
-      tabBtnSketch.classList.add('bg-[#F5C344]', 'text-[#122822]');
-      tabBtnSketch.classList.remove('bg-white/10', 'text-white/80');
-      tabBtnMaster.classList.remove('bg-[#F5C344]', 'text-[#122822]');
-      tabBtnMaster.classList.add('bg-white/10', 'text-white/80');
-      if (blueprintDisplayImg) blueprintDisplayImg.src = 'photos/sai_roots_gate.jpg';
-      if (blueprintModalImg) blueprintModalImg.src = 'photos/sai_roots_gate.jpg';
-      if (blueprintModalTitle) blueprintModalTitle.textContent = 'Sai Roots Layout — Official Sanctioned Layout Sketch';
-    });
-    tabBtnMaster.addEventListener('click', (e) => {
-      e.stopPropagation();
-      tabBtnMaster.classList.add('bg-[#F5C344]', 'text-[#122822]');
-      tabBtnMaster.classList.remove('bg-white/10', 'text-white/80');
-      tabBtnSketch.classList.remove('bg-[#F5C344]', 'text-[#122822]');
-      tabBtnSketch.classList.add('bg-white/10', 'text-white/80');
-      if (blueprintDisplayImg) blueprintDisplayImg.src = 'photos/master-layout.webp';
-      if (blueprintModalImg) blueprintModalImg.src = 'photos/master-layout.webp';
-      if (blueprintModalTitle) blueprintModalTitle.textContent = 'Sai Roots Layout — Plotted Master Grid';
+  const trackerBtnSaiRoots = document.getElementById('tracker-btn-sairoots');
+  const trackerBtnSaiPrashanthi = document.getElementById('tracker-btn-saiprashanthi');
+
+  let activeProject = 'sairoots'; // 'sairoots' or 'saiprashanthi'
+
+  function openBlueprintModal(src, title) {
+    if (!blueprintModal || !blueprintModalImg) return;
+    blueprintModalImg.src = src;
+    if (blueprintModalTitle) blueprintModalTitle.textContent = title;
+    blueprintModal.classList.remove('hidden');
+    blueprintModal.classList.add('flex');
+  }
+
+  function setBlueprintTabActive(activeBtn) {
+    const allTabs = [tabBtnSaiRoots, tabBtnSaiPrashanthi, tabBtnCompare, tabBtnMaster];
+    allTabs.forEach(b => {
+      if (!b) return;
+      if (b === activeBtn) {
+        b.className = 'px-3.5 py-1.5 rounded-full text-xs font-bold bg-clay text-white shadow transition-all cursor-pointer';
+      } else {
+        b.className = 'px-3.5 py-1.5 rounded-full text-xs font-bold bg-white text-pine border border-[#D6C2AB] hover:bg-[#FAF4EB] transition-all cursor-pointer';
+      }
     });
   }
 
-  if (blueprintTrigger && blueprintModal && blueprintClose) {
-    blueprintTrigger.addEventListener('click', () => {
-      blueprintModal.classList.remove('hidden');
-      blueprintModal.classList.add('flex');
+  function showSaiRootsBlueprint() {
+    setBlueprintTabActive(tabBtnSaiRoots);
+    if (singleBlueprintView) singleBlueprintView.classList.remove('hidden');
+    if (dualBlueprintView) {
+      dualBlueprintView.classList.add('hidden');
+      dualBlueprintView.classList.remove('grid');
+    }
+    if (blueprintDisplayImg) blueprintDisplayImg.src = 'photos/sai_roots_gate.jpg';
+    if (blueprintCardTitle) blueprintCardTitle.textContent = 'Official Layout Blueprint';
+    if (blueprintNorthBadge) blueprintNorthBadge.textContent = '🧭 0° TRUE NORTH';
+    if (blueprintLegalBadge) blueprintLegalBadge.textContent = 'DC Converted · E-Khata';
+    if (blueprintCaptionText) {
+      blueprintCaptionText.textContent = 'Gram Panchayat Sanctioned Layout in Sy.No. 41/1, Bukkasagara, Jigani Hobli. 53 residential sites, 50 ft main road, 40 ft entrance arch, 25 ft internal concrete roads, parks, and underground services.';
+    }
+  }
+
+  function showSaiPrashanthiBlueprint() {
+    setBlueprintTabActive(tabBtnSaiPrashanthi);
+    if (singleBlueprintView) singleBlueprintView.classList.remove('hidden');
+    if (dualBlueprintView) {
+      dualBlueprintView.classList.add('hidden');
+      dualBlueprintView.classList.remove('grid');
+    }
+    if (blueprintDisplayImg) blueprintDisplayImg.src = 'photos/global-sai-prashanthi-layout-plan.jpg';
+    if (blueprintCardTitle) blueprintCardTitle.textContent = 'Global Sri Sai Prashanthi Blueprint';
+    if (blueprintNorthBadge) blueprintNorthBadge.textContent = '🧭 TRUE NORTH';
+    if (blueprintLegalBadge) blueprintLegalBadge.textContent = 'Koppa Ramasandra Rd · 27 Sites';
+    if (blueprintCaptionText) {
+      blueprintCaptionText.textContent = 'Global Sri Sai Prashanthi Sanctioned Master Layout Plan on Koppa Ramasandra Road, Koppa. 27 residential sites (standard 20×40 = 800 sq.ft and odd plots), 25 ft internal concrete road, INDUSVAL Kaveri water connection, 3 borewells, underground drainage, transformer, and STP.';
+    }
+  }
+
+  function showCompareBothBlueprints() {
+    setBlueprintTabActive(tabBtnCompare);
+    if (singleBlueprintView) singleBlueprintView.classList.add('hidden');
+    if (dualBlueprintView) {
+      dualBlueprintView.classList.remove('hidden');
+      dualBlueprintView.classList.add('grid');
+    }
+    if (blueprintCardTitle) blueprintCardTitle.textContent = 'Comparative Master Blueprints';
+    if (blueprintNorthBadge) blueprintNorthBadge.textContent = '🧭 TRUE NORTH';
+    if (blueprintLegalBadge) blueprintLegalBadge.textContent = 'DC Converted Developments';
+    if (blueprintCaptionText) {
+      blueprintCaptionText.textContent = 'Comparative Master Blueprints: Sai Roots (53 Sites in Jigani corridor) alongside Global Sri Sai Prashanthi (27 Sites on Koppa Ramasandra Road). Click any sketch to zoom full resolution.';
+    }
+  }
+
+  function showMasterGridBlueprint() {
+    setBlueprintTabActive(tabBtnMaster);
+    if (singleBlueprintView) singleBlueprintView.classList.remove('hidden');
+    if (dualBlueprintView) {
+      dualBlueprintView.classList.add('hidden');
+      dualBlueprintView.classList.remove('grid');
+    }
+    if (blueprintDisplayImg) blueprintDisplayImg.src = 'photos/master-layout.webp';
+    if (blueprintCardTitle) blueprintCardTitle.textContent = 'Sai Roots Plotted Master Grid';
+    if (blueprintNorthBadge) blueprintNorthBadge.textContent = '🧭 0° TRUE NORTH';
+    if (blueprintLegalBadge) blueprintLegalBadge.textContent = 'Architectural Demarcation';
+    if (blueprintCaptionText) {
+      blueprintCaptionText.textContent = 'Plotted Master Grid for Sai Roots Layout highlighting numbered villa sites, internal concrete avenue network, green buffer zones, and civic infrastructure.';
+    }
+  }
+
+  if (tabBtnSaiRoots) tabBtnSaiRoots.addEventListener('click', (e) => { e.stopPropagation(); showSaiRootsBlueprint(); switchTrackerProject('sairoots'); });
+  if (tabBtnSaiPrashanthi) tabBtnSaiPrashanthi.addEventListener('click', (e) => { e.stopPropagation(); showSaiPrashanthiBlueprint(); switchTrackerProject('saiprashanthi'); });
+  if (tabBtnCompare) tabBtnCompare.addEventListener('click', (e) => { e.stopPropagation(); showCompareBothBlueprints(); });
+  if (tabBtnMaster) tabBtnMaster.addEventListener('click', (e) => { e.stopPropagation(); showMasterGridBlueprint(); });
+
+  if (dualTriggerSaiRoots) {
+    dualTriggerSaiRoots.addEventListener('click', () => {
+      openBlueprintModal('photos/sai_roots_gate.jpg', 'Sai Roots Layout — Official Sanctioned Layout Sketch');
     });
+  }
+  if (dualTriggerSaiPrashanthi) {
+    dualTriggerSaiPrashanthi.addEventListener('click', () => {
+      openBlueprintModal('photos/global-sai-prashanthi-layout-plan.jpg', 'Global Sri Sai Prashanthi — Official Master Layout Plan');
+    });
+  }
+
+  if (blueprintTrigger) {
+    blueprintTrigger.addEventListener('click', () => {
+      const currentSrc = blueprintDisplayImg ? blueprintDisplayImg.src : 'photos/sai_roots_gate.jpg';
+      const isPrashanthi = currentSrc.includes('global-sai-prashanthi');
+      const isMaster = currentSrc.includes('master-layout');
+      const title = isPrashanthi 
+        ? 'Global Sri Sai Prashanthi — Official Master Layout Plan' 
+        : (isMaster ? 'Sai Roots Layout — Plotted Master Grid' : 'Sai Roots Layout — Official Sanctioned Layout Sketch');
+      openBlueprintModal(currentSrc, title);
+    });
+  }
+
+  if (blueprintClose && blueprintModal) {
     blueprintClose.addEventListener('click', () => {
       blueprintModal.classList.add('hidden');
       blueprintModal.classList.remove('flex');
@@ -311,15 +444,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (plotGrid) {
+  const aboutShowcaseTrigger = document.getElementById('about-showcase-zoom-trigger');
+  if (aboutShowcaseTrigger) {
+    aboutShowcaseTrigger.addEventListener('click', () => {
+      openBlueprintModal('photos/global-mahanshi-about-us.jpg', 'Global Mahanshi Builders — Official Brand Showcase');
+    });
+  }
+
+  // --- PLOT AVAILABILITY TRACKER LOGIC (Supports Sai Roots: 53 & Sri Sai Prashanthi: 27) ---
+  function getSaiRootsPlots() {
     const plots = [];
     for (let i = 1; i <= 53; i++) {
       let status = 'available';
-      if ([3, 7, 12, 18, 24, 29, 35, 41, 49].includes(i)) {
-        status = 'booked';
-      } else if ([1, 2, 5, 8, 15, 20, 21, 30, 31, 32, 45, 50, 52].includes(i)) {
-        status = 'sold';
-      }
+      if ([3, 7, 12, 18, 24, 29, 35, 41, 49].includes(i)) status = 'booked';
+      else if ([1, 2, 5, 8, 15, 20, 21, 30, 31, 32, 45, 50, 52].includes(i)) status = 'sold';
 
       let size = '30 × 40 (1,200 sq.ft)';
       let facing = (i % 2 === 0) ? 'North Facing' : 'East Facing';
@@ -330,12 +468,43 @@ document.addEventListener('DOMContentLoaded', () => {
         size = 'Custom Dimension (600–1,000 sq.ft)';
         facing = 'West Facing';
       }
-
-      plots.push({ id: i, status, size, facing });
+      plots.push({ id: i, project: 'sairoots', projectName: 'Sai Roots Layout', status, size, facing, roads: '25/50 ft Concrete', water: 'UGD & Water Ready' });
     }
+    return plots;
+  }
+
+  function getSaiPrashanthiPlots() {
+    const plots = [];
+    const sizes = {
+      1: '20\'-4" × 40\' (813 sq.ft)', 2: '20\'-4" × 40\' (813 sq.ft)', 3: '20\'-4" × 40\' (813 sq.ft)',
+      4: '27\'-4" × 40\' (1,093 sq.ft)', 5: '27\'-4" × 40\' (1,093 sq.ft)', 6: '20\'-4" × 40\' (813 sq.ft)',
+      7: '20\'-4" × 40\' (813 sq.ft)', 8: '20\'-4" × 40\' (813 sq.ft)', 9: '20\'-4" × 40\' (813 sq.ft)',
+      10: '20\'-4" × 40\' (813 sq.ft)', 11: '20\'-4" × 40\' (813 sq.ft)', 12: '20\'-4" × 40\' (813 sq.ft)',
+      13: '20\'-4" × 40\' (813 sq.ft)', 14: '20\'-4" × 40\' (813 sq.ft)', 15: '20\'-4" × 40\' (813 sq.ft)',
+      16: '34\' × 40\' Corner (1,360 sq.ft)', 17: '41\'-10" × 25\'-11" (Corner)', 18: '34\'-6" × 34\'-11"',
+      19: '29\'-6" × 29\'-5"', 20: '28\'-10" × 29\'', 21: '32\' × 32\'-2"', 22: '30\'-2" × 30\'-3"',
+      23: '30\'-4" × 30\'-5"', 24: '26\'-3" × 26\'-3"', 25: '27\'-3" × 27\'-3"', 26: '29\'-2" × 29\'-3"',
+      27: '22\'-9" × 26\'-3" Corner'
+    };
+    for (let i = 1; i <= 27; i++) {
+      let status = 'available';
+      if ([3, 7, 12, 18, 24].includes(i)) status = 'booked';
+      else if ([5, 15, 20, 26].includes(i)) status = 'sold';
+
+      let facing = i <= 16 ? 'North/East Facing' : 'South/West Facing';
+      let size = sizes[i] || '20 × 40 (800 sq.ft)';
+      plots.push({ id: i, project: 'saiprashanthi', projectName: 'Sri Sai Prashanthi', status, size, facing, roads: '25/30 ft Concrete Avenue', water: 'INDUSVAL Kaveri & 3 Borewells', packageOffer: '₹52 Lakhs* All-Inclusive Site + Build' });
+    }
+    return plots;
+  }
+
+  function renderPlotGrid(projectKey) {
+    if (!plotGrid) return;
+    activeProject = projectKey;
+    const plots = (projectKey === 'saiprashanthi') ? getSaiPrashanthiPlots() : getSaiRootsPlots();
 
     plotGrid.innerHTML = plots.map(p => `
-      <div class="plot-tile ${p.status}" data-plot-id="${p.id}" title="Plot #${p.id} (${p.status.toUpperCase()})">
+      <div class="plot-tile ${p.status}" data-plot-id="${p.id}" data-project="${p.project}" title="${p.projectName} Plot #${p.id} (${p.status.toUpperCase()})">
         <span>#${p.id}</span>
       </div>
     `).join('');
@@ -352,51 +521,59 @@ document.addEventListener('DOMContentLoaded', () => {
         if (plotDetail) {
           const isAvail = plot.status === 'available';
           const badgeClass = isAvail 
-            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500' 
-            : (plot.status === 'booked' ? 'bg-amber-500/20 text-amber-300 border-amber-500' : 'bg-slate-500/20 text-slate-400 border-slate-500');
+            ? 'bg-emerald-100 text-emerald-800 border-emerald-500' 
+            : (plot.status === 'booked' ? 'bg-amber-100 text-amber-800 border-amber-500' : 'bg-slate-200 text-slate-700 border-slate-400');
+          const isPrashanthi = plot.project === 'saiprashanthi';
 
           plotDetail.innerHTML = `
-            <div class="bg-[#0d1d19] border border-amber-400/40 rounded-2xl p-4 sm:p-5 shadow-lg bracket-frame">
-              <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-white/10 mb-3">
+            <div class="bg-white border-2 border-clay/40 rounded-2xl p-4 sm:p-5 shadow-md bracket-frame">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E6DCD0] mb-3">
                 <div class="flex items-center gap-2">
-                  <h4 class="font-display text-lg sm:text-xl font-bold text-white">Sai Roots — Plot #${plot.id}</h4>
+                  <h4 class="font-display text-lg sm:text-xl font-bold text-pine-heading">${plot.projectName} — Plot #${plot.id}</h4>
                   <span class="text-[11px] font-bold uppercase px-2.5 py-0.5 rounded-full border ${badgeClass}">${plot.status}</span>
                 </div>
-                <span class="text-xs font-bold text-[#F5C344] tracking-wider">DC-CONVERTED · E-KHATA</span>
+                <span class="text-xs font-bold text-clay tracking-wider">${isPrashanthi ? 'KOPPA ROAD · GATED' : 'DC-CONVERTED · E-KHATA'}</span>
               </div>
               
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-4 text-xs">
-                <div class="bg-[#122822] p-2.5 rounded-xl border border-white/10">
-                  <span class="text-[#8E9B95] block text-[10px] uppercase font-bold">Dimensions</span>
-                  <span class="text-white font-bold mt-0.5 block">${plot.size}</span>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-4 text-xs font-sans">
+                <div class="bg-[#FAF4EB] p-2.5 rounded-xl border border-[#E6DCD0]">
+                  <span class="text-pine-muted block text-[10px] uppercase font-bold">Dimensions</span>
+                  <span class="text-pine font-bold mt-0.5 block">${plot.size}</span>
                 </div>
-                <div class="bg-[#122822] p-2.5 rounded-xl border border-white/10">
-                  <span class="text-[#8E9B95] block text-[10px] uppercase font-bold">Orientation</span>
-                  <span class="text-white font-bold mt-0.5 block">🧭 ${plot.facing} (Vastu)</span>
+                <div class="bg-[#FAF4EB] p-2.5 rounded-xl border border-[#E6DCD0]">
+                  <span class="text-pine-muted block text-[10px] uppercase font-bold">Orientation</span>
+                  <span class="text-pine font-bold mt-0.5 block">🧭 ${plot.facing}</span>
                 </div>
-                <div class="bg-[#122822] p-2.5 rounded-xl border border-white/10">
-                  <span class="text-[#8E9B95] block text-[10px] uppercase font-bold">Road Access</span>
-                  <span class="text-white font-bold mt-0.5 block">🛣️ 25/40 ft Concrete</span>
+                <div class="bg-[#FAF4EB] p-2.5 rounded-xl border border-[#E6DCD0]">
+                  <span class="text-pine-muted block text-[10px] uppercase font-bold">Road Access</span>
+                  <span class="text-pine font-bold mt-0.5 block">🛣️ ${plot.roads}</span>
                 </div>
-                <div class="bg-[#122822] p-2.5 rounded-xl border border-white/10">
-                  <span class="text-[#8E9B95] block text-[10px] uppercase font-bold">Utilities</span>
-                  <span class="text-white font-bold mt-0.5 block">⚡ UGD &amp; Water Ready</span>
+                <div class="bg-[#FAF4EB] p-2.5 rounded-xl border border-[#E6DCD0]">
+                  <span class="text-pine-muted block text-[10px] uppercase font-bold">Water &amp; Power</span>
+                  <span class="text-pine font-bold mt-0.5 block">${plot.water}</span>
                 </div>
               </div>
+
+              ${isPrashanthi ? `
+                <div class="mb-3.5 p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-bold text-amber-950 flex items-center justify-between">
+                  <span>✨ Combo Offer: Site + Custom Home Just ₹52 Lakhs* Onwards</span>
+                  <span class="text-[11px] text-emerald-800 bg-white px-2 py-0.5 rounded border border-amber-300">Down Payment: ₹15L</span>
+                </div>
+              ` : ''}
 
               <div class="flex flex-wrap items-center gap-3">
                 ${isAvail ? `
                   <a href="#contact" class="btn-terracotta-primary text-xs font-bold uppercase px-4 py-2 rounded-full shadow-md">
                     Book Priority Site Visit
                   </a>
-                  <a href="https://wa.me/919632734110?text=Hi%2C%20I%20am%20interested%20in%20Sai%20Roots%20Layout%20Plot%20%23${plot.id}%20(${encodeURIComponent(plot.size)}%2C%20${encodeURIComponent(plot.facing)}).%20Please%20share%20the%20price%20quote%20and%20availability." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-full inline-flex items-center gap-1.5 transition-all">
+                  <a href="https://wa.me/919632734110?text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(plot.projectName)}%20Plot%20%23${plot.id}%20(${encodeURIComponent(plot.size)}).%20Please%20share%20the%20price%20quote%20and%20availability." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded-full inline-flex items-center gap-1.5 transition-all shadow-sm">
                     <span>💬</span> Inquire Plot #${plot.id} on WhatsApp
                   </a>
                 ` : `
                   <a href="#contact" class="btn-pine-outline text-xs font-bold uppercase px-4 py-2 rounded-full">
                     Enquire Similar Plots
                   </a>
-                  <a href="https://wa.me/919632734110?text=Hi%2C%20Plot%20%23${plot.id}%20is%20${plot.status}.%20Please%20share%20other%20available%20plots%20with%20similar%20dimensions." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-full inline-flex items-center gap-1.5 transition-all">
+                  <a href="https://wa.me/919632734110?text=Hi%2C%20Plot%20%23${plot.id}%20at%20${encodeURIComponent(plot.projectName)}%20is%20${plot.status}.%20Please%20share%20other%20available%20plots." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded-full inline-flex items-center gap-1.5 transition-all shadow-sm">
                     <span>💬</span> WhatsApp Agent
                   </a>
                 `}
@@ -407,6 +584,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  function switchTrackerProject(projectKey) {
+    if (projectKey === 'saiprashanthi') {
+      if (trackerBtnSaiPrashanthi) trackerBtnSaiPrashanthi.className = 'px-3 py-1 rounded-full text-xs font-bold bg-clay text-white shadow transition-all cursor-pointer';
+      if (trackerBtnSaiRoots) trackerBtnSaiRoots.className = 'px-3 py-1 rounded-full text-xs font-bold bg-white text-pine border border-[#D6C2AB] hover:bg-[#FAF4EB] transition-all cursor-pointer';
+    } else {
+      if (trackerBtnSaiRoots) trackerBtnSaiRoots.className = 'px-3 py-1 rounded-full text-xs font-bold bg-clay text-white shadow transition-all cursor-pointer';
+      if (trackerBtnSaiPrashanthi) trackerBtnSaiPrashanthi.className = 'px-3 py-1 rounded-full text-xs font-bold bg-white text-pine border border-[#D6C2AB] hover:bg-[#FAF4EB] transition-all cursor-pointer';
+    }
+    renderPlotGrid(projectKey);
+  }
+
+  if (trackerBtnSaiRoots) trackerBtnSaiRoots.addEventListener('click', () => switchTrackerProject('sairoots'));
+  if (trackerBtnSaiPrashanthi) trackerBtnSaiPrashanthi.addEventListener('click', () => switchTrackerProject('saiprashanthi'));
+
+  // Initialize Plot Tracker with default Sai Roots
+  renderPlotGrid('sairoots');
 
   // --- 8. CLIENT LOGIN PORTAL POPUP MODAL CONTROLLER (UNIQUE ARCHITECTURAL VAULT) ---
   function initLoginModal() {
@@ -746,5 +940,66 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initLoginModal();
+
+  // --- SRI SAI PRASHANTHI INTERACTIVE PHOTO VIEWER & ZOOM ---
+  const spMainImg = document.getElementById('sp-main-img');
+  const spImgBadge = document.getElementById('sp-img-badge');
+  const spThumbBtns = document.querySelectorAll('.sp-thumb-btn');
+  const spMainBox = document.getElementById('sp-main-view-box');
+
+  if (spMainImg && spThumbBtns.length > 0) {
+    spThumbBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const src = btn.getAttribute('data-src');
+        const badge = btn.getAttribute('data-badge');
+        const title = btn.getAttribute('data-title');
+
+        if (src) {
+          spMainImg.style.opacity = '0';
+          setTimeout(() => {
+            spMainImg.src = src;
+            spMainImg.alt = title || 'Sri Sai Prashanthi Photo';
+            spMainImg.style.opacity = '1';
+          }, 150);
+        }
+
+        if (spImgBadge && badge) {
+          spImgBadge.textContent = badge;
+        }
+
+        spThumbBtns.forEach(b => {
+          b.classList.remove('border-clay', 'active');
+          b.classList.add('border-transparent');
+        });
+        btn.classList.remove('border-transparent');
+        btn.classList.add('border-clay', 'active');
+      });
+    });
+
+    function openSpModal() {
+      const blueprintModal = document.getElementById('blueprint-modal');
+      const blueprintModalImg = document.getElementById('blueprint-modal-img');
+      const blueprintModalTitle = document.getElementById('blueprint-modal-title');
+      if (blueprintModal && blueprintModalImg) {
+        blueprintModalImg.src = spMainImg.src;
+        if (blueprintModalTitle) {
+          const activeBtn = document.querySelector('.sp-thumb-btn.active');
+          blueprintModalTitle.textContent = 'Sri Sai Prashanthi — ' + (activeBtn ? activeBtn.getAttribute('data-title') : 'Authentic Layout View');
+        }
+        blueprintModal.classList.remove('hidden');
+        blueprintModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    if (spMainBox) {
+      spMainBox.addEventListener('click', (e) => {
+        openSpModal();
+      });
+    }
+  }
 });
+
 

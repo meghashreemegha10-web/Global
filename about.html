@@ -53,8 +53,9 @@
     }
   </script>
   <link rel="stylesheet" href="linen-theme.css?v=20261013-v3" />
+  <link rel="stylesheet" href="light-theme.css?v=20261019-v9" />
 </head>
-<body class="bg-[#1F3630] font-sans text-pine-body antialiased">
+<body class="page-about bg-[#FAF7F0] font-sans text-pine-body antialiased">
 
   <!-- ==================== TOP NAVIGATION HEADER ==================== -->
   <header class="absolute top-0 inset-x-0 z-50 h-20 sm:h-22 lg:h-24 border-b border-white/10 bg-transparent text-[#FDFCEE] transition-all">
@@ -62,7 +63,7 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3.5 group">
-        <img src="images/logo-emblem.png" alt="Global Mahanshi Builders Emblem" class="h-10 sm:h-12 w-auto object-contain filter drop-shadow transition-transform group-hover:scale-105" />
+        <img src="images/logo-emblem.png" alt="Global Mahanshi Builders Logo" class="brand-top-logo" />
         <div class="flex flex-col">
           <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">Global Mahanshi</span>
           <span class="brand-subtitle text-[11px] sm:text-xs font-bold uppercase text-amber-300">Builders</span>
@@ -70,15 +71,15 @@
       </a>
 
       <!-- Primary Navigation -->
-      <nav class="hidden items-center gap-3.5 lg:gap-4 xl:gap-6 2xl:gap-8 lg:flex" aria-label="Primary Navigation">
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="index.html">Home</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-bold tracking-wide text-amber-300 border-b-2 border-amber-300 pb-0.5" href="about.html">About Us</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="services.html">Services</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="projects.html">Projects</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="packages.html">Packages</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="leadership.html">Leadership</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="gallery.html">Gallery</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="contact.html">Contact</a>
+      <nav class="hidden items-center gap-2 lg:gap-2.5 xl:gap-3 lg:flex" aria-label="Primary Navigation">
+        <a class="nav-option-pill nav-opt-home" href="index.html"><span>Home</span></a>
+        <a class="nav-option-pill nav-opt-about" href="about.html"><span>About Us</span></a>
+        <a class="nav-option-pill nav-opt-services" href="services.html"><span>Services</span></a>
+        <a class="nav-option-pill nav-opt-projects" href="projects.html"><span>Projects</span></a>
+        <a class="nav-option-pill nav-opt-packages" href="packages.html"><span>Packages</span></a>
+        <a class="nav-option-pill nav-opt-leadership" href="leadership.html"><span>Leadership</span></a>
+        <a class="nav-option-pill nav-opt-gallery" href="gallery.html"><span>Gallery</span></a>
+        <a class="nav-option-pill nav-opt-contact" href="contact.html"><span>Contact</span></a>
       </nav>
 
       <!-- Action Button & WhatsApp -->
@@ -101,15 +102,15 @@
 
     <!-- Mobile Drawer -->
     <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-white/15 bg-[#1F3630] px-6 py-6 text-linen shadow-2xl">
-      <nav class="flex flex-col gap-4 text-base font-medium">
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="index.html">Home</a>
-        <a class="text-amber-300 py-1 font-bold text-lg" href="about.html">About Us</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="services.html">Services &amp; Themes</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="projects.html">Active Projects</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="packages.html">Packages &amp; Estimate</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="leadership.html">Leadership</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="gallery.html">Project Gallery</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="contact.html">Contact &amp; Site Visit</a>
+      <nav class="flex flex-col gap-2 text-base font-medium">
+        <a class="nav-option-pill nav-opt-home" href="index.html"><span>Home</span></a>
+        <a class="nav-option-pill nav-opt-about" href="about.html"><span>About Us</span></a>
+        <a class="nav-option-pill nav-opt-services" href="services.html"><span>Services</span></a>
+        <a class="nav-option-pill nav-opt-projects" href="projects.html"><span>Projects</span></a>
+        <a class="nav-option-pill nav-opt-packages" href="packages.html"><span>Packages</span></a>
+        <a class="nav-option-pill nav-opt-leadership" href="leadership.html"><span>Leadership</span></a>
+        <a class="nav-option-pill nav-opt-gallery" href="gallery.html"><span>Gallery</span></a>
+        <a class="nav-option-pill nav-opt-contact" href="contact.html"><span>Contact</span></a>
         <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
           <button type="button" class="open-login-modal-btn w-full inline-flex items-center justify-center gap-2 rounded-full border border-amber-300/40 bg-white/5 py-2.5 text-sm font-bold uppercase text-amber-200 hover:bg-white/10">
             <svg class="size-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -129,7 +130,7 @@
     <!-- ==================== PAGE BANNER (DARK PINE CANVAS #1F3630) ==================== -->
     <section class="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[580px] flex items-center bg-[#0e221c] text-white pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 overflow-hidden border-b border-white/15">
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="photos/hero-architectural-villa.webp" alt="Global Mahanshi" class="h-full w-full object-cover object-center filter brightness-95 contrast-105 opacity-88" />
+        <img src="photos/ai-nav-about.jpg" alt="Global Mahanshi — About Global Mahanshi Builders &amp; Architects" class="h-full w-full object-cover object-center filter brightness-90 contrast-105 opacity-65" />
         <div class="hero-plain-backdrop"></div>
       </div>
 
@@ -160,8 +161,8 @@
             </div>
 
             <div class="pt-4 flex flex-wrap gap-4">
-              <a href="#founder-statement" class="btn-terracotta-primary rounded-full px-8 py-3.5 text-base font-bold uppercase tracking-wider shadow-lg">
-                Our Foundation Story
+              <a href="#who-we-are" class="btn-terracotta-primary rounded-full px-8 py-3.5 text-base font-bold uppercase tracking-wider shadow-lg">
+                Who We Are
               </a>
               <a href="projects.html" class="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-8 py-3.5 text-base font-bold uppercase tracking-wider text-white backdrop-blur-md transition-all hover:bg-white/20 hover:border-white shadow-sm">
                 Explore Projects
@@ -197,7 +198,7 @@
                 </div>
 
                 <div class="rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 p-4">
-                  <p class="font-display text-3xl font-bold text-white">&#8377;1,950</p>
+                  <p class="font-display text-3xl font-bold text-white">&#8377;2,200</p>
                   <p class="text-xs font-bold uppercase tracking-wider text-linen/90 mt-1">Per Sq.Ft Onwards</p>
                   <p class="text-[11px] text-linen/60 mt-0.5">Turnkey Home Packages</p>
                 </div>
@@ -235,85 +236,85 @@
       </div>
     </section>
 
-    <!-- ==================== THE STORY & FOUNDER STATEMENT (LINEN CANVAS) ==================== -->
-    <section class="bg-linen-canvas py-16 lg:py-20 text-pine border-b border-linen-edge">
-      <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <!-- ==================== WHO WE ARE SECTION ==================== -->
+    <section id="who-we-are" class="bg-[#FAF7F0] py-16 lg:py-24 text-pine border-b border-linen-edge relative overflow-hidden">
+      <span id="founder-statement" class="sr-only"></span>
+      <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-center">
           
-          <div class="lg:col-span-7">
-            <div class="inline-flex items-center gap-2 rounded-full border border-[#9E3F1C]/25 bg-[#9E3F1C]/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-clay mb-3">
-              <span>Our Foundation Story</span>
+          <!-- Left Column: Who We Are Content (6 Cols) -->
+          <div class="lg:col-span-6 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 rounded-full border border-clay/20 bg-clay/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-clay mb-4">
+                <span class="w-2 h-2 rounded-full bg-clay"></span>
+                <span>ESTABLISHED JANUARY 2026 · SOUTH BENGALURU</span>
+              </div>
+
+              <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pine-heading leading-tight">
+                Who We Are
+              </h2>
+
+              <p class="mt-6 sm:mt-8 text-xl sm:text-2xl lg:text-[23px] text-pine-copy leading-relaxed font-normal">
+                Established in January 2026 under the leadership of founder and managing director G. Muniswamy, Global Mahanshi Builders focuses on creating residential communities where legal clarity and quality construction go hand in hand.
+              </p>
+
+              <p class="mt-6 sm:mt-7 text-xl sm:text-2xl lg:text-[23px] text-pine-copy leading-relaxed font-normal">
+                We offer a complete journey — from buying a legally verified plot to designing and building your home — all through one organization. Every step comes with transparent documentation so you know exactly what you are getting.
+              </p>
             </div>
-            
-            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pine-heading leading-tight">
-              A Company Built on Direct Accountability
-            </h2>
-            <div class="mt-3 h-1.5 w-24 bg-clay rounded-full"></div>
 
-            <p class="mt-6 text-xl sm:text-2xl lg:text-[23px] leading-relaxed text-pine-copy story-lead-copy">
-              <strong class="text-pine font-bold">Global Mahanshi Builders</strong> is a professionally managed construction and real estate development company headquartered in Bengaluru, established in January 2026. With construction as our core strength, we build high-quality homes, develop residential layouts, and provide customers with dependable end-to-end solutions — backed by professional execution and transparent business practices.
-            </p>
-
-            <blockquote class="mt-6 border-l-4 border-clay pl-5 italic text-pine-copy text-xl sm:text-2xl lg:text-[23px] leading-relaxed story-quote-copy">
-              "We believe home construction should be free of hidden clauses and legal ambiguity. Every plot we develop and every wall we build stands on clarity, engineering integrity, and enduring value."
-              <footer class="mt-3 text-sm sm:text-base font-bold uppercase tracking-wider text-clay not-italic">— G. Muniswamy, Founder &amp; Managing Director</footer>
-            </blockquote>
-
-            <p class="mt-6 text-lg sm:text-xl text-pine-copy leading-relaxed heading-explanation">
-              Founded with the objective of eliminating the traditional friction points in Bangalore real estate, Global Mahanshi Builders unites land development, structural civil engineering, architectural design, and legal paperwork under one responsible management umbrella.
-            </p>
+            <!-- Architectural Pillar Strip (Fills Space & Eliminates Gaps) -->
+            <div class="mt-8 pt-7 border-t border-linen-edge/80 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="rounded-2xl bg-white p-4 border border-linen-edge/60 shadow-sm">
+                <span class="text-xs font-bold uppercase tracking-wider text-clay block">Legal Clarity</span>
+                <p class="text-sm font-semibold text-pine-heading mt-1">DC-Converted &amp; E-Khata</p>
+                <p class="text-xs text-pine-muted mt-0.5">100% verified parent deeds</p>
+              </div>
+              <div class="rounded-2xl bg-white p-4 border border-linen-edge/60 shadow-sm">
+                <span class="text-xs font-bold uppercase tracking-wider text-clay block">Single Window</span>
+                <p class="text-sm font-semibold text-pine-heading mt-1">Plots &amp; Construction</p>
+                <p class="text-xs text-pine-muted mt-0.5">Zero contractor conflicts</p>
+              </div>
+              <div class="rounded-2xl bg-white p-4 border border-linen-edge/60 shadow-sm">
+                <span class="text-xs font-bold uppercase tracking-wider text-clay block">Accountability</span>
+                <p class="text-sm font-semibold text-pine-heading mt-1">Direct Leadership</p>
+                <p class="text-xs text-pine-muted mt-0.5">Supervised civil standards</p>
+              </div>
+            </div>
           </div>
 
-          <div class="lg:col-span-5 flex flex-col gap-5">
-            <div class="card-linen-white rounded-3xl p-7 shadow-md border border-linen-edge">
-              <span class="text-sm font-bold uppercase tracking-widest text-clay">Corporate Overview</span>
-              <h3 class="font-display text-2xl font-bold text-pine-heading mt-1">Company Credentials</h3>
-              
-              <ul class="mt-5 space-y-4 text-base sm:text-lg text-pine-copy">
-                <li class="flex items-start gap-3">
-                  <span class="rounded bg-clay/10 p-1.5 text-clay font-bold">🏢</span>
-                  <div>
-                    <strong class="text-pine block">Headquarters</strong>
-                    <span>JP Nagar 8th Phase, Bengaluru, Karnataka 560083</span>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="rounded bg-clay/10 p-1.5 text-clay font-bold">📅</span>
-                  <div>
-                    <strong class="text-pine block">Established</strong>
-                    <span>January 2026</span>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="rounded bg-clay/10 p-1.5 text-clay font-bold">👤</span>
-                  <div>
-                    <strong class="text-pine block">Leadership</strong>
-                    <span>G. Muniswamy, Founder &amp; Managing Director</span>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="rounded bg-clay/10 p-1.5 text-clay font-bold">🏗️</span>
-                  <div>
-                    <strong class="text-pine block">Specialization</strong>
-                    <span>DC Plotted Layouts, Turnkey Homes, Luxury Villas</span>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="rounded bg-clay/10 p-1.5 text-clay font-bold">📞</span>
-                  <div>
-                    <strong class="text-pine block">Direct Contact</strong>
-                    <a href="tel:+919632734110" class="text-clay font-bold">+91 96327 34110</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
+          <!-- Right Column: Site / Project Photo Container (6 Cols) -->
+          <div class="lg:col-span-6 w-full">
+            <div class="card-calculator-warm rounded-3xl p-3 sm:p-4 bracket-frame shadow-xl border-2 border-[#D6C2AB] text-pine flex flex-col justify-between" style="background: linear-gradient(145deg, #FAF4EB 0%, #F1E5D6 100%);">
+              <div class="relative overflow-hidden rounded-2xl border border-[#E6DCD0] shadow-sm bg-white cursor-pointer group" id="about-showcase-zoom-trigger">
+                <!-- Global Mahanshi Builders About Us Brand Showcase -->
+                <img src="photos/global-mahanshi-about-us.jpg" alt="About Global Mahanshi Builders - Building Trust. Creating Landmarks." class="w-full h-auto block object-contain transition-transform duration-500 group-hover:scale-[1.01]" />
+                
+                <!-- Zoom Overlay on Hover -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#142822]/85 via-[#142822]/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-4 pointer-events-none">
+                  <span class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-300 bg-[#1F3630]/90 px-4 py-2 rounded-full shadow-lg border border-amber-300/30 backdrop-blur-sm">
+                    🔍 Click to zoom full-resolution official showcase
+                  </span>
+                </div>
+                <span class="absolute bottom-2.5 right-2.5 bg-[#1F3630]/85 text-amber-300 text-xs font-bold px-3 py-1.5 rounded-full shadow border border-amber-300/30 flex items-center gap-1.5 backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                  🔍 Click to Zoom
+                </span>
+              </div>
 
-            <div class="bg-[#1F3630] rounded-3xl p-7 text-white shadow-xl">
-              <span class="text-xs text-amber-300 font-bold uppercase tracking-wider">Zero Middlemen</span>
-              <h4 class="font-display text-xl sm:text-2xl font-bold text-white mt-1">Direct Developer Relationship</h4>
-              <p class="mt-2 text-base text-linen/90 leading-relaxed">
-                When you buy a plot or build a home with us, you interact directly with our in-house engineers and leadership. No third-party brokers, no hidden commission markups.
-              </p>
+              <!-- Interactive Status & Action Bar Below Image (Zero Text Occlusion!) -->
+              <div class="mt-3.5 px-1.5 flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-clay">Active Master Developments</p>
+                    <p class="text-xs sm:text-sm font-bold text-pine-heading">Sai Roots (Jigani) &amp; Sri Sai Prashanthi (Koppa)</p>
+                  </div>
+                </div>
+                <a href="projects.html" class="inline-flex items-center gap-1.5 rounded-full bg-clay hover:bg-[#853415] text-white px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all shadow-sm">
+                  <span>View Projects</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -321,54 +322,250 @@
       </div>
     </section>
 
-    <!-- ==================== THE 4 PILLARS OF EXCELLENCE ==================== -->
-    <section class="bg-linen-canvas py-16 text-pine border-b border-linen-edge">
-      <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12">
+    <!-- ==================== OUR MISSION & OUR VISION ==================== -->
+    <section id="mission-vision" class="bg-[#FAF7F0] py-14 lg:py-20 text-pine border-b border-linen-edge relative overflow-hidden">
+      <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12 relative z-10">
         
-        <div class="max-w-3xl mb-12">
-          <div class="inline-flex items-center gap-2 rounded-full border border-[#9E3F1C]/25 bg-[#9E3F1C]/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-clay mb-2">
-            <span>Core Principles</span>
-          </div>
-          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pine-heading leading-tight">
-            The 4 Pillars That Guide Every Project
+        <!-- Section Header -->
+        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-[#0B2545] leading-tight">
+            Our Mission &amp; Our Vision
           </h2>
-          <p class="mt-3 text-lg sm:text-xl text-pine-copy leading-relaxed heading-explanation">
-            We operate by four strict commitments designed to give buyers 100% peace of mind from agreement to key handover.
+          <div class="mt-3.5 h-1 w-12 bg-[#C59B63] rounded-full mx-auto"></div>
+          <p class="mt-3.5 text-base sm:text-lg text-[#4A5568] leading-relaxed">
+            The dual commitments that govern our architectural planning, civil engineering, and client relationships.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Full-Layout Dual Cards (Simple, Clean, Zero Side Gaps) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 w-full">
           
-          <div class="card-linen-white rounded-3xl p-7 shadow-sm">
-            <span class="font-display text-3xl font-bold text-clay">01</span>
-            <h3 class="font-display text-2xl font-bold text-pine-heading mt-3">Transparent Pricing</h3>
-            <p class="mt-3 text-lg sm:text-xl text-pine-copy leading-relaxed heading-explanation">
-              Written quotations with clear scope of work and stage-wise billing. Government charges, material brands, and timelines are itemized upfront with zero hidden surprise escalations.
-            </p>
+          <!-- Mission Card -->
+          <div class="card-linen-white rounded-3xl p-8 sm:p-10 lg:p-12 border border-linen-edge/80 border-t-[3.5px] border-t-[#C59B63] shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between bg-white">
+            <div>
+              <div class="flex items-center gap-4 mb-5">
+                <span class="size-12 sm:size-14 rounded-2xl bg-amber-500/10 text-[#C59B63] border border-[#C59B63]/25 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+                </span>
+                <div>
+                  <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#C59B63] block">Core Purpose</span>
+                  <h3 class="font-display text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#0B2545]">Our Mission</h3>
+                </div>
+              </div>
+
+              <div class="h-1 w-16 bg-[#C59B63] rounded-full mb-6"></div>
+
+              <p class="text-lg sm:text-xl lg:text-[21px] text-[#384641] leading-relaxed font-normal">
+                To deliver high-grade residential plots and custom-constructed independent homes across South Bengaluru that provide enduring value, 100% legal security, and lasting architectural pride to every family we serve.
+              </p>
+            </div>
+
+            <!-- Simple, Clean Pillar Badges -->
+            <div class="mt-8 pt-6 border-t border-linen-edge/70 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-sm sm:text-base font-bold text-[#1F3630]">
+              <span class="inline-flex items-center gap-2"><span class="text-[#C59B63] text-base font-bold">✓</span> Quality Construction</span>
+              <span class="inline-flex items-center gap-2"><span class="text-[#C59B63] text-base font-bold">✓</span> Legal Integrity</span>
+              <span class="inline-flex items-center gap-2"><span class="text-[#C59B63] text-base font-bold">✓</span> Transparent Pricing</span>
+            </div>
           </div>
 
-          <div class="card-linen-white rounded-3xl p-7 shadow-sm">
-            <span class="font-display text-3xl font-bold text-clay">02</span>
-            <h3 class="font-display text-2xl font-bold text-pine-heading mt-3">Legal Clarity First</h3>
-            <p class="mt-3 text-lg sm:text-xl text-pine-copy leading-relaxed heading-explanation">
-              DC-converted land, individual E-Khata, and Panchayath-approved developments with clean legal parent documentation open for your independent legal verification before token payment.
-            </p>
+          <!-- Vision Card -->
+          <div class="card-linen-white rounded-3xl p-8 sm:p-10 lg:p-12 border border-linen-edge/80 border-t-[3.5px] border-t-[#C59B63] shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between bg-white">
+            <div>
+              <div class="flex items-center gap-4 mb-5">
+                <span class="size-12 sm:size-14 rounded-2xl bg-amber-500/10 text-[#C59B63] border border-[#C59B63]/25 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="m12 2 4 4-4 4-4-4 4-4Z"/></svg>
+                </span>
+                <div>
+                  <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#C59B63] block">Long-Term Horizon</span>
+                  <h3 class="font-display text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#0B2545]">Our Vision</h3>
+                </div>
+              </div>
+
+              <div class="h-1 w-16 bg-[#C59B63] rounded-full mb-6"></div>
+
+              <p class="text-lg sm:text-xl lg:text-[21px] text-[#384641] leading-relaxed font-normal">
+                To be recognized as Bengaluru's most dependable and transparent boutique builder — known for flawless project delivery, authentic engineering specifications, and relationships that extend decades beyond project handover.
+              </p>
+            </div>
+
+            <!-- Simple, Clean Pillar Badges -->
+            <div class="mt-8 pt-6 border-t border-linen-edge/70 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-sm sm:text-base font-bold text-[#1F3630]">
+              <span class="inline-flex items-center gap-2"><span class="text-[#C59B63] text-base font-bold">✦</span> Flawless Delivery</span>
+              <span class="inline-flex items-center gap-2"><span class="text-[#C59B63] text-base font-bold">✦</span> Lifelong Trust</span>
+              <span class="inline-flex items-center gap-2"><span class="text-[#C59B63] text-base font-bold">✦</span> South Bengaluru Benchmark</span>
+            </div>
           </div>
 
-          <div class="card-linen-white rounded-3xl p-7 shadow-sm">
-            <span class="font-display text-3xl font-bold text-clay">03</span>
-            <h3 class="font-display text-2xl font-bold text-pine-heading mt-3">One Trusted Company</h3>
-            <p class="mt-3 text-lg sm:text-xl text-pine-copy leading-relaxed heading-explanation">
-              Buy the plot and construct your home with one unified entity. Seamless coordination, singular accountability, and zero finger-pointing between landowner and contractor.
-            </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR VALUES SECTION (AS PER SPECIFIED WIREFRAME) ==================== -->
+    <section id="our-values" class="bg-[#FAF7F0] py-16 lg:py-24 text-pine border-b border-linen-edge relative overflow-hidden">
+      <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <h2 class="font-display text-4xl sm:text-5xl lg:text-[52px] font-bold tracking-tight text-[#0B2545] leading-tight">
+            Our Values
+          </h2>
+          <div class="mt-3.5 h-1 w-12 bg-[#C59B63] rounded-full mx-auto"></div>
+          <p class="mt-4 text-lg sm:text-xl text-[#4A5568] leading-relaxed">
+            The principles that shape every project we take on.
+          </p>
+        </div>
+
+        <!-- Values Grid (3 Columns Spanning Full Width Without Gaps) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
+          
+          <!-- Value 1: Trust -->
+          <div class="card-linen-white rounded-2xl p-8 sm:p-9 border border-linen-edge/70 border-t-[3.5px] border-t-[#C59B63] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+            <span class="font-display font-bold text-5xl text-amber-200/50 absolute top-4 right-5 select-none pointer-events-none group-hover:text-amber-300/70 transition-colors">
+              01
+            </span>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="size-10 rounded-xl bg-amber-500/10 text-[#C59B63] flex items-center justify-center font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#C59B63]">Ethical Foundation</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3">
+                Trust
+              </h3>
+              <p class="text-base sm:text-lg text-pine-copy leading-relaxed">
+                Honest communication and ethical practices in every relationship.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/40 flex items-center justify-between text-xs font-bold text-pine-muted">
+              <span>Integrity In Action</span>
+              <span class="text-emerald-600 font-bold">● Unwavering</span>
+            </div>
           </div>
 
-          <div class="card-linen-white rounded-3xl p-7 shadow-sm">
-            <span class="font-display text-3xl font-bold text-clay">04</span>
-            <h3 class="font-display text-2xl font-bold text-pine-heading mt-3">Quality Materials</h3>
-            <p class="mt-3 text-lg sm:text-xl text-pine-copy leading-relaxed heading-explanation">
-              Branded 53-grade cement, 550D TMT steel, solid teak woodwork, UPVC acoustic windows, and multi-stage civil inspections with photographic progress reports at each slab casting.
-            </p>
+          <!-- Value 2: Quality -->
+          <div class="card-linen-white rounded-2xl p-8 sm:p-9 border border-linen-edge/70 border-t-[3.5px] border-t-[#C59B63] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+            <span class="font-display font-bold text-5xl text-amber-200/50 absolute top-4 right-5 select-none pointer-events-none group-hover:text-amber-300/70 transition-colors">
+              02
+            </span>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="size-10 rounded-xl bg-amber-500/10 text-[#C59B63] flex items-center justify-center font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#C59B63]">Civil Specification</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3">
+                Quality
+              </h3>
+              <p class="text-base sm:text-lg text-pine-copy leading-relaxed">
+                Careful planning, quality materials, and skilled workmanship — no shortcuts.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/40 flex items-center justify-between text-xs font-bold text-pine-muted">
+              <span>Standard Tested</span>
+              <span class="text-emerald-600 font-bold">● 53-Grade / 550D</span>
+            </div>
+          </div>
+
+          <!-- Value 3: Transparency -->
+          <div class="card-linen-white rounded-2xl p-8 sm:p-9 border border-linen-edge/70 border-t-[3.5px] border-t-[#C59B63] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+            <span class="font-display font-bold text-5xl text-amber-200/50 absolute top-4 right-5 select-none pointer-events-none group-hover:text-amber-300/70 transition-colors">
+              03
+            </span>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="size-10 rounded-xl bg-amber-500/10 text-[#C59B63] flex items-center justify-center font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                </span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#C59B63]">Legal &amp; Scope Clarity</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3">
+                Transparency
+              </h3>
+              <p class="text-base sm:text-lg text-pine-copy leading-relaxed">
+                Clear documentation and open communication at every stage.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/40 flex items-center justify-between text-xs font-bold text-pine-muted">
+              <span>Zero Hidden Costs</span>
+              <span class="text-emerald-600 font-bold">● Itemized Scope</span>
+            </div>
+          </div>
+
+          <!-- Value 4: Engineering Excellence -->
+          <div class="card-linen-white rounded-2xl p-8 sm:p-9 border border-linen-edge/70 border-t-[3.5px] border-t-[#C59B63] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+            <span class="font-display font-bold text-5xl text-amber-200/50 absolute top-4 right-5 select-none pointer-events-none group-hover:text-amber-300/70 transition-colors">
+              04
+            </span>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="size-10 rounded-xl bg-amber-500/10 text-[#C59B63] flex items-center justify-center font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#C59B63]">Structural Precision</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3">
+                Engineering Excellence
+              </h3>
+              <p class="text-base sm:text-lg text-pine-copy leading-relaxed">
+                Strong engineering and proper planning for safe, durable homes.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/40 flex items-center justify-between text-xs font-bold text-pine-muted">
+              <span>Soil &amp; Concrete Tested</span>
+              <span class="text-emerald-600 font-bold">● Multi-Stage QA</span>
+            </div>
+          </div>
+
+          <!-- Value 5: Customer First -->
+          <div class="card-linen-white rounded-2xl p-8 sm:p-9 border border-linen-edge/70 border-t-[3.5px] border-t-[#C59B63] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+            <span class="font-display font-bold text-5xl text-amber-200/50 absolute top-4 right-5 select-none pointer-events-none group-hover:text-amber-300/70 transition-colors">
+              05
+            </span>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="size-10 rounded-xl bg-amber-500/10 text-[#C59B63] flex items-center justify-center font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#C59B63]">Protecting Buyer Needs</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3">
+                Customer First
+              </h3>
+              <p class="text-base sm:text-lg text-pine-copy leading-relaxed">
+                Every decision starts with understanding and protecting customer needs.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/40 flex items-center justify-between text-xs font-bold text-pine-muted">
+              <span>Personalized Support</span>
+              <span class="text-emerald-600 font-bold">● Lifetime Care</span>
+            </div>
+          </div>
+
+          <!-- Value 6: Continuous Improvement -->
+          <div class="card-linen-white rounded-2xl p-8 sm:p-9 border border-linen-edge/70 border-t-[3.5px] border-t-[#C59B63] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+            <span class="font-display font-bold text-5xl text-amber-200/50 absolute top-4 right-5 select-none pointer-events-none group-hover:text-amber-300/70 transition-colors">
+              06
+            </span>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="size-10 rounded-xl bg-amber-500/10 text-[#C59B63] flex items-center justify-center font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#C59B63]">Process &amp; Innovation</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3">
+                Continuous Improvement
+              </h3>
+              <p class="text-base sm:text-lg text-pine-copy leading-relaxed">
+                Constantly improving our processes, technology, and experience.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/40 flex items-center justify-between text-xs font-bold text-pine-muted">
+              <span>Evolving Practices</span>
+              <span class="text-emerald-600 font-bold">● Future Ready</span>
+            </div>
           </div>
 
         </div>
@@ -376,38 +573,279 @@
       </div>
     </section>
 
-    <!-- ==================== MISSION & VISION ==================== -->
-    <section class="bg-linen-canvas py-16 text-pine border-b border-linen-edge">
-      <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- ==================== EXECUTIVE LEADERSHIP (PLACED AFTER WHERE WE BUILD AS PER PROMPT) ==================== -->
+    <section id="leadership" class="bg-[#FAF7F0] py-16 lg:py-24 text-pine border-b border-linen-edge relative overflow-hidden">
+      <div class="mx-auto w-full max-w-6xl lg:max-w-7xl px-4 sm:px-8 lg:px-12 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-[46px] font-bold tracking-tight text-[#0B2545] leading-tight">
+            Executive Leadership
+          </h2>
+          <div class="mt-3.5 h-1 w-14 bg-[#C59B63] rounded-full mx-auto"></div>
+          <p class="mt-4 text-base sm:text-lg lg:text-xl text-[#4A5568] leading-relaxed max-w-3xl mx-auto">
+            The visionary minds guiding our land developments and civil engineering precision across South Bengaluru.
+          </p>
+        </div>
+
+        <!-- 2 Medium Leadership Cards Centered & Proportioned as per Website -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 max-w-5xl lg:max-w-6xl mx-auto">
           
-          <div class="card-linen-soft rounded-3xl p-8 sm:p-10 border border-linen-edge">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="rounded-full bg-clay p-3 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
-              </span>
-              <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">Our Mission</h3>
+          <!-- Founder Card -->
+          <div class="card-linen-white rounded-3xl overflow-hidden shadow-lg border border-linen-edge/80 flex flex-col hover:shadow-2xl transition-all duration-300">
+            <!-- Top Photo Area matching Wireframe with Real Portrait -->
+            <div class="w-full h-64 sm:h-72 lg:h-80 bg-[#ded8cf] flex items-center justify-center border-b border-linen-edge/50 overflow-hidden p-6 sm:p-8">
+              <img src="images/founder-g-muniswamy.png?v=3" alt="G. Muniswamy - Founder &amp; Managing Director" class="h-full w-auto object-contain filter drop-shadow-md transition-transform duration-300 hover:scale-105" />
             </div>
-            <p class="text-lg sm:text-xl text-pine-copy leading-relaxed heading-explanation">
-              To deliver high-grade residential plots and custom-constructed independent homes across South Bengaluru that provide enduring value, legal security, and lasting architectural pride to every family we serve.
-            </p>
+
+            <!-- Bottom Content Area matching Wireframe -->
+            <div class="p-7 sm:p-9 lg:p-10 flex flex-col justify-between flex-1 bg-white">
+              <div>
+                <h3 class="font-display text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#0B2545] tracking-tight">
+                  G. Muniswamy
+                </h3>
+                <span class="mt-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#C59B63] block">
+                  FOUNDER &amp; MANAGING DIRECTOR
+                </span>
+                <p class="mt-4 text-base sm:text-lg text-[#4A5568] leading-relaxed font-normal">
+                  Founded Global Mahanshi Builders in January 2026 with a vision to deliver legally secure residential developments and quality construction across South Bengaluru.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="card-linen-soft rounded-3xl p-8 sm:p-10 border border-linen-edge">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="rounded-full bg-pine p-3 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="m12 2 4 4-4 4-4-4 4-4Z"/></svg>
-              </span>
-              <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">Our Vision</h3>
+          <!-- CEO Card -->
+          <div class="card-linen-white rounded-3xl overflow-hidden shadow-lg border border-linen-edge/80 flex flex-col hover:shadow-2xl transition-all duration-300">
+            <!-- Top Photo Area matching Wireframe with Real Portrait -->
+            <div class="w-full h-64 sm:h-72 lg:h-80 bg-[#ded8cf] flex items-center justify-center border-b border-linen-edge/50 overflow-hidden p-6 sm:p-8">
+              <img src="images/ceo-harish-raja.png?v=3" alt="Harish Raja - Chief Executive Officer" class="h-full w-auto object-contain filter drop-shadow-md transition-transform duration-300 hover:scale-105" />
             </div>
-            <p class="text-lg sm:text-xl text-pine-copy leading-relaxed heading-explanation">
-              To be recognized as Bengaluru's most dependable and transparent boutique builder — known for flawless project delivery, authentic engineering specifications, and relationships that extend decades beyond project handover.
-            </p>
+
+            <!-- Bottom Content Area matching Wireframe -->
+            <div class="p-7 sm:p-9 lg:p-10 flex flex-col justify-between flex-1 bg-white">
+              <div>
+                <h3 class="font-display text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#0B2545] tracking-tight">
+                  Harish Raja
+                </h3>
+                <span class="mt-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#C59B63] block">
+                  CHIEF EXECUTIVE OFFICER
+                </span>
+                <p class="mt-4 text-base sm:text-lg text-[#4A5568] leading-relaxed font-normal">
+                  Leads the company with a focus on transparent processes, quality infrastructure, and building communities that families can trust for generations.
+                </p>
+              </div>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
+
+    <!-- ==================== WHERE WE BUILD (AS PER SPECIFIED WIREFRAME) ==================== -->
+    <section id="where-we-build" class="bg-[#FAF7F0] py-16 lg:py-24 text-pine border-b border-linen-edge relative overflow-hidden">
+      <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12 text-center relative z-10">
+        
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-[52px] font-bold tracking-tight text-[#0B2545] leading-tight">
+          Where We Build
+        </h2>
+        <div class="mt-3.5 h-1 w-12 bg-[#C59B63] rounded-full mx-auto"></div>
+        <p class="mt-4 text-lg sm:text-xl text-[#4A5568] leading-relaxed max-w-2xl mx-auto">
+          Residential layouts and homes across South Bengaluru’s growing corridors.
+        </p>
+
+        <!-- Corridor Location Pills from Wireframe -->
+        <div class="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3.5 sm:gap-5">
+          <span class="inline-flex items-center justify-center rounded-full bg-white px-7 sm:px-9 py-3 sm:py-3.5 text-base sm:text-lg font-bold text-[#0B2545] border border-linen-edge shadow-sm hover:shadow hover:border-[#C59B63] transition-all">
+            Jigani
+          </span>
+          <span class="inline-flex items-center justify-center rounded-full bg-white px-7 sm:px-9 py-3 sm:py-3.5 text-base sm:text-lg font-bold text-[#0B2545] border border-linen-edge shadow-sm hover:shadow hover:border-[#C59B63] transition-all">
+            Electronic City
+          </span>
+          <span class="inline-flex items-center justify-center rounded-full bg-white px-7 sm:px-9 py-3 sm:py-3.5 text-base sm:text-lg font-bold text-[#0B2545] border border-linen-edge shadow-sm hover:shadow hover:border-[#C59B63] transition-all">
+            Bannerghatta Road
+          </span>
+          <span class="inline-flex items-center justify-center rounded-full bg-white px-7 sm:px-9 py-3 sm:py-3.5 text-base sm:text-lg font-bold text-[#0B2545] border border-linen-edge shadow-sm hover:shadow hover:border-[#C59B63] transition-all">
+            Anekal
+          </span>
+        </div>
+
+        <!-- 4 Corridor Master Grid (Fills Complete Section, Leaving Zero Gaps!) -->
+        <div class="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+          
+          <!-- Corridor 1: Jigani -->
+          <div class="card-linen-white rounded-2xl p-6 sm:p-7 border border-linen-edge shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="rounded-full bg-amber-500/10 text-[#C59B63] text-xs font-bold uppercase tracking-wider px-3 py-1">
+                  Flagship Corridor
+                </span>
+                <span class="text-xs font-bold text-emerald-600">Active Site</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-[#0B2545]">
+                Jigani Hub
+              </h3>
+              <p class="text-xs font-bold uppercase tracking-wider text-clay mt-1">Sai Roots Residential Villas</p>
+              <p class="mt-3 text-sm sm:text-base text-pine-copy leading-relaxed">
+                Strategic industrial-residential belt near Otis Circle. Prime location with 30ft/40ft concrete layout roads, complete UGD, and ready-to-build E-Khata plots.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/50 text-xs font-semibold text-pine-muted">
+              <span>Connectivity: </span><span class="text-pine-heading font-bold">15 Mins to E-City Phase 1</span>
+            </div>
+          </div>
+
+          <!-- Corridor 2: Electronic City -->
+          <div class="card-linen-white rounded-2xl p-6 sm:p-7 border border-linen-edge shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="rounded-full bg-blue-500/10 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1">
+                  IT &amp; Tech Capital
+                </span>
+                <span class="text-xs font-bold text-blue-700">High Demand</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-[#0B2545]">
+                Electronic City
+              </h3>
+              <p class="text-xs font-bold uppercase tracking-wider text-clay mt-1">Tech Workforce Corridor</p>
+              <p class="mt-3 text-sm sm:text-base text-pine-copy leading-relaxed">
+                Bengaluru's premier technology powerhouse. Rapid appreciation and strong rental yield for custom turnkey duplex villas and residential plots.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/50 text-xs font-semibold text-pine-muted">
+              <span>Connectivity: </span><span class="text-pine-heading font-bold">Yellow Line Metro Linked</span>
+            </div>
+          </div>
+
+          <!-- Corridor 3: Bannerghatta Road -->
+          <div class="card-linen-white rounded-2xl p-6 sm:p-7 border border-linen-edge shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="rounded-full bg-emerald-500/10 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1">
+                  Green Belt &amp; Infra
+                </span>
+                <span class="text-xs font-bold text-emerald-700">Established</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-[#0B2545]">
+                Bannerghatta Road
+              </h3>
+              <p class="text-xs font-bold uppercase tracking-wider text-clay mt-1">Social Infrastructure Belt</p>
+              <p class="mt-3 text-sm sm:text-base text-pine-copy leading-relaxed">
+                Established corridor flanked by prestigious hospitals, international schools, and serene green belts with instant arterial access to NICE Road.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/50 text-xs font-semibold text-pine-muted">
+              <span>Connectivity: </span><span class="text-pine-heading font-bold">Direct NICE Road Junction</span>
+            </div>
+          </div>
+
+          <!-- Corridor 4: Anekal -->
+          <div class="card-linen-white rounded-2xl p-6 sm:p-7 border border-linen-edge shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="rounded-full bg-purple-500/10 text-purple-700 text-xs font-bold uppercase tracking-wider px-3 py-1">
+                  High Growth Belt
+                </span>
+                <span class="text-xs font-bold text-purple-700">High Appreciation</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-[#0B2545]">
+                Anekal Corridor
+              </h3>
+              <p class="text-xs font-bold uppercase tracking-wider text-clay mt-1">High-ROI Value Multiplier</p>
+              <p class="mt-3 text-sm sm:text-base text-pine-copy leading-relaxed">
+                Spacious residential land offerings with high capital appreciation potential driven by planned Satellite Town Ring Road (STRR) infrastructure.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-linen-edge/50 text-xs font-semibold text-pine-muted">
+              <span>Connectivity: </span><span class="text-pine-heading font-bold">STRR &amp; Rail Connected</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6: SAI ROOTS RESIDENTIAL VILLAS (IMAGE 6) ==================== -->
+    <section id="featured-project-spotlight" class="bg-[#FAF7F0] py-14 lg:py-20 text-white border-b border-linen-edge relative overflow-hidden">
+      <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12 relative z-10">
+        
+        <!-- Dark Navy Rounded Card Matching Wireframe with Complete Transparent Architectural Sketch Background -->
+        <div class="sai-roots-card w-full text-center relative overflow-hidden">
+          
+          <!-- Complete Transparent Architectural Villa & Sketch Background Image -->
+          <img src="photos/hero-vision-transition.webp" alt="Sai Roots Villa Architectural Sketch and Design" class="sketch-backdrop-img" />
+          
+          <!-- Subtle Dark Radial Gradient Vignette for Text Legibility -->
+          <div class="sketch-gradient-overlay"></div>
+
+          <!-- Big Transparent Watermark Text as in Reference -->
+          <div class="sketch-watermark-text" aria-hidden="true">SAI ROOTS</div>
+
+          <!-- Foreground Content with Big, Bold Typography -->
+          <div class="card-content">
+            
+            <!-- Title (Big Display Font) -->
+            <h2 class="card-title font-display">
+              Sai Roots Residential Villas
+            </h2>
+
+            <!-- Subtitle (Clear, Large Font in Gold) -->
+            <p class="card-subtitle">
+              Rooted in Trust. Built for Generations.
+            </p>
+
+            <!-- Feature Pills (5 Pills Top + 1 Pill Bottom Centered) -->
+            <div class="mt-8 sm:mt-9 max-w-6xl mx-auto">
+              <!-- Row 1: 5 Pills -->
+              <div class="pills-row-1">
+                <span class="feature-pill">
+                  Starting from ₹58 Lakhs*
+                </span>
+                <span class="feature-pill">
+                  2 &amp; 3 BHK Duplex Villas
+                </span>
+                <span class="feature-pill">
+                  DC Converted E-Khata
+                </span>
+                <span class="feature-pill">
+                  100% Clear Legal Title
+                </span>
+                <span class="feature-pill">
+                  Grand Entrance Arch
+                </span>
+              </div>
+
+              <!-- Row 2: 1 Pill Centered -->
+              <div class="pills-row-2">
+                <span class="feature-pill">
+                  Wide Concrete Roads
+                </span>
+              </div>
+            </div>
+
+            <!-- Location Text Centered with Golden Pin -->
+            <p class="location-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C59B63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="inline shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Jigani Main Road, Otis Circle</span>
+            </p>
+
+            <!-- View Project Button -->
+            <div class="mt-7 sm:mt-8 flex items-center justify-center">
+              <a href="projects.html" class="btn-view-project">
+                View Project
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
 
   </main>
 
@@ -479,6 +917,22 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
     <span>Chat on WhatsApp</span>
   </a>
+
+  <!-- Lightbox Modal for Brand Showcase -->
+  <div id="blueprint-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-md">
+    <div class="relative max-w-5xl w-full bg-[#0b1f1a] border border-amber-400/40 rounded-2xl p-4 sm:p-6 shadow-2xl overflow-hidden">
+      <div class="flex justify-between items-center mb-3">
+        <div class="flex items-center gap-2">
+          <h4 id="blueprint-modal-title" class="text-white font-bold text-base sm:text-lg">Global Mahanshi Builders — Official Brand Showcase</h4>
+          <span class="text-sm text-amber-300 font-bold bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/30">Verified Portfolio</span>
+        </div>
+        <button id="blueprint-modal-close" class="text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold transition-all cursor-pointer">✕</button>
+      </div>
+      <div class="overflow-auto max-h-[80vh] rounded-xl bg-black/50 p-2 sm:p-4 flex justify-center">
+        <img id="blueprint-modal-img" src="photos/global-mahanshi-about-us.jpg" alt="Full resolution showcase" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl" />
+      </div>
+    </div>
+  </div>
 
   <script src="app.js?v=20261012-v4"></script>
 </body>

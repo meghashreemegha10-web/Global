@@ -16,7 +16,7 @@ Official website for **Global Mahanshi Builders & Architects** — Bengaluru Rea
 - `about.html` — Company origins, founder vision & credentials
 - `services.html` — Plotted layouts, house construction & villa verticals
 - `projects.html` — Sai Roots layout showcase & interactive 53-plot availability tracker
-- `packages.html` — Construction pricing (₹1,950 & ₹2,200/sq.ft) & interactive Home EMI calculator
+- `packages.html` — Construction pricing (₹2,200 & ₹2,500/sq.ft) & interactive Home EMI calculator
 - `leadership.html` — Founder G. Muniswamy profile, principles & engineering wings
 - `gallery.html` — Authentic site photography & interactive modal lightbox
 - `contact.html` — Office locations, Google Maps embed & enquiry form

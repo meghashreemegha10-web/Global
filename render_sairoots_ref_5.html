@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1080, initial-scale=1.0" />
+  <title>Sai Roots - Ref 5: Godrej Emerald Style Royal Magenta & Gold Ornate Arch</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      background: #701A75;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .poster-box {
+      width: 1080px;
+      height: 1080px;
+      background: #701A75;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #FFFFFF;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Ornate Jharokha Arch Plaque */
+    .arch-plaque {
+      border: 4px solid #FACC15;
+      border-radius: 40px 40px 20px 20px;
+      position: relative;
+    }
+    .arch-plaque::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 24px;
+      background: #701A75;
+      border: 4px solid #FACC15;
+      border-bottom: none;
+      border-right: none;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    .diya-glow {
+      filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.9));
+    }
+  </style>
+</head>
+<body>
+
+  <div class="poster-box">
+    
+    <!-- Top Half: Actual Site Infrastructure Photo with Top Ribbon -->
+    <div class="relative h-[560px] w-full overflow-hidden bg-slate-900 border-b-6 border-[#FACC15]">
+      
+      <!-- Actual Concrete Road Site Photo -->
+      <img src="photos/sai-roots-wide-concrete-road.jpg" alt="Sai Roots Gated Community" class="w-full h-full object-cover brightness-95" />
+
+      <!-- Top Gold-Bordered Magenta Ribbon -->
+      <div class="absolute top-6 left-1/2 transform -translate-x-1/2 z-20">
+        <div class="bg-[#831843] border-4 border-[#FACC15] rounded-2xl px-8 py-2.5 shadow-2xl text-center">
+          <span class="font-display text-2xl font-black uppercase tracking-[0.2em] text-[#FEF08A] drop-shadow-md">
+            GLOBAL MAHANSHI BUILDERS PRESENTS
+          </span>
+        </div>
+      </div>
+
+      <!-- Corner Overlays -->
+      <div class="absolute bottom-4 left-6 bg-black/70 backdrop-blur-sm border border-amber-400 px-4 py-1.5 rounded-full text-white text-xs font-black uppercase tracking-wider">
+        🚩 30-FT WIDE ENTRANCE &amp; 25-FT CONCRETE ROADS
+      </div>
+
+      <div class="absolute bottom-4 right-6 bg-emerald-900/80 backdrop-blur-sm border border-emerald-400 px-4 py-1.5 rounded-full text-amber-200 text-xs font-black uppercase tracking-wider">
+        DC CONVERTED E-KHATA APPROVED
+      </div>
+
+    </div>
+
+    <!-- Bottom Half: Royal Magenta & Gold Section (Godrej Emerald Style) -->
+    <div class="h-[520px] bg-gradient-to-b from-[#701A75] via-[#831843] to-[#581C87] px-8 py-5 flex flex-col justify-between relative">
+      
+      <div class="grid grid-cols-12 gap-6 items-stretch flex-1">
+        
+        <!-- Left: Ornate Jharokha Arch Plaque -->
+        <div class="col-span-5 flex flex-col justify-between">
+          <div class="arch-plaque bg-[#831843]/90 p-5 text-center shadow-2xl flex-1 flex flex-col justify-between">
+            
+            <div class="mt-2">
+              <span class="text-xs font-black tracking-widest uppercase text-amber-300 block">PRIME RESIDENTIAL LOCATION</span>
+              <h2 class="font-display text-2xl font-black uppercase tracking-wide text-white drop-shadow-md mt-1">
+                SAI ROOTS RESIDENTIAL VILLAS
+              </h2>
+              <p class="text-xs font-extrabold text-amber-200 uppercase mt-1">
+                📍 JIGANI PHASE-1, BENGALURU
+              </p>
+            </div>
+
+            <div class="my-2 py-2 border-y border-amber-400/40 text-[11px] font-bold text-amber-100 uppercase space-y-1">
+              <div>✅ DC Converted E-Khata</div>
+              <div>✅ Gated Community Enclave</div>
+              <div>✅ 30-Ft &amp; 25-Ft Concrete Roads</div>
+              <div>✅ Underground Drainage &amp; STP Pit</div>
+            </div>
+
+            <!-- Glowing Diyas at Bottom of Arch -->
+            <div class="flex items-center justify-center gap-3 pt-1">
+              <span class="text-2xl diya-glow">🪔</span>
+              <span class="text-3xl diya-glow">🪔</span>
+              <span class="text-2xl diya-glow">🪔</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Pricing, Configuration & Gold Button -->
+        <div class="col-span-7 flex flex-col justify-between pl-2">
+          
+          <!-- Configuration Box with Dotted Outline -->
+          <div class="border-2 border-amber-400/80 rounded-2xl p-4 text-center bg-black/20 backdrop-blur-xs">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-200 block">
+              PREMIUM RESIDENTIAL VILLAS &amp; PLOTS
+            </span>
+            <div class="text-lg font-black text-white mt-1 uppercase">
+              100% READY FOR REGISTRATION &amp; CONSTRUCTION
+            </div>
+            <div class="mt-2 flex items-center justify-center gap-3">
+              <span class="text-sm font-bold text-slate-300 line-through">₹5,499</span>
+              <span class="text-2xl font-black text-amber-300 font-display">₹ 4,999 / SQ.FT</span>
+              <span class="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase">SAVE ₹500/SQ.FT</span>
+            </div>
+          </div>
+
+          <!-- Massive Gold Pill Button: Villa Starting Price -->
+          <div class="my-2">
+            <div class="bg-gradient-to-r from-[#FACC15] via-[#FDE047] to-[#EAB308] text-slate-950 font-display text-3xl font-black py-3 px-6 rounded-full text-center shadow-2xl border-2 border-white uppercase tracking-wider">
+              ₹ 58 LAKHS* <span class="text-lg font-extrabold text-slate-800">ONWARDS</span>
+            </div>
+          </div>
+
+          <!-- Location & Bank Approval Bar -->
+          <div class="flex items-center justify-between text-xs font-black text-amber-200 uppercase px-2">
+            <span>📍 JIGANI PHASE-1, SOUTH BENGALURU</span>
+            <span class="bg-emerald-800 text-emerald-200 border border-emerald-400 px-3 py-1 rounded-full text-[10px]">
+              🏦 ALL BANK LOANS APPROVED
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Phone Contact Bar -->
+      <footer class="mt-3 bg-black/60 rounded-2xl py-2 px-6 flex items-center justify-between border border-amber-400/50">
+        <div class="flex items-center gap-2">
+          <img src="images/logo-emblem.png" alt="Global Mahanshi Builders" class="h-8 w-auto object-contain" />
+          <span class="text-xs font-black uppercase tracking-wider text-amber-300">GLOBAL MAHANSHI BUILDERS</span>
+        </div>
+
+        <div class="flex items-center gap-4 text-base font-black text-white font-display">
+          <span class="text-amber-400 text-lg">📞</span>
+          <span>93433 06055</span>
+          <span>·</span>
+          <span>97417 96055</span>
+          <span>·</span>
+          <span>96327 34110</span>
+        </div>
+
+        <span class="text-[11px] font-bold text-amber-200">www.globalmahanshibuilders.com</span>
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

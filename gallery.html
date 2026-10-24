@@ -53,6 +53,7 @@
     }
   </script>
   <link rel="stylesheet" href="linen-theme.css?v=20261013-v3" />
+  <link rel="stylesheet" href="light-theme.css?v=20261019-v5" />
   <style>
     .gallery-filter-btn.active {
       background-color: #1F3630 !important;
@@ -62,7 +63,7 @@
     }
   </style>
 </head>
-<body class="bg-[#1F3630] font-sans text-pine-body antialiased">
+<body class="page-gallery bg-[#FAF5EA] font-sans text-pine-body antialiased">
 
   <!-- ==================== TOP NAVIGATION HEADER ==================== -->
   <header class="absolute top-0 inset-x-0 z-50 h-20 sm:h-22 lg:h-24 border-b border-white/10 bg-transparent text-[#FDFCEE] transition-all">
@@ -70,7 +71,7 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3.5 group">
-        <img src="images/logo-emblem.png" alt="Global Mahanshi Builders Emblem" class="h-10 sm:h-12 w-auto object-contain filter drop-shadow transition-transform group-hover:scale-105" />
+        <img src="images/logo-emblem.png" alt="Global Mahanshi Builders Logo" class="brand-top-logo" />
         <div class="flex flex-col">
           <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">Global Mahanshi</span>
           <span class="brand-subtitle text-[11px] sm:text-xs font-bold uppercase text-amber-300">Builders</span>
@@ -78,15 +79,15 @@
       </a>
 
       <!-- Primary Navigation -->
-      <nav class="hidden items-center gap-3.5 lg:gap-4 xl:gap-6 2xl:gap-8 lg:flex" aria-label="Primary Navigation">
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="index.html">Home</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="about.html">About Us</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="services.html">Services</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="projects.html">Projects</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="packages.html">Packages</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="leadership.html">Leadership</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-bold tracking-wide text-amber-300 border-b-2 border-amber-300 pb-0.5" href="gallery.html">Gallery</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="contact.html">Contact</a>
+      <nav class="hidden items-center gap-2 lg:gap-2.5 xl:gap-3 lg:flex" aria-label="Primary Navigation">
+        <a class="nav-option-pill nav-opt-home" href="index.html"><span>Home</span></a>
+        <a class="nav-option-pill nav-opt-about" href="about.html"><span>About Us</span></a>
+        <a class="nav-option-pill nav-opt-services" href="services.html"><span>Services</span></a>
+        <a class="nav-option-pill nav-opt-projects" href="projects.html"><span>Projects</span></a>
+        <a class="nav-option-pill nav-opt-packages" href="packages.html"><span>Packages</span></a>
+        <a class="nav-option-pill nav-opt-leadership" href="leadership.html"><span>Leadership</span></a>
+        <a class="nav-option-pill nav-opt-gallery" href="gallery.html"><span>Gallery</span></a>
+        <a class="nav-option-pill nav-opt-contact" href="contact.html"><span>Contact</span></a>
       </nav>
 
       <!-- Action Button & WhatsApp -->
@@ -110,14 +111,14 @@
     <!-- Mobile Drawer -->
     <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-white/15 bg-[#1F3630] px-6 py-6 text-linen shadow-2xl">
       <nav class="flex flex-col gap-4 text-base font-medium">
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="index.html">Home</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="about.html">About Us</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="services.html">Services</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="projects.html">Projects</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="packages.html">Packages</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="leadership.html">Leadership</a>
-        <a class="text-amber-300 font-bold py-1 text-base" href="gallery.html">Gallery</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="contact.html">Contact</a>
+        <a class="nav-option-pill nav-opt-home" href="index.html"><span>Home</span></a>
+        <a class="nav-option-pill nav-opt-about" href="about.html"><span>About Us</span></a>
+        <a class="nav-option-pill nav-opt-services" href="services.html"><span>Services</span></a>
+        <a class="nav-option-pill nav-opt-projects" href="projects.html"><span>Projects</span></a>
+        <a class="nav-option-pill nav-opt-packages" href="packages.html"><span>Packages</span></a>
+        <a class="nav-option-pill nav-opt-leadership" href="leadership.html"><span>Leadership</span></a>
+        <a class="nav-option-pill nav-opt-gallery" href="gallery.html"><span>Gallery</span></a>
+        <a class="nav-option-pill nav-opt-contact" href="contact.html"><span>Contact</span></a>
         <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
           <button type="button" class="open-login-modal-btn w-full inline-flex items-center justify-center gap-2 rounded-full border border-amber-300/40 bg-white/5 py-2.5 text-sm font-bold uppercase text-amber-200 hover:bg-white/10">
             <svg class="size-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -136,7 +137,7 @@
     <!-- HERO BANNER: Dark Pine Signature with Architectural Background -->
     <section class="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[580px] flex items-center bg-[#0e221c] text-white pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 overflow-hidden border-b border-white/15">
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="photos/site-road-demarcated-plots.jpeg" alt="Global Mahanshi" class="h-full w-full object-cover object-center filter brightness-95 contrast-105 opacity-88" />
+        <img src="photos/ai-nav-gallery.jpg" alt="Global Mahanshi Project Gallery &amp; Architecture Showroom" class="h-full w-full object-cover object-center filter brightness-90 contrast-105 opacity-65" />
         <div class="hero-plain-backdrop"></div>
       </div>
       
@@ -243,17 +244,20 @@
     <div id="gallery-grid" class="bg-linen-canvas py-16 lg:py-24 text-pine border-b border-linen-edge">
       <div class="mx-auto w-full max-w-[1680px] px-4 sm:px-8 lg:px-12">
         
-        <!-- Sticky Category Navigation Bar -->
-        <div class="sticky top-20 z-40 bg-linen-canvas/95 backdrop-blur-md py-4 mb-10 border-b border-linen-edge">
+        <!-- Category Navigation Bar (Static in place at top of section; does not follow scroll down) -->
+        <div class="relative py-4 mb-10 border-b border-linen-edge">
           <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
             <button class="section-filter-btn active rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge transition-all" data-target="all">
-              All Sections (27)
+              All Sections (38)
+            </button>
+            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-amber-400/80 bg-amber-400/20 text-amber-950 hover:bg-amber-400/35 transition-all shadow-xs" data-target="section-saiprashanthi">
+              👑 Sri Sai Prashanthi (5)
             </button>
             <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-construction">
               🏗️ Construction Work (8)
             </button>
-            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-funactivities">
-              🎉 Fun Activities (7)
+            <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-officeactivities">
+              🏢 Office Activities (13)
             </button>
             <button class="section-filter-btn rounded-full px-5 py-2.5 text-sm sm:text-base font-bold border border-linen-edge bg-white/70 text-pine hover:bg-white transition-all" data-target="section-layouts">
               🏡 Plotted Layouts (3)
@@ -269,6 +273,126 @@
             </button>
           </div>
         </div>
+
+      <!-- ==================== SRI SAI PRASHANTHI ==================== -->
+      <section id="section-saiprashanthi" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-900 mb-2">
+              <span>Section 01 · CO-FLAGSHIP GATED ENCLAVE</span>
+            </div>
+            <h3 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-pine-heading flex items-center gap-2">
+              <span>Sri Sai Prashanthi</span>
+              <span class="text-2xl text-amber-600">👑👑</span>
+            </h3>
+          </div>
+          <div class="md:text-right max-w-xl">
+            <span class="inline-block rounded-full bg-amber-500/15 text-amber-900 text-xs font-bold uppercase px-3 py-1 mb-1">5 Verified Authentic Photos</span>
+            <p class="text-sm sm:text-base text-pine-copy">📌 Koppa Ramasandra Road, Koppa 🚧🚧 — 20×40 (800 Sq.Ft) DC Converted gated layout, Kaveri water connection &amp; 3 bores, 30 ft concrete roads, and turnkey Site + Construction ₹52 Lakhs combo package.</p>
+          </div>
+        </div>
+
+        <!-- Section Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Card 1: Grand Entrance Arch -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="saiprashanthi" data-src="photos/sai-prashanthi-grand-entrance-arch.jpg" data-type="image" data-title="Sri Sai Prashanthi — Grand Entrance Arch &amp; Main Approach" data-sub="📌 Koppa Ramasandra Road, Koppa 🚧🚧 — 20×40 (800 Sq.Ft) Gated Community with 30 Ft Concrete Roads &amp; Kaveri Water" data-badge="👑 GRAND ENTRANCE ARCH">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#142822] flex items-center justify-center p-1">
+              <img src="photos/sai-prashanthi-grand-entrance-arch.jpg" alt="Sri Sai Prashanthi Grand Entrance Arch" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (100% Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow border border-amber-300/30">
+                👑 GRAND ENTRANCE ARCH
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Grand Entrance Arch &amp; Main Approach</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Koppa Ramasandra Road, Koppa — 20×40 (800 sq.ft) plots &amp; 30 ft concrete roads</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Live House Construction -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="saiprashanthi" data-src="photos/sai-prashanthi-house-construction.jpg" data-type="image" data-title="Active Turnkey House Construction at Sri Sai Prashanthi" data-sub="Ground plinth, red brick masonry, and structural column casting for independent family home" data-badge="LIVE HOUSE CONSTRUCTION">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#142822] flex items-center justify-center p-1">
+              <img src="photos/sai-prashanthi-house-construction.jpg" alt="Active Turnkey House Construction" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (100% Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                TURNKEY HOUSE ON-SITE
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Active Turnkey House Construction</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">On-ground building execution: Site + Construction combo ₹52 Lakhs</p>
+            </div>
+          </div>
+
+          <!-- Card 3: 30 Ft Concrete Roads & Plots -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="saiprashanthi" data-src="photos/sai-prashanthi-plots-concrete-road.jpg" data-type="image" data-title="30 Ft Wide Concrete Roads &amp; Demarcated 20×40 Plots" data-sub="Engineered concrete roadways with underground drainage, street light infrastructure &amp; perimeter fencing" data-badge="30 FT CONCRETE ROADS">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#142822] flex items-center justify-center p-1">
+              <img src="photos/sai-prashanthi-plots-concrete-road.jpg" alt="30 Ft Wide Concrete Roads & Demarcated Plots" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (100% Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-4 left-4 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                30 FT CONCRETE ROADS
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">30 Ft Concrete Roads &amp; Plots</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">20×40 (800 Sq.Ft) demarcated residential plots with ready utility connections</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Columns, Footings & Sump -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="saiprashanthi" data-src="photos/sai-prashanthi-columns-footings-sump.jpg" data-type="image" data-title="RCC Water Sump, Footing Pits &amp; Column Reinforcements" data-sub="Underground water reservoir and foundation columns engineered for multi-story strength" data-badge="RCC FOOTINGS &amp; SUMP">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#142822] flex items-center justify-center p-1">
+              <img src="photos/sai-prashanthi-columns-footings-sump.jpg" alt="RCC Water Sump & Column Reinforcements" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (100% Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                RCC FOOTINGS &amp; SUMP
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">RCC Sump &amp; Column Footings</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Underground water storage and structural columns built with 550D TMT steel</p>
+            </div>
+          </div>
+
+          <!-- Card 5: Heavy Excavation & Solid Blocks -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="saiprashanthi" data-src="photos/sai-prashanthi-excavator-blocks.jpg" data-type="image" data-title="Heavy JCB Earthworks, Solid Concrete Blocks &amp; Perimeter" data-sub="Site grading, compound wall construction, and high-density concrete building blocks ready for masonry" data-badge="HEAVY EXCAVATION &amp; BLOCKS">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#142822] flex items-center justify-center p-1">
+              <img src="photos/sai-prashanthi-excavator-blocks.jpg" alt="Heavy JCB Earthworks & Solid Concrete Blocks" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (100% Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                HEAVY EARTHWORKS &amp; BLOCKS
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Heavy Earthworks &amp; Solid Blocks</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">JCB site grading, foundation excavation, and compound wall perimeter execution</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
       <!-- ==================== CONSTRUCTION WORK ==================== -->
       <section id="section-construction" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
@@ -316,14 +440,15 @@
 
           <!-- Photo: Live RCC Column Footing Concrete Pouring -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="construction" data-src="photos/construction-rcc-concrete-pouring.jpg" data-type="image" data-title="Live RCC Column Footing Concrete Pouring" data-sub="Sai Roots Layout, Jigani — Precision concrete pouring into heavy steel rebar cages" data-badge="CONSTRUCTION WORK">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/construction-rcc-concrete-pouring.jpg" alt="Live RCC Column Footing Concrete Pouring" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/construction-rcc-concrete-pouring.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/construction-rcc-concrete-pouring.jpg" alt="Live RCC Column Footing Concrete Pouring" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 CONSTRUCTION WORK
               </span>
             </div>
@@ -354,14 +479,15 @@
 
           <!-- Photo: Auspicious Bhoomi Pooja Water Blessing Ceremony -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="construction" data-src="photos/ceremony-bhoomi-pooja-water-blessing.jpg" data-type="image" data-title="Auspicious Bhoomi Pooja Water Blessing Ceremony" data-sub="Founder G. Muniswamy and Vedic priest pouring consecrated holy water at plot cornerstone" data-badge="CONSTRUCTION WORK">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/ceremony-bhoomi-pooja-water-blessing.jpg" alt="Auspicious Bhoomi Pooja Water Blessing Ceremony" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/ceremony-bhoomi-pooja-water-blessing.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/ceremony-bhoomi-pooja-water-blessing.jpg" alt="Auspicious Bhoomi Pooja Water Blessing Ceremony" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 CONSTRUCTION WORK
               </span>
             </div>
@@ -373,14 +499,15 @@
 
           <!-- Photo: Sacred Boundary Stone Consecration Rituals -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="construction" data-src="photos/ceremony-boundary-stone-consecration.jpg" data-type="image" data-title="Sacred Boundary Stone Consecration Rituals" data-sub="Founder G. Muniswamy holding the ceremonial staff alongside the Vedic priest" data-badge="CONSTRUCTION WORK">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/ceremony-boundary-stone-consecration.jpg" alt="Sacred Boundary Stone Consecration Rituals" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/ceremony-boundary-stone-consecration.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/ceremony-boundary-stone-consecration.jpg" alt="Sacred Boundary Stone Consecration Rituals" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 CONSTRUCTION WORK
               </span>
             </div>
@@ -392,14 +519,15 @@
 
           <!-- Photo: Vedic Foundation Stone Consecration & Floral Offerings -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="construction" data-src="photos/ceremony-vedic-stone-blessing.jpg" data-type="image" data-title="Vedic Foundation Stone Consecration & Floral Offerings" data-sub="Traditional Vedic priest and leadership performing sacred havan and floral offerings" data-badge="CONSTRUCTION WORK">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/ceremony-vedic-stone-blessing.jpg" alt="Vedic Foundation Stone Consecration & Floral Offerings" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/ceremony-vedic-stone-blessing.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/ceremony-vedic-stone-blessing.jpg" alt="Vedic Foundation Stone Consecration & Floral Offerings" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 CONSTRUCTION WORK
               </span>
             </div>
@@ -449,38 +577,119 @@
 
         </div>
       </section>
-      <!-- ==================== FUN ACTIVITIES ==================== -->
-      <section id="section-funactivities" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
+      <!-- ==================== OFFICE ACTIVITIES ==================== -->
+      <section id="section-officeactivities" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
         <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
             <div class="inline-flex items-center gap-2 rounded-full border border-clay/30 bg-clay/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-clay mb-2">
-              <span>Section 02 · TEAM BONDING &amp; ENGAGEMENT</span>
+              <span>Section 02 · OFFICE ACTIVITIES &amp; CELEBRATIONS</span>
             </div>
             <h3 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-pine-heading">
-              Fun Activities
+              Office Activities
             </h3>
           </div>
           <div class="md:text-right max-w-xl">
-            <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">7 Items</span>
-            <p class="text-sm sm:text-base text-pine-copy">Moments of joy, laughter, and high-energy camaraderie at Global Mahanshi: indoor team games, straw-cup balancing races, balloon lift challenges, blindfold obstacle walks, and shared celebration breaks.</p>
+            <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">13 Items</span>
+            <p class="text-sm sm:text-base text-pine-copy">Moments of festive celebration, employee appreciation, and camaraderie at Global Mahanshi: traditional workplace pooja ceremonies, festive gift presentations, indoor team games, speed cup-stacking tournaments, and shared celebration breaks.</p>
           </div>
         </div>
 
         <!-- Section Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
           
-          <!-- Photo: Team Circle Games & Group Celebration -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/fun-activity-group-dance-games.jpg" data-type="image" data-title="Team Circle Games & Group Celebration" data-sub="High-energy office team bonding, celebration dancing, and festive circle games" data-badge="FUN ACTIVITIES">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/fun-activity-group-dance-games.jpg" alt="Team Circle Games & Group Celebration" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+          <!-- Photo: Office Festive Pooja & Traditional Blessings -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/office-activity-traditional-pooja-celebration.jpg" data-type="image" data-title="Office Festive Pooja &amp; Traditional Blessings" data-sub="Traditional Lakshmi-Ganesha pooja ceremony with sacred lamps, blossoms, and blessings at the Global Mahanshi workplace" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/office-activity-traditional-pooja-celebration.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/office-activity-traditional-pooja-celebration.jpg" alt="Office Festive Pooja &amp; Traditional Blessings" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-pink-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
-                FUN ACTIVITIES
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Office Festive Pooja &amp; Blessings</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Traditional Lakshmi-Ganesha pooja ceremony with sacred lamps, blossoms, and blessings at the workplace</p>
+            </div>
+          </div>
+
+          <!-- Photo: Employee Festive Gift Distribution & Appreciation -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/office-activity-festival-gifting-appreciation.jpg" data-type="image" data-title="Employee Festive Gift Distribution &amp; Appreciation" data-sub="Presenting festive gifts and appreciation hampers to team members across engineering and architectural wings" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/office-activity-festival-gifting-appreciation.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/office-activity-festival-gifting-appreciation.jpg" alt="Employee Festive Gift Distribution &amp; Appreciation" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Festive Gift Distribution &amp; Appreciation</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Presenting festive gifts and appreciation hampers to team members across engineering and architectural wings</p>
+            </div>
+          </div>
+
+          <!-- Photo: Speed Cup Stacking Tower Showdown -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-speed-cup-stacking-race.jpg" data-type="image" data-title="Speed Cup Stacking Tower Showdown" data-sub="Intense head-to-head paper cup balancing and rapid pyramid stacking challenge" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-speed-cup-stacking-race.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-speed-cup-stacking-race.jpg" alt="Speed Cup Stacking Tower Showdown" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Speed Cup Stacking Tower Showdown</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Intense head-to-head paper cup balancing and rapid pyramid stacking challenge</p>
+            </div>
+          </div>
+
+          <!-- Photo: Team Circle Laughter & Office Bonding -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-team-circle-laughter.jpg" data-type="image" data-title="Team Circle Laughter &amp; Office Bonding" data-sub="Colleagues sharing joy, lighthearted stories, and hearty laughter during office team bonding" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-team-circle-laughter.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-team-circle-laughter.jpg" alt="Team Circle Laughter &amp; Office Bonding" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Team Circle Laughter &amp; Office Bonding</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Colleagues sharing joy, lighthearted stories, and hearty laughter during office team bonding</p>
+            </div>
+          </div>
+
+          <!-- Photo: Team Circle Games & Group Celebration -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-group-dance-games.jpg" data-type="image" data-title="Team Circle Games & Group Celebration" data-sub="High-energy office team bonding, celebration dancing, and festive circle games" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-group-dance-games.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-group-dance-games.jpg" alt="Team Circle Games & Group Celebration" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
               </span>
             </div>
             <div class="p-5">
@@ -489,36 +698,19 @@
             </div>
           </div>
 
-          <!-- Photo: Team Chai Break & Informal Gathering -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/fun-activity-team-chai-break.jpg" data-type="image" data-title="Team Chai Break & Informal Gathering" data-sub="Afternoon tea and coffee break with team members relaxing together in office lounge" data-badge="FUN ACTIVITIES">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/fun-activity-team-chai-break.jpg" alt="Team Chai Break & Informal Gathering" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
-                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
-                </span>
-              </div>
-              <span class="absolute top-3 left-3 bg-pink-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
-                FUN ACTIVITIES
-              </span>
-            </div>
-            <div class="p-5">
-              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Team Chai Break & Informal Gathering</h4>
-              <p class="mt-1 text-sm text-pine-muted font-medium">Afternoon tea and coffee break with team members relaxing together in office lounge</p>
-            </div>
-          </div>
 
           <!-- Photo: Straw & Paper Cup Air Balancing Race -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/fun-activity-straw-cup-balance.jpg" data-type="image" data-title="Straw & Paper Cup Air Balancing Race" data-sub="Exciting two-player paper cup suction and balancing face-off" data-badge="FUN ACTIVITIES">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/fun-activity-straw-cup-balance.jpg" alt="Straw & Paper Cup Air Balancing Race" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-straw-cup-balance.jpg" data-type="image" data-title="Straw & Paper Cup Air Balancing Race" data-sub="Exciting two-player paper cup suction and balancing face-off" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-straw-cup-balance.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-straw-cup-balance.jpg" alt="Straw & Paper Cup Air Balancing Race" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-pink-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
-                FUN ACTIVITIES
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
               </span>
             </div>
             <div class="p-5">
@@ -528,16 +720,17 @@
           </div>
 
           <!-- Photo: Blindfolded Paper Cup Obstacle Course -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/fun-activity-blindfold-obstacle-walk.jpg" data-type="image" data-title="Blindfolded Paper Cup Obstacle Course" data-sub="Navigating through a straight row of cups blindfolded while colleagues guide and cheer" data-badge="FUN ACTIVITIES">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/fun-activity-blindfold-obstacle-walk.jpg" alt="Blindfolded Paper Cup Obstacle Course" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-blindfold-obstacle-walk.jpg" data-type="image" data-title="Blindfolded Paper Cup Obstacle Course" data-sub="Navigating through a straight row of cups blindfolded while colleagues guide and cheer" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-blindfold-obstacle-walk.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-blindfold-obstacle-walk.jpg" alt="Blindfolded Paper Cup Obstacle Course" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-pink-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
-                FUN ACTIVITIES
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
               </span>
             </div>
             <div class="p-5">
@@ -547,16 +740,17 @@
           </div>
 
           <!-- Photo: Balloon Air-Lift Paper Cup Challenge -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/fun-activity-balloon-cup-challenge.jpg" data-type="image" data-title="Balloon Air-Lift Paper Cup Challenge" data-sub="Competitive head-to-head cup lifting contest using inflated balloons" data-badge="FUN ACTIVITIES">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/fun-activity-balloon-cup-challenge.jpg" alt="Balloon Air-Lift Paper Cup Challenge" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-balloon-cup-challenge.jpg" data-type="image" data-title="Balloon Air-Lift Paper Cup Challenge" data-sub="Competitive head-to-head cup lifting contest using inflated balloons" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-balloon-cup-challenge.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-balloon-cup-challenge.jpg" alt="Balloon Air-Lift Paper Cup Challenge" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-pink-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
-                FUN ACTIVITIES
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
               </span>
             </div>
             <div class="p-5">
@@ -566,16 +760,17 @@
           </div>
 
           <!-- Photo: Lounge Cheering & Speed Balancing Contest -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/fun-activity-straw-cup-contest-cheering.jpg" data-type="image" data-title="Lounge Cheering & Speed Balancing Contest" data-sub="Colleagues cheering and recording the heated cup-stacking race in the lounge" data-badge="FUN ACTIVITIES">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/fun-activity-straw-cup-contest-cheering.jpg" alt="Lounge Cheering & Speed Balancing Contest" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-straw-cup-contest-cheering.jpg" data-type="image" data-title="Lounge Cheering & Speed Balancing Contest" data-sub="Colleagues cheering and recording the heated cup-stacking race in the lounge" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-straw-cup-contest-cheering.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-straw-cup-contest-cheering.jpg" alt="Lounge Cheering & Speed Balancing Contest" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-pink-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
-                FUN ACTIVITIES
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
               </span>
             </div>
             <div class="p-5">
@@ -585,26 +780,209 @@
           </div>
 
           <!-- Photo: Friendly Match Point & Game Coordination -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="funactivities" data-src="photos/fun-activity-team-games-coordination.jpg" data-type="image" data-title="Friendly Match Point & Game Coordination" data-sub="Counting scores, coordinating rules, and sharing hearty laughs among colleagues" data-badge="FUN ACTIVITIES">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/fun-activity-team-games-coordination.jpg" alt="Friendly Match Point & Game Coordination" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-team-games-coordination.jpg" data-type="image" data-title="Friendly Match Point &amp; Game Coordination" data-sub="Counting scores, coordinating rules, and sharing hearty laughs among colleagues" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-team-games-coordination.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-team-games-coordination.jpg" alt="Friendly Match Point &amp; Game Coordination" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-pink-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
-                FUN ACTIVITIES
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
               </span>
             </div>
             <div class="p-5">
-              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Friendly Match Point & Game Coordination</h4>
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Friendly Match Point &amp; Game Coordination</h4>
               <p class="mt-1 text-sm text-pine-muted font-medium">Counting scores, coordinating rules, and sharing hearty laughs among colleagues</p>
+            </div>
+          </div>
+
+          <!-- Photo: Team Circle Icebreaker & Group Connection -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-circle-icebreaker-introduction.jpg" data-type="image" data-title="Team Circle Icebreaker &amp; Group Connection" data-sub="Welcoming all colleagues and building camaraderie across engineering and design wings" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-circle-icebreaker-introduction.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-circle-icebreaker-introduction.jpg" alt="Team Circle Icebreaker &amp; Group Connection" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Team Circle Icebreaker &amp; Connection</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Welcoming all colleagues and building camaraderie across engineering and design wings</p>
+            </div>
+          </div>
+
+          <!-- Photo: Cup Stacking Tournament & Team Cheers -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-cup-stacking-tournament-cheering.jpg" data-type="image" data-title="Cup Stacking Tournament &amp; Team Cheers" data-sub="Teammates lined up to encourage, cheer, and celebrate every successful cup pyramid" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-cup-stacking-tournament-cheering.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-cup-stacking-tournament-cheering.jpg" alt="Cup Stacking Tournament &amp; Team Cheers" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Cup Stacking Tournament &amp; Team Cheers</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Teammates lined up to encourage, cheer, and celebrate every successful cup pyramid</p>
+            </div>
+          </div>
+
+          <!-- Photo: Championship Round & High-Focus Cup Stacking -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="officeactivities funactivities" data-src="photos/fun-activity-championship-cup-stacking-focus.jpg" data-type="image" data-title="Championship Round &amp; High-Focus Stacking" data-sub="Final round precision moves with undivided encouragement and smiles from colleagues" data-badge="OFFICE ACTIVITIES">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/fun-activity-championship-cup-stacking-focus.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/fun-activity-championship-cup-stacking-focus.jpg" alt="Championship Round &amp; High-Focus Stacking" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 z-20 bg-amber-700/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                OFFICE ACTIVITIES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Championship Round &amp; Precision Stacking</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">Final round precision moves with undivided encouragement and smiles from colleagues</p>
             </div>
           </div>
 
         </div>
       </section>
+      <!-- ==================== PLOTTED LAYOUTS ==================== -->
+      <!-- ==================== SRI SAI PRASHANTHI (5 AUTHENTIC PHOTOS) ==================== -->
+      <section id="section-saiprashanthi" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/15 px-3.5 py-1 text-xs font-black uppercase tracking-wider text-amber-900 mb-2">
+              <span>👑👑 SRI SAI PRASHANTHI</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+              <span>100% FULL AUTHENTIC PHOTOS (UNCROPPED)</span>
+            </div>
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">SRI SAI PRASHANTHI 👑👑</h3>
+            <p class="text-sm sm:text-base text-pine-copy mt-1 font-semibold">
+              📌📌 LOCATION : KOPPA RAMASANDRA ROAD, KOPPA 🚧🚧 · PLOT SIZES 20×40 = 800 SQ.FT
+            </p>
+          </div>
+          <div class="text-xs sm:text-sm font-black text-slate-900 bg-amber-400/90 border border-amber-500 px-4 py-2 rounded-2xl shadow-xs shrink-0">
+            💰 SITE + CONSTRUCTION JUST 52 LAKHS ONWARDS · DOWN PAYMENT 15 LAKHS
+          </div>
+        </div>
+
+        <!-- 5 Photos Grid (All with object-contain to ensure NO CROPPING) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Photo 1: Grand Entrance Arch -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border-2 border-amber-400/50 group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/sai-prashanthi-grand-entrance-arch.jpg" data-type="image" data-title="SRI SAI PRASHANTHI 👑👑 — Grand Entrance Arch" data-sub="📌 Koppa Ramasandra Road, Koppa · Gated Community Entrance Arch &amp; Ornate Gates" data-badge="GRAND ENTRANCE ARCH">
+            <div class="relative aspect-[4/3] bg-[#142822] flex items-center justify-center p-3 overflow-hidden">
+              <img src="photos/sai-prashanthi-grand-entrance-arch.jpg" alt="Sri Sai Prashanthi Grand Entrance Arch" class="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                GRAND ENTRANCE ARCH
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Sri Sai Prashanthi Grand Entrance Arch</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">📌 Koppa Ramasandra Road, Koppa · Ornate Gated Community</p>
+            </div>
+          </div>
+
+          <!-- Photo 2: House Construction -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/sai-prashanthi-house-construction.jpg" data-type="image" data-title="SRI SAI PRASHANTHI 👑👑 — Active House Construction" data-sub="Site + Construction Just 52 Lakhs Onwards · Down Payment 15 Lakhs · Booking 2 Lakhs" data-badge="HOUSE CONSTRUCTION">
+            <div class="relative aspect-[4/3] bg-[#142822] flex items-center justify-center p-3 overflow-hidden">
+              <img src="photos/sai-prashanthi-house-construction.jpg" alt="Duplex Villa Active Construction" class="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                HOUSE CONSTRUCTION
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Active Duplex Villa Construction (G+1)</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">💰 Site + Construction Just 52 Lakhs Onwards · Booking 2 Lakhs</p>
+            </div>
+          </div>
+
+          <!-- Photo 3: 30 Ft Concrete Road & Plots -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/sai-prashanthi-plots-concrete-road.jpg" data-type="image" data-title="SRI SAI PRASHANTHI 👑👑 — 30 Ft Roads & Demarcated Plots" data-sub="Plot Sizes 20×40 = 800 SQ.FT · 30 Ft Roads, UGD, Street Lights & 24*7 Security" data-badge="30 FT ROADS & DRAINAGE">
+            <div class="relative aspect-[4/3] bg-[#142822] flex items-center justify-center p-3 overflow-hidden">
+              <img src="photos/sai-prashanthi-plots-concrete-road.jpg" alt="30 Ft Roads & Demarcated Plots" class="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                30 FT ROADS &amp; DRAINAGE
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">30 Ft Roads &amp; Demarcated Plots (20×40)</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">✅ Underground Drainage · Street Lights · 24*7 Security</p>
+            </div>
+          </div>
+
+          <!-- Photo 4: RCC Footings & Water Infrastructure -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/sai-prashanthi-columns-footings-sump.jpg" data-type="image" data-title="SRI SAI PRASHANTHI 👑👑 — RCC Footings, Columns & Water Sump" data-sub="INDUSVAL Kaveri Water Connection & 24*7 Water Supply · Total Site 3 Bores" data-badge="KAVERI WATER & 3 BORES">
+            <div class="relative aspect-[4/3] bg-[#142822] flex items-center justify-center p-3 overflow-hidden">
+              <img src="photos/sai-prashanthi-columns-footings-sump.jpg" alt="RCC Footings & Sump Work" class="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                KAVERI WATER &amp; 3 BORES
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">RCC Columns, Footings &amp; Water Sump</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">✅ INDUSVAL Kaveri Water Connection &amp; 24*7 Supply (3 Bores)</p>
+            </div>
+          </div>
+
+          <!-- Photo 5: Heavy Excavation Work & Blocks Staging -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/sai-prashanthi-excavator-blocks.jpg" data-type="image" data-title="SRI SAI PRASHANTHI 👑👑 — Heavy Earthmoving & Material Staging" data-sub="Ready for Registration & Construction · Near Multiple Industries" data-badge="SITE DEVELOPMENT">
+            <div class="relative aspect-[4/3] bg-[#142822] flex items-center justify-center p-3 overflow-hidden">
+              <img src="photos/sai-prashanthi-excavator-blocks.jpg" alt="Excavator & Hollow Blocks Staging" class="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (Uncropped)
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+                SITE DEVELOPMENT
+              </span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Heavy Earthmoving &amp; Materials Staging</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">🏡 Ready for Registration &amp; Construction · Near Multiple Industries</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <!-- ==================== PLOTTED LAYOUTS ==================== -->
       <section id="section-layouts" class="gallery-category-section scroll-mt-36 py-12 border-b border-linen-edge last:border-b-0">
         <!-- Section Header -->
@@ -619,7 +997,7 @@
           </div>
           <div class="md:text-right max-w-xl">
             <span class="inline-block rounded-full bg-pine/10 text-pine text-xs font-bold uppercase px-3 py-1 mb-1">3 Items</span>
-            <p class="text-sm sm:text-base text-pine-copy">Grand entrance arches, compound wall security gates, and strategic connectivity corridors for Sai Roots and Sri Sai Prasanthi gated layouts.</p>
+            <p class="text-sm sm:text-base text-pine-copy">Grand entrance arches, compound wall security gates, and strategic connectivity corridors for Sai Roots and Sri Sai Prashanthi gated layouts.</p>
           </div>
         </div>
 
@@ -644,22 +1022,22 @@
               <p class="mt-1 text-sm text-pine-muted font-medium">Jigani Industrial Corridor, near Electronic City Phase 1 & 2</p>
             </div>
           </div>
-          <!-- Photo: Sri Sai Prasanthi Gated Community Entrance -->
-          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/images-sri-sai-prasanthi-entrance.webp" data-type="image" data-title="Sri Sai Prasanthi Gated Community Entrance" data-sub="Peaceful, secured plotted layout in Ramasandra, Jigani Hub" data-badge="SRI SAI PRASANTHI">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/images-sri-sai-prasanthi-entrance.webp" alt="Sri Sai Prasanthi Gated Community Entrance" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+          <!-- Photo: Sri Sai Prashanthi Gated Community Entrance -->
+          <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/sai-prashanthi-grand-entrance-arch.jpg" data-type="image" data-title="SRI SAI PRASHANTHI 👑👑 — Grand Entrance Arch" data-sub="📌 Koppa Ramasandra Road, Koppa · Gated Community" data-badge="SRI SAI PRASHANTHI">
+            <div class="relative aspect-[4/3] bg-[#142822] flex items-center justify-center p-2.5 overflow-hidden">
+              <img src="photos/sai-prashanthi-grand-entrance-arch.jpg" alt="Sri Sai Prashanthi Gated Community Entrance Arch" class="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen (Uncropped)
                 </span>
               </div>
               <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
-                SRI SAI PRASANTHI
+                SRI SAI PRASHANTHI
               </span>
             </div>
             <div class="p-5">
-              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Sri Sai Prasanthi Gated Community Entrance</h4>
-              <p class="mt-1 text-sm text-pine-muted font-medium">Peaceful, secured plotted layout in Ramasandra, Jigani Hub</p>
+              <h4 class="font-display text-xl font-bold text-pine-heading group-hover:text-clay transition-colors">Sri Sai Prashanthi Gated Community Entrance</h4>
+              <p class="mt-1 text-sm text-pine-muted font-medium">📌 Koppa Ramasandra Road, Koppa · Site + Construction ₹52 Lakhs</p>
             </div>
           </div>
           <!-- Photo: Jigani Development Landmark Corridor -->
@@ -705,14 +1083,15 @@
           
           <!-- Photo: 50 Ft Main Concrete Road & Numbered Sites -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/site-road-demarcated-plots.jpeg" data-type="image" data-title="50 Ft Main Concrete Road & Numbered Sites" data-sub="Wide concrete arterial roadway with stone-marked plot boundary stones" data-badge="50 FT MAIN ROAD">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/site-road-demarcated-plots.jpeg" alt="50 Ft Main Concrete Road & Numbered Sites" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/site-road-demarcated-plots.jpeg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/site-road-demarcated-plots.jpeg" alt="50 Ft Main Concrete Road & Numbered Sites" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 50 FT MAIN ROAD
               </span>
             </div>
@@ -723,14 +1102,15 @@
           </div>
           <!-- Photo: Underground Drainage & Walkway Infrastructure -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/site-infrastructure-drainage.jpeg" data-type="image" data-title="Underground Drainage & Walkway Infrastructure" data-sub="Concealed underground sewage pipe network with RCC access manholes" data-badge="UNDERGROUND UTILITIES">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/site-infrastructure-drainage.jpeg" alt="Underground Drainage & Walkway Infrastructure" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/site-infrastructure-drainage.jpeg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/site-infrastructure-drainage.jpeg" alt="Underground Drainage & Walkway Infrastructure" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 UNDERGROUND UTILITIES
               </span>
             </div>
@@ -764,7 +1144,7 @@
           
           <!-- Photo: Sanctioned DC Layout Master Plan & Approvals -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/sai_roots_gate.jpg" data-type="image" data-title="Sanctioned DC Layout Master Plan & Approvals" data-sub="Sy.No. 41/1, Bukkasagara, Jigani — Approved 53-site sanctioned plan with Gram Panchayat seal & conversion orders" data-badge="OFFICIAL BLUEPRINT">
-            <div class="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden bg-[#0d1d19] flex items-center justify-center p-3">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center p-3">
               <img src="photos/sai_roots_gate.jpg" alt="Sanctioned DC Layout Master Plan & Approvals" class="h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
@@ -782,7 +1162,7 @@
           </div>
           <!-- Photo: High-Resolution Master Plotted Layout -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/master-layout.webp" data-type="image" data-title="High-Resolution Master Plotted Layout" data-sub="53-Plot master grid with park areas, civic amenities, and road widths" data-badge="MASTER PLAN">
-            <div class="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden bg-[#0d1d19] flex items-center justify-center p-3">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center p-3">
               <img src="photos/master-layout.webp" alt="High-Resolution Master Plotted Layout" class="h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
@@ -859,14 +1239,15 @@
           </div>
           <!-- Photo: Architectural Elevation — Designer Residence -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" data-type="image" data-title="Architectural Elevation — Designer Residence" data-sub="Contemporary clean geometry, wooden louvers, and expansive balconies" data-badge="DESIGNER RESIDENCE">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" alt="Architectural Elevation — Designer Residence" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" alt="Architectural Elevation — Designer Residence" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 DESIGNER RESIDENCE
               </span>
             </div>
@@ -877,14 +1258,15 @@
           </div>
           <!-- Photo: Modern Residence Architectural Study -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/Modern_RESIDENCE_Horizontal_Logo_Poster_No_For_Sale.jpg" data-type="image" data-title="Modern Residence Architectural Study" data-sub="Multi-level duplex configuration with covered car porch and rooftop deck" data-badge="MODERN RESIDENCE">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/Modern_RESIDENCE_Horizontal_Logo_Poster_No_For_Sale.jpg" alt="Modern Residence Architectural Study" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/Modern_RESIDENCE_Horizontal_Logo_Poster_No_For_Sale.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/Modern_RESIDENCE_Horizontal_Logo_Poster_No_For_Sale.jpg" alt="Modern Residence Architectural Study" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 MODERN RESIDENCE
               </span>
             </div>
@@ -895,14 +1277,15 @@
           </div>
           <!-- Photo: Urban Home 30×40 Living Design -->
           <div class="gallery-item card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1" data-category="" data-src="photos/Urban_HOME_Poster_No_For_Sale.jpg" data-type="image" data-title="Urban Home 30×40 Living Design" data-sub="Optimized 30×40 plot construction with high natural ventilation and light" data-badge="URBAN HOME 30×40">
-            <div class="relative aspect-[4/3] overflow-hidden bg-pine-dark">
-              <img src="photos/Urban_HOME_Poster_No_For_Sale.jpg" alt="Urban Home 30×40 Living Design" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#0d1d19] flex items-center justify-center">
+              <img src="photos/Urban_HOME_Poster_No_For_Sale.jpg" alt="" class="absolute inset-0 h-full w-full object-cover blur-md scale-110 opacity-30 pointer-events-none" aria-hidden="true" />
+              <img src="photos/Urban_HOME_Poster_No_For_Sale.jpg" alt="Urban Home 30×40 Living Design" class="relative z-10 h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-1" />
+              <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 pointer-events-none">
                 <span class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Click to View Fullscreen
                 </span>
               </div>
-              <span class="absolute top-3 left-3 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
+              <span class="absolute top-3 left-3 z-20 bg-[#1F3630]/90 text-amber-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm shadow">
                 URBAN HOME 30×40
               </span>
             </div>
@@ -1019,96 +1402,6 @@
     <span>Chat on WhatsApp</span>
   </a>
 
-  <!-- Script for Filtering and Lightbox Modal -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Filtering logic
-      const filterBtns = document.querySelectorAll('.gallery-filter-btn');
-      const galleryItems = document.querySelectorAll('.gallery-item');
-
-      function filterCategory(category) {
-        filterBtns.forEach(b => {
-          if (b.dataset.category === category) {
-            b.classList.add('active');
-          } else {
-            b.classList.remove('active');
-          }
-        });
-
-        galleryItems.forEach(item => {
-          const itemCats = (item.dataset.category || '').split(/\s+/);
-          if (category === 'all' || itemCats.includes(category)) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      }
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const category = btn.dataset.category;
-          filterCategory(category);
-        });
-      });
-
-      // Auto-filter from URL parameter if present (?category=funactivities or ?category=construction)
-      const urlParams = new URLSearchParams(window.location.search);
-      const initialCat = urlParams.get('category');
-      if (initialCat) {
-        filterCategory(initialCat);
-      }
-
-      // 2. Lightbox logic
-      const lightbox = document.getElementById('gallery-lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      const lightboxTitle = document.getElementById('lightbox-title');
-      const lightboxSub = document.getElementById('lightbox-sub');
-      const lightboxBadge = document.getElementById('lightbox-badge');
-      const lightboxClose = document.getElementById('lightbox-close');
-      const lightboxWaBtn = document.getElementById('lightbox-wa-btn');
-
-      galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const src = item.dataset.src;
-          const title = item.dataset.title;
-          const sub = item.dataset.sub;
-          const badge = item.dataset.badge;
-
-          if (lightboxImg) lightboxImg.src = src;
-          if (lightboxTitle) lightboxTitle.textContent = title;
-          if (lightboxSub) lightboxSub.textContent = sub;
-          if (lightboxBadge) lightboxBadge.textContent = badge;
-
-          if (lightboxWaBtn) {
-            lightboxWaBtn.href = `https://wa.me/919632734110?text=Hi%2C%20I%20am%20inquiring%20about%20the%20photo%20'${encodeURIComponent(title)}'%20on%20your%20website%20gallery.`;
-          }
-
-          if (lightbox) {
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-          }
-        });
-      });
-
-      if (lightboxClose && lightbox) {
-        lightboxClose.addEventListener('click', () => {
-          lightbox.classList.add('hidden');
-          lightbox.classList.remove('flex');
-        });
-
-        lightbox.addEventListener('click', (e) => {
-          if (e.target === lightbox) {
-            lightbox.classList.add('hidden');
-            lightbox.classList.remove('flex');
-          }
-        });
-      }
-    });
-  </script>
-  <script src="app.js?v=20261012-v4"></script>
-</body>
-</html>
   <!-- ==================== GALLERY LIGHTBOX MODAL (IMAGE & VIDEO) ==================== -->
   <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/92 p-4 backdrop-blur-md transition-all">
     <div class="relative max-w-5xl w-full flex flex-col items-center">
@@ -1165,7 +1458,7 @@
             sections.forEach(s => s.classList.remove('hidden'));
           } else {
             sections.forEach(s => {
-              if (s.id === target) {
+              if (s.id === target || (target === 'section-officeactivities' && s.id === 'section-funactivities') || (target === 'section-funactivities' && s.id === 'section-officeactivities')) {
                 s.classList.remove('hidden');
                 s.scrollIntoView({ behavior: 'smooth', block: 'start' });
               } else {
@@ -1175,6 +1468,20 @@
           }
         });
       });
+
+      // Auto-filter or jump from URL parameter if present (?category=officeactivities or ?category=funactivities)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlCategory = urlParams.get('category');
+      if (urlCategory) {
+        let matchingTarget = 'section-' + urlCategory;
+        if (urlCategory === 'funactivities' || urlCategory === 'officeactivities') {
+          matchingTarget = 'section-officeactivities';
+        }
+        const targetBtn = Array.from(filterBtns).find(b => b.dataset.target === matchingTarget || (matchingTarget === 'section-officeactivities' && b.dataset.target === 'section-funactivities'));
+        if (targetBtn) {
+          targetBtn.click();
+        }
+      }
 
       // 2. Lightbox Controller
       const lightbox = document.getElementById('gallery-lightbox');
@@ -1252,5 +1559,6 @@
       });
     });
   </script>
+  <script src="app.js?v=20261012-v4"></script>
 </body>
 </html>

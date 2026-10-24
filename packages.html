@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Construction Packages &amp; EMI Calculator | Global Mahanshi Builders</title>
-  <meta name="description" content="View transparent residential house construction packages from ₹1,950 / sq.ft and calculate your monthly EMI with Global Mahanshi Builders in Bengaluru." />
+  <meta name="description" content="View transparent residential house construction packages from ₹2,200 / sq.ft and calculate your monthly EMI with Global Mahanshi Builders in Bengaluru." />
   
   <!-- Preconnect & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,8 +53,9 @@
     }
   </script>
   <link rel="stylesheet" href="linen-theme.css?v=20261013-v3" />
+  <link rel="stylesheet" href="light-theme.css?v=20261019-v5" />
 </head>
-<body class="bg-[#1F3630] font-sans text-pine-body antialiased">
+<body class="page-packages bg-[#EEF3F0] font-sans text-pine-body antialiased">
 
   <!-- ==================== TOP NAVIGATION HEADER ==================== -->
   <header class="absolute top-0 inset-x-0 z-50 h-20 sm:h-22 lg:h-24 border-b border-white/10 bg-transparent text-[#FDFCEE] transition-all">
@@ -62,7 +63,7 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3.5 group">
-        <img src="images/logo-emblem.png" alt="Global Mahanshi Builders Emblem" class="h-10 sm:h-12 w-auto object-contain filter drop-shadow transition-transform group-hover:scale-105" />
+        <img src="images/logo-emblem.png" alt="Global Mahanshi Builders Logo" class="brand-top-logo" />
         <div class="flex flex-col">
           <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">Global Mahanshi</span>
           <span class="brand-subtitle text-[11px] sm:text-xs font-bold uppercase text-amber-300">Builders</span>
@@ -70,15 +71,15 @@
       </a>
 
       <!-- Primary Navigation -->
-      <nav class="hidden items-center gap-3.5 lg:gap-4 xl:gap-6 2xl:gap-8 lg:flex" aria-label="Primary Navigation">
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="index.html">Home</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="about.html">About Us</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="services.html">Services</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="projects.html">Projects</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-bold tracking-wide text-amber-300 border-b-2 border-amber-300 pb-0.5" href="packages.html">Packages</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="leadership.html">Leadership</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="gallery.html">Gallery</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="contact.html">Contact</a>
+      <nav class="hidden items-center gap-2 lg:gap-2.5 xl:gap-3 lg:flex" aria-label="Primary Navigation">
+        <a class="nav-option-pill nav-opt-home" href="index.html"><span>Home</span></a>
+        <a class="nav-option-pill nav-opt-about" href="about.html"><span>About Us</span></a>
+        <a class="nav-option-pill nav-opt-services" href="services.html"><span>Services</span></a>
+        <a class="nav-option-pill nav-opt-projects" href="projects.html"><span>Projects</span></a>
+        <a class="nav-option-pill nav-opt-packages" href="packages.html"><span>Packages</span></a>
+        <a class="nav-option-pill nav-opt-leadership" href="leadership.html"><span>Leadership</span></a>
+        <a class="nav-option-pill nav-opt-gallery" href="gallery.html"><span>Gallery</span></a>
+        <a class="nav-option-pill nav-opt-contact" href="contact.html"><span>Contact</span></a>
       </nav>
 
       <!-- Action Button & WhatsApp -->
@@ -101,15 +102,15 @@
 
     <!-- Mobile Drawer -->
     <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-white/15 bg-[#1F3630] px-6 py-6 text-linen shadow-2xl">
-      <nav class="flex flex-col gap-4 text-base font-medium">
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="index.html">Home</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="about.html">About Us</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="services.html">Services &amp; Themes</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="projects.html">Active Projects</a>
-        <a class="text-amber-300 py-1 font-bold text-lg" href="packages.html">Packages &amp; Estimate</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="leadership.html">Leadership</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="gallery.html">Project Gallery</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="contact.html">Contact &amp; Site Visit</a>
+      <nav class="flex flex-col gap-2 text-base font-medium">
+        <a class="nav-option-pill nav-opt-home" href="index.html"><span>Home</span></a>
+        <a class="nav-option-pill nav-opt-about" href="about.html"><span>About Us</span></a>
+        <a class="nav-option-pill nav-opt-services" href="services.html"><span>Services</span></a>
+        <a class="nav-option-pill nav-opt-projects" href="projects.html"><span>Projects</span></a>
+        <a class="nav-option-pill nav-opt-packages" href="packages.html"><span>Packages</span></a>
+        <a class="nav-option-pill nav-opt-leadership" href="leadership.html"><span>Leadership</span></a>
+        <a class="nav-option-pill nav-opt-gallery" href="gallery.html"><span>Gallery</span></a>
+        <a class="nav-option-pill nav-opt-contact" href="contact.html"><span>Contact</span></a>
         <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
           <button type="button" class="open-login-modal-btn w-full inline-flex items-center justify-center gap-2 rounded-full border border-amber-300/40 bg-white/5 py-2.5 text-sm font-bold uppercase text-amber-200 hover:bg-white/10">
             <svg class="size-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -129,7 +130,7 @@
     <!-- ==================== PAGE BANNER (DARK PINE CANVAS #1F3630) ==================== -->
     <section class="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[580px] flex items-center bg-[#0e221c] text-white pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 overflow-hidden border-b border-white/15">
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="photos/images-mr-rajendra-residence-proposed-design.webp" alt="Global Mahanshi" class="h-full w-full object-cover object-center filter brightness-95 contrast-105 opacity-88" />
+        <img src="photos/ai-nav-packages.jpg?v=20261022-p3" alt="Global Mahanshi Turnkey Construction Packages &amp; Cost Calculator" class="h-full w-full object-cover object-center filter brightness-90 contrast-105 opacity-65" />
         <div class="hero-plain-backdrop"></div>
       </div>
 
@@ -191,7 +192,7 @@
                       <p class="text-xs text-linen/70">Turnkey Complete Package</p>
                     </div>
                     <div class="text-right">
-                      <span class="font-display text-2xl font-bold text-amber-300">&#8377;1,950</span>
+                      <span class="font-display text-2xl font-bold text-amber-300">&#8377;2,200</span>
                       <span class="text-xs text-linen/60 block">/ sq.ft</span>
                     </div>
                   </div>
@@ -207,7 +208,7 @@
                       <p class="text-xs text-amber-300 font-semibold">Most Popular Specification</p>
                     </div>
                     <div class="text-right">
-                      <span class="font-display text-2xl font-bold text-amber-200">&#8377;2,200</span>
+                      <span class="font-display text-2xl font-bold text-amber-200">&#8377;2,500</span>
                       <span class="text-xs text-linen/60 block">/ sq.ft</span>
                     </div>
                   </div>
@@ -253,32 +254,137 @@
           </p>
         </div>
 
-        <!-- 3 Packages Cards (Wide 3-Col Grid) -->
+        <!-- ==================== SRI SAI PRASHANTHI ALL-INCLUSIVE PLOT + CONSTRUCTION COMBO ==================== -->
+        <div class="card-linen-white rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-400 p-6 sm:p-8 lg:p-10 mb-14 relative" style="background: linear-gradient(145deg, #FFFFFF 0%, #FDF9F0 50%, #F6ECDD 100%);">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left (5 Cols): 100% Full Uncropped Image Preview -->
+            <div class="lg:col-span-5 relative bg-[#142822] rounded-2xl p-3 sm:p-4 flex flex-col justify-between min-h-[300px] border border-amber-400/40 shadow-inner">
+              <div class="flex items-center justify-between mb-2">
+                <span class="rounded-full bg-amber-500 text-slate-950 font-black text-xs uppercase px-3 py-1 shadow">
+                  👑 Sri Sai Prashanthi
+                </span>
+                <span class="rounded-full bg-emerald-700 text-white font-bold text-xs uppercase px-2.5 py-1 shadow">
+                  Ready to Register
+                </span>
+              </div>
+              <div class="w-full h-52 sm:h-60 flex items-center justify-center my-auto">
+                <img src="photos/sai-prashanthi-grand-entrance-arch.jpg" alt="Sri Sai Prashanthi Grand Entrance Arch" class="max-h-full max-w-full object-contain rounded-xl shadow-lg" />
+              </div>
+              <div class="grid grid-cols-4 gap-1.5 pt-2 border-t border-white/10 mt-2">
+                <div class="aspect-[4/3] bg-black/40 rounded p-0.5 overflow-hidden flex items-center justify-center">
+                  <img src="photos/sai-prashanthi-house-construction.jpg" alt="House Construction" class="w-full h-full object-contain" />
+                </div>
+                <div class="aspect-[4/3] bg-black/40 rounded p-0.5 overflow-hidden flex items-center justify-center">
+                  <img src="photos/sai-prashanthi-plots-concrete-road.jpg" alt="30 Ft Roads &amp; Plots" class="w-full h-full object-contain" />
+                </div>
+                <div class="aspect-[4/3] bg-black/40 rounded p-0.5 overflow-hidden flex items-center justify-center">
+                  <img src="photos/sai-prashanthi-columns-footings-sump.jpg" alt="RCC Footings" class="w-full h-full object-contain" />
+                </div>
+                <div class="aspect-[4/3] bg-black/40 rounded p-0.5 overflow-hidden flex items-center justify-center">
+                  <img src="photos/sai-prashanthi-excavator-blocks.jpg" alt="Excavation Work" class="w-full h-full object-contain" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Right (7 Cols): Exact Details & Financial Combo -->
+            <div class="lg:col-span-7 space-y-4">
+              <div class="inline-flex items-center gap-2 rounded-full border border-clay/30 bg-clay/10 px-4 py-1 text-xs font-black uppercase tracking-wider text-clay">
+                <span>👑👑 PLOT + VILLA TURNKEY COMBO OFFER</span>
+              </div>
+
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-pine-heading">
+                SRI SAI PRASHANTHI... 👑👑
+              </h3>
+
+              <p class="text-sm sm:text-base font-bold text-clay">
+                📌📌 LOCATION : KOPPA RAMASANDRA ROAD, KOPPA 🚧🚧
+              </p>
+
+              <div class="inline-block bg-[#1F3630] text-amber-300 font-extrabold text-sm sm:text-base px-4 py-1.5 rounded-full shadow-xs">
+                📐 PLOT SIZES 20×40 = 800 SQ.FT
+              </div>
+
+              <!-- Price Box -->
+              <div class="rounded-2xl border-2 border-amber-400 bg-amber-500/10 p-4 sm:p-5 shadow-sm space-y-2">
+                <div class="text-xl sm:text-2xl font-display font-black text-pine-heading">
+                  💰 SITE + CONSTRUCTION JUST 52 LAKHS💰💰💰 ONWARDS....
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm font-black pt-1">
+                  <div class="bg-white rounded-xl p-2.5 border border-amber-200 text-emerald-800">
+                    💳 JUST PAY 15 LAKHS FOR DOWN PAYMENT.
+                  </div>
+                  <div class="bg-white rounded-xl p-2.5 border border-amber-200 text-amber-900">
+                    💰 BOOKING AMOUNT 2 LAKHS 💰💰💰💰
+                  </div>
+                </div>
+                <div class="text-xs sm:text-sm font-black text-center text-emerald-950 bg-emerald-100 rounded-xl py-2 border border-emerald-300">
+                  🏡🏡🏡🏡🏡🏡 READY FOR REGISTRATION AND CONSTRUCTION 🏡🏡🏡🏡🏡🏡
+                </div>
+              </div>
+
+              <!-- Amenities -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-pine font-semibold pt-1">
+                <div>✅ INDUSVAL Kaveri Water &amp; 24*7 Water Supply (3 Bores)</div>
+                <div>✅ Gated Community</div>
+                <div>✅ Under Ground Drainage</div>
+                <div>✅ 30 Ft Roads</div>
+                <div>✅ Near Multiple Industries</div>
+                <div>✅ Street Lights &amp; 24*7 Security</div>
+              </div>
+
+              <div class="pt-2 flex flex-wrap items-center gap-3">
+                <a href="https://wa.me/919632734110?text=Hi%20Global%20Mahanshi%20Builders%2C%20I%20am%20interested%20in%20Sri%20Sai%20Prashanthi%2052%20Lakhs%20Site%20%2B%20Construction%20combo.%20Please%20share%20all%20details." target="_blank" class="sweep group inline-flex items-center gap-2 rounded-full bg-clay px-6 py-3.5 text-sm sm:text-base font-black tracking-wider uppercase text-white shadow-lg hover:bg-terracotta hover:text-pine transition-all">
+                  <span>Claim ₹52L Combo on WhatsApp</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                </a>
+                <a href="projects.html#sri-sai-prashanthi" class="btn-pine-outline rounded-full px-6 py-3.5 text-sm sm:text-base font-bold tracking-wider uppercase">
+                  View 5 Photos &amp; Layout Showcase →
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3 Packages Cards (Wide 3-Col Grid with Image Headers) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           
           <!-- Package 1: Vitrified -->
-          <div class="card-linen-white rounded-3xl p-8 shadow-sm transition-all hover:border-clay flex flex-col justify-between">
+          <div class="card-linen-white rounded-3xl overflow-hidden shadow-sm transition-all hover:border-clay flex flex-col justify-between group">
             <div>
-              <span class="inline-block rounded-lg bg-pine/10 px-3.5 py-1.5 text-base font-bold uppercase text-pine mb-3">Popular Value</span>
-              <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">Standard Vitrified</h3>
-              <div class="mt-2 flex items-baseline gap-1">
-                <span class="font-display text-3xl sm:text-4xl font-bold text-clay">₹1,950</span>
-                <span class="text-base text-pine-muted font-bold">/ sq.ft built-up</span>
+              <div class="relative h-56 w-full overflow-hidden cursor-pointer package-img-trigger" data-src="photos/package-standard-vitrified.jpg" data-title="Standard Vitrified Tier · Living &amp; Dining Finishes" data-sub="2x2 Vitrified tile flooring, teakwood frames, and UPVC acoustic sliding windows">
+                <img src="photos/package-standard-vitrified.jpg?v=20261022" alt="Standard Vitrified Package - 2x2 Vitrified Tiles &amp; Modern Living" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <span class="absolute top-4 left-4 rounded-full bg-pine/90 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">Popular Value</span>
+                <span class="absolute bottom-3 left-4 font-display text-xl font-bold text-white drop-shadow">Vitrified Living &amp; Dining</span>
+                <span class="absolute bottom-3 right-4 text-xs font-bold uppercase tracking-wider text-amber-300 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span>Enlarge</span>
+                  <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/></svg>
+                </span>
               </div>
-              <p class="mt-3 text-lg sm:text-xl lg:text-[20px] text-pine-copy leading-relaxed heading-explanation">
-                Ideal for budget-conscious families seeking durable quality with verified structural engineering and branded materials.
-              </p>
-              
-              <ul class="mt-6 space-y-3.5 text-lg text-pine-copy border-t border-linen-edge pt-5 font-medium">
-                <li class="flex items-start gap-2"><span>✓</span><span>Vitrified tile flooring (2x2 ft) in living, dining &amp; bedrooms</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Teak wood main door &amp; flush internal doors</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Branded 53-grade cement &amp; 550D TMT steel frame</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>2-track sliding UPVC acoustic windows with safety grills</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Anchor/equivalent concealed copper wiring &amp; switches</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Parryware or equivalent sanitaryware and CP fittings</span></li>
-              </ul>
+              <div class="p-8">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">Standard Vitrified</h3>
+                <div class="mt-2 flex items-baseline gap-1">
+                  <span class="font-display text-3xl sm:text-4xl font-bold text-clay">₹2,200</span>
+                  <span class="text-base text-pine-muted font-bold">/ sq.ft built-up</span>
+                </div>
+                <p class="mt-3 text-lg sm:text-xl lg:text-[20px] text-pine-copy leading-relaxed heading-explanation">
+                  Ideal for budget-conscious families seeking durable quality with verified structural engineering and branded materials.
+                </p>
+                
+                <ul class="mt-6 space-y-3.5 text-lg text-pine-copy border-t border-linen-edge pt-5 font-medium">
+                  <li class="flex items-start gap-2"><span>✓</span><span>Vitrified tile flooring (2x2 ft) in living, dining &amp; bedrooms</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Teak wood main door &amp; flush internal doors</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Branded 53-grade cement &amp; 550D TMT steel frame</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>2-track sliding UPVC acoustic windows with safety grills</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Anchor/equivalent concealed copper wiring &amp; switches</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Parryware or equivalent sanitaryware and CP fittings</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="mt-8 pt-5 border-t border-linen-edge">
+            <div class="px-8 pb-8 pt-2">
               <a href="#calculator" class="btn-pine-outline block w-full text-center rounded-full py-4 text-base font-bold uppercase tracking-wider">
                 Select for Calculator
               </a>
@@ -286,29 +392,40 @@
           </div>
 
           <!-- Package 2: Granite -->
-          <div class="card-linen-white rounded-3xl p-8 shadow-xl border-2 border-clay flex flex-col justify-between relative">
-            <span class="absolute -top-3 right-8 rounded-full bg-clay px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-md">Recommended</span>
+          <div class="card-linen-white rounded-3xl overflow-hidden shadow-xl border-2 border-clay flex flex-col justify-between relative group">
+            <span class="absolute top-4 right-4 z-10 rounded-full bg-clay px-4 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md">Recommended</span>
             <div>
-              <span class="inline-block rounded-lg bg-clay/15 px-3.5 py-1.5 text-base font-bold uppercase text-clay mb-3">Premium Durability</span>
-              <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">Standard Granite</h3>
-              <div class="mt-2 flex items-baseline gap-1">
-                <span class="font-display text-3xl sm:text-4xl font-bold text-clay">₹2,200</span>
-                <span class="text-base text-pine-muted font-bold">/ sq.ft built-up</span>
+              <div class="relative h-56 w-full overflow-hidden cursor-pointer package-img-trigger" data-src="photos/package-standard-granite.jpg" data-title="Standard Granite Tier · Sadarahalli Granite &amp; Teak Doors" data-sub="Mirror-polished Sadarahalli natural granite flooring, solid teak entrance door, and Jaquar fittings">
+                <img src="photos/package-standard-granite.jpg?v=20261022" alt="Standard Granite Package - Mirror Polish Sadarahalli Granite &amp; Teak Doors" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <span class="absolute top-4 left-4 rounded-full bg-clay/90 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">Premium Durability</span>
+                <span class="absolute bottom-3 left-4 font-display text-xl font-bold text-white drop-shadow">Sadarahalli Granite &amp; Teak</span>
+                <span class="absolute bottom-3 right-4 text-xs font-bold uppercase tracking-wider text-amber-300 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span>Enlarge</span>
+                  <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/></svg>
+                </span>
               </div>
-              <p class="mt-3 text-lg sm:text-xl lg:text-[20px] text-pine-copy leading-relaxed heading-explanation">
-                Mirror-finish natural granite flooring in living, dining, and stairs with upgraded bathware fixtures and acoustic windows.
-              </p>
-              
-              <ul class="mt-6 space-y-3.5 text-lg text-pine-copy border-t border-linen-edge pt-5 font-medium">
-                <li class="flex items-start gap-2"><span>✓</span><span>Mirror-finish natural granite flooring throughout common areas</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Heavy solid teak wood main entrance door with brass fixtures</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Jaquar or equivalent branded premium bath fittings</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>3-track UPVC acoustic windows with built-in mosquito mesh</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Asian Paints Premium emulsion interiors with 2 coats putty</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Black granite kitchen platform with stainless steel sink</span></li>
-              </ul>
+              <div class="p-8">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">Standard Granite</h3>
+                <div class="mt-2 flex items-baseline gap-1">
+                  <span class="font-display text-3xl sm:text-4xl font-bold text-clay">₹2,500</span>
+                  <span class="text-base text-pine-muted font-bold">/ sq.ft built-up</span>
+                </div>
+                <p class="mt-3 text-lg sm:text-xl lg:text-[20px] text-pine-copy leading-relaxed heading-explanation">
+                  Mirror-finish natural granite flooring in living, dining, and stairs with upgraded bathware fixtures and acoustic windows.
+                </p>
+                
+                <ul class="mt-6 space-y-3.5 text-lg text-pine-copy border-t border-linen-edge pt-5 font-medium">
+                  <li class="flex items-start gap-2"><span>✓</span><span>Mirror-finish natural granite flooring throughout common areas</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Heavy solid teak wood main entrance door with brass fixtures</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Jaquar or equivalent branded premium bath fittings</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>3-track UPVC acoustic windows with built-in mosquito mesh</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Asian Paints Premium emulsion interiors with 2 coats putty</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Black granite kitchen platform with stainless steel sink</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="mt-8 pt-5 border-t border-linen-edge">
+            <div class="px-8 pb-8 pt-2">
               <a href="#calculator" class="btn-terracotta-primary block w-full text-center rounded-full py-4 text-base font-bold uppercase tracking-wider shadow-md">
                 Select for Calculator
               </a>
@@ -316,34 +433,121 @@
           </div>
 
           <!-- Package 3: Turnkey Luxury -->
-          <div class="card-linen-white rounded-3xl p-8 shadow-sm transition-all hover:border-clay flex flex-col justify-between">
+          <div class="card-linen-white rounded-3xl overflow-hidden shadow-sm transition-all hover:border-clay flex flex-col justify-between group">
             <div>
-              <span class="inline-block rounded-lg bg-pine/10 px-3.5 py-1.5 text-base font-bold uppercase text-pine mb-3">Architectural Bespoke</span>
-              <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">Turnkey Luxury Villa</h3>
-              <div class="mt-2 flex items-baseline gap-1">
-                <span class="font-display text-3xl sm:text-4xl font-bold text-pine">Custom</span>
-                <span class="text-base text-pine-muted font-bold">/ tailored quote</span>
+              <div class="relative h-56 w-full overflow-hidden cursor-pointer package-img-trigger" data-src="photos/package-turnkey-luxury-villa.jpg" data-title="Turnkey Luxury Villa Tier · Italian Marble &amp; Duplex Architecture" data-sub="Double-height architectural living space, imported Italian marble, modular kitchen, and smart provisions">
+                <img src="photos/package-turnkey-luxury-villa.jpg?v=20261022" alt="Turnkey Luxury Villa - Italian Marble &amp; Double-Height Architecture" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <span class="absolute top-4 left-4 rounded-full bg-pine/90 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">Architectural Bespoke</span>
+                <span class="absolute bottom-3 left-4 font-display text-xl font-bold text-white drop-shadow">Italian Marble Duplex Villa</span>
+                <span class="absolute bottom-3 right-4 text-xs font-bold uppercase tracking-wider text-amber-300 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span>Enlarge</span>
+                  <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/></svg>
+                </span>
               </div>
-              <p class="mt-3 text-lg sm:text-xl lg:text-[20px] text-pine-copy leading-relaxed heading-explanation">
-                Customized architectural villa with double heights, Italian marble, modular kitchens, smart provisions, and designer facades.
-              </p>
-              
-              <ul class="mt-6 space-y-3.5 text-lg text-pine-copy border-t border-linen-edge pt-5 font-medium">
-                <li class="flex items-start gap-2"><span>✓</span><span>Italian marble or imported large-format vitrified slabs</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Double-height ceiling with architectural facade louvers</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Custom modular kitchen &amp; wardrobe electrical conduits</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Solar water heating &amp; home automation conduits ready</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Kohler/Grohe sanitary appointments &amp; toughened glass railings</span></li>
-                <li class="flex items-start gap-2"><span>✓</span><span>Architect-supervised execution with 3D walk-through model</span></li>
-              </ul>
+              <div class="p-8">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold text-pine-heading">Turnkey Luxury Villa</h3>
+                <div class="mt-2 flex items-baseline gap-1">
+                  <span class="font-display text-3xl sm:text-4xl font-bold text-pine">Custom</span>
+                  <span class="text-base text-pine-muted font-bold">/ tailored quote</span>
+                </div>
+                <p class="mt-3 text-lg sm:text-xl lg:text-[20px] text-pine-copy leading-relaxed heading-explanation">
+                  Customized architectural villa with double heights, Italian marble, modular kitchens, smart provisions, and designer facades.
+                </p>
+                
+                <ul class="mt-6 space-y-3.5 text-lg text-pine-copy border-t border-linen-edge pt-5 font-medium">
+                  <li class="flex items-start gap-2"><span>✓</span><span>Italian marble or imported large-format vitrified slabs</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Double-height ceiling with architectural facade louvers</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Custom modular kitchen &amp; wardrobe electrical conduits</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Solar water heating &amp; home automation conduits ready</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Kohler/Grohe sanitary appointments &amp; toughened glass railings</span></li>
+                  <li class="flex items-start gap-2"><span>✓</span><span>Architect-supervised execution with 3D walk-through model</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="mt-8 pt-5 border-t border-linen-edge">
+            <div class="px-8 pb-8 pt-2">
               <a href="contact.html" class="btn-pine-outline block w-full text-center rounded-full py-4 text-base font-bold uppercase tracking-wider">
                 Request Bespoke Proposal
               </a>
             </div>
           </div>
 
+        </div>
+
+        <!-- ==================== PACKAGE SPECIFICATIONS & ELEVATIONS SHOWCASE ==================== -->
+        <div class="mb-16">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <div class="inline-flex items-center gap-2 rounded-full border border-[#9E3F1C]/25 bg-[#9E3F1C]/10 px-4 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-clay mb-2">
+                <span>Material &amp; Structural Assurance</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-pine-heading">
+                What Goes Into Every Package
+              </h3>
+              <p class="mt-2 text-base sm:text-lg text-pine-copy max-w-2xl">
+                From high-grade foundational reinforcement to architectural exterior elevations, every package follows strict BIS construction standards.
+              </p>
+            </div>
+            <a href="gallery.html" class="shrink-0 inline-flex items-center gap-2 rounded-full border border-clay bg-white px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-clay hover:bg-clay hover:text-white transition-all shadow-xs">
+              <span>View All Site Photos &rarr;</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Spec Card 1: Concrete & Steel -->
+            <div class="card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer package-img-trigger transition-all hover:shadow-xl hover:-translate-y-1" data-src="photos/construction-rcc-concrete-pouring.jpg" data-title="550D TMT Steel &amp; 53-Grade Concrete Pouring" data-sub="Machine-mixed certified concrete with automated vibrators for crack-free monolithic slab construction">
+              <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0d1d19]">
+                <img src="photos/construction-rcc-concrete-pouring.jpg" alt="550D TMT Steel &amp; RCC Concrete Pouring" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-3 rounded-full bg-clay/90 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-white">Foundation Core</span>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display text-base sm:text-lg font-bold text-pine-heading leading-snug">550D TMT Steel &amp; Certified Concrete</h4>
+                <p class="text-xs sm:text-sm text-pine-muted mt-1 leading-relaxed">Seismic-resistant steel cages and 53-grade cement for long-lasting structural rigidity.</p>
+              </div>
+            </div>
+
+            <!-- Spec Card 2: Footing & Water Sump -->
+            <div class="card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer package-img-trigger transition-all hover:shadow-xl hover:-translate-y-1" data-src="photos/construction-footing-columns-sump.jpg" data-title="Waterproof RCC Sump &amp; Column Footings" data-sub="Engineered underground monolithic water sump with damp-proof treatment and column alignments">
+              <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0d1d19]">
+                <img src="photos/construction-footing-columns-sump.jpg" alt="RCC Footing Columns &amp; Monolithic Water Sump" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-3 rounded-full bg-clay/90 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-white">Civil Engineering</span>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display text-base sm:text-lg font-bold text-pine-heading leading-snug">Engineered Sump &amp; Column Footings</h4>
+                <p class="text-xs sm:text-sm text-pine-muted mt-1 leading-relaxed">Monolithic RCC underground water sump with multi-layer waterproofing and cure tests.</p>
+              </div>
+            </div>
+
+            <!-- Spec Card 3: Urban Statement Elevation -->
+            <div class="card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer package-img-trigger transition-all hover:shadow-xl hover:-translate-y-1" data-src="photos/Urban_HOME_Poster_No_For_Sale.jpg" data-title="3-Storey Urban Home Turnkey Elevation" data-sub="Contemporary vertical elevation on compact plot with CNC jaali screens and facade lighting">
+              <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0d1d19]">
+                <img src="photos/Urban_HOME_Poster_No_For_Sale.jpg" alt="3-Storey Urban Home Turnkey Elevation" class="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-3 rounded-full bg-clay/90 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-white">Turnkey Elevation</span>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display text-base sm:text-lg font-bold text-pine-heading leading-snug">3-Storey Statement Elevation</h4>
+                <p class="text-xs sm:text-sm text-pine-muted mt-1 leading-relaxed">Laser-cut jaali screens, LED profile elevation lights, and expansive balcony living.</p>
+              </div>
+            </div>
+
+            <!-- Spec Card 4: Designer House Elevation -->
+            <div class="card-linen-white rounded-3xl overflow-hidden shadow-sm border border-linen-edge group cursor-pointer package-img-trigger transition-all hover:shadow-xl hover:-translate-y-1" data-src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" data-title="4 BHK Custom Villa Elevation 'Kiran'" data-sub="Bespoke luxury villa with car porch, landscaped front setbacks, and grand entrance arch">
+              <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0d1d19]">
+                <img src="photos/Designer_HOUSE_Poster_No_For_Sale.jpg" alt="4 BHK Custom Villa Elevation Kiran" class="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-3 rounded-full bg-clay/90 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-white">Bespoke Design</span>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display text-base sm:text-lg font-bold text-pine-heading leading-snug">4 BHK Designer Villa Elevation</h4>
+                <p class="text-xs sm:text-sm text-pine-muted mt-1 leading-relaxed">Integrated car porch, landscaped terrace garden, and architectural stone accents.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <!-- ==================== 7-STAGE MILESTONE PAYMENT SCHEDULE ==================== -->
@@ -402,48 +606,48 @@
         </div>
 
         <!-- ==================== HOME EMI CALCULATOR ==================== -->
-        <div id="calculator" class="bg-[#162723] border border-white/15 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl text-white">
+        <div id="calculator" class="card-calculator-warm rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border-2 border-[#D8C7B5] text-pine" style="background: linear-gradient(145deg, #FAF4EB 0%, #F3EAE0 100%);">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             
             <!-- Left Column: Intro & Guidelines -->
             <div class="flex flex-col space-y-6">
               <div>
-                <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-amber-400/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-[#F5C344]">
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#F5C344]"></span>
+                <div class="inline-flex items-center gap-2 rounded-full border border-clay/35 bg-white/90 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-clay shadow-xs">
+                  <span class="w-2.5 h-2.5 rounded-full bg-clay"></span>
                   <span>FINANCIAL PLANNING AID</span>
                 </div>
-                <h3 class="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight mt-4">
-                  <span class="text-[#F5C344]">EMI calculator</span> for your next home.
+                <h3 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pine-heading leading-tight mt-4">
+                  <span class="text-clay">EMI calculator</span> for your next home.
                 </h3>
-                <p class="mt-3 text-lg sm:text-xl lg:text-[20px] text-[#B0BFB8] leading-relaxed max-w-lg font-sans heading-explanation">
+                <p class="mt-3 text-lg sm:text-xl lg:text-[20px] text-pine-copy leading-relaxed max-w-lg font-sans heading-explanation">
                   Know exactly what you'll pay—calculate your EMI instantly and move forward with confidence.
                 </p>
               </div>
 
-              <div class="bg-[#0d1d19] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-sm">
-                <h4 class="text-white font-bold text-lg sm:text-xl mb-2 font-sans">Interest Rates</h4>
-                <p class="text-lg sm:text-xl lg:text-[20px] text-[#B0BFB8] leading-relaxed font-sans heading-explanation">
+              <div class="bg-white rounded-2xl p-5 sm:p-6 border border-[#E5DCCE] shadow-xs">
+                <h4 class="text-pine-heading font-bold text-lg sm:text-xl mb-2 font-display">Interest Rates</h4>
+                <p class="text-base sm:text-lg text-pine-copy leading-relaxed font-sans heading-explanation">
                   Home loan interest rates typically range between 8% – 10.5% p.a. depending on the bank, your credit profile, and loan tenure.
                 </p>
               </div>
 
-              <div class="bg-[#0d1d19] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-sm">
-                <h4 class="text-white font-bold text-lg sm:text-xl mb-3 font-sans">Smart Tips</h4>
-                <ul class="space-y-3.5 text-lg sm:text-xl text-[#B0BFB8] font-sans">
+              <div class="bg-white rounded-2xl p-5 sm:p-6 border border-[#E5DCCE] shadow-xs">
+                <h4 class="text-pine-heading font-bold text-lg sm:text-xl mb-3 font-display">Smart Tips</h4>
+                <ul class="space-y-3.5 text-base sm:text-lg text-pine-copy font-sans">
                   <li class="flex items-start gap-2.5">
-                    <span class="text-[#F5C344] font-bold leading-none mt-1 text-base">•</span>
+                    <span class="text-clay font-bold leading-none mt-1 text-base">•</span>
                     <span>Lower your EMI by choosing a longer tenure—but balance it with total interest paid.</span>
                   </li>
                   <li class="flex items-start gap-2.5">
-                    <span class="text-[#F5C344] font-bold leading-none mt-1 text-base">•</span>
+                    <span class="text-clay font-bold leading-none mt-1 text-base">•</span>
                     <span>A higher down payment can significantly reduce your monthly burden.</span>
                   </li>
                   <li class="flex items-start gap-2.5">
-                    <span class="text-[#F5C344] font-bold leading-none mt-1 text-base">•</span>
+                    <span class="text-clay font-bold leading-none mt-1 text-base">•</span>
                     <span>Maintain a good credit score (750+) to get better loan offers.</span>
                   </li>
                   <li class="flex items-start gap-2.5">
-                    <span class="text-[#F5C344] font-bold leading-none mt-1 text-base">•</span>
+                    <span class="text-clay font-bold leading-none mt-1 text-base">•</span>
                     <span>Compare multiple lenders before finalizing your loan.</span>
                   </li>
                 </ul>
@@ -455,67 +659,68 @@
               
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 font-sans">
                 <div>
-                  <label for="emi-loan-amount" class="block text-base font-bold uppercase tracking-wider text-[#CBD5E1] mb-2">
+                  <label for="emi-loan-amount" class="block text-sm sm:text-base font-bold uppercase tracking-wider text-pine mb-2">
                     LOAN AMOUNT
                   </label>
-                  <input type="number" id="emi-loan-amount" value="5000000" min="100000" step="50000" class="w-full bg-[#122822] border border-[#2A4B42] rounded-xl px-4 py-3.5 text-white text-lg font-bold focus:outline-none focus:border-[#F5C344] focus:ring-1 focus:ring-[#F5C344] transition-all font-sans" />
+                  <input type="number" id="emi-loan-amount" value="5000000" min="100000" step="50000" class="w-full linen-input rounded-xl px-4 py-3.5 text-pine text-lg font-bold bg-white border border-[#D5C9B8] focus:outline-none focus:border-[#B85D26] focus:ring-2 focus:ring-[#B85D26]/20 transition-all font-sans shadow-xs" />
                 </div>
                 <div>
-                  <label for="emi-interest-rate" class="block text-base font-bold uppercase tracking-wider text-[#CBD5E1] mb-2">
+                  <label for="emi-interest-rate" class="block text-sm sm:text-base font-bold uppercase tracking-wider text-pine mb-2">
                     INTEREST RATE (P.A.)
                   </label>
-                  <input type="number" id="emi-interest-rate" value="9" min="1" max="30" step="0.1" class="w-full bg-[#122822] border border-[#2A4B42] rounded-xl px-4 py-3.5 text-white text-lg font-bold focus:outline-none focus:border-[#F5C344] focus:ring-1 focus:ring-[#F5C344] transition-all font-sans" />
+                  <input type="number" id="emi-interest-rate" value="9" min="1" max="30" step="0.1" class="w-full linen-input rounded-xl px-4 py-3.5 text-pine text-lg font-bold bg-white border border-[#D5C9B8] focus:outline-none focus:border-[#B85D26] focus:ring-2 focus:ring-[#B85D26]/20 transition-all font-sans shadow-xs" />
                 </div>
                 <div>
-                  <label for="emi-tenure" class="block text-base font-bold uppercase tracking-wider text-[#CBD5E1] mb-2">
+                  <label for="emi-tenure" class="block text-sm sm:text-base font-bold uppercase tracking-wider text-pine mb-2">
                     TENURE
                   </label>
-                  <input type="number" id="emi-tenure" value="20" min="1" max="50" step="1" class="w-full bg-[#122822] border border-[#2A4B42] rounded-xl px-4 py-3.5 text-white text-lg font-bold focus:outline-none focus:border-[#F5C344] focus:ring-1 focus:ring-[#F5C344] transition-all font-sans" />
+                  <input type="number" id="emi-tenure" value="20" min="1" max="50" step="1" class="w-full linen-input rounded-xl px-4 py-3.5 text-pine text-lg font-bold bg-white border border-[#D5C9B8] focus:outline-none focus:border-[#B85D26] focus:ring-2 focus:ring-[#B85D26]/20 transition-all font-sans shadow-xs" />
                 </div>
                 <div>
-                  <label for="emi-tenure-unit" class="block text-base font-bold uppercase tracking-wider text-[#CBD5E1] mb-2">
+                  <label for="emi-tenure-unit" class="block text-sm sm:text-base font-bold uppercase tracking-wider text-pine mb-2">
                     TENURE UNIT
                   </label>
-                  <select id="emi-tenure-unit" class="w-full bg-[#122822] border border-[#2A4B42] rounded-xl px-4 py-3.5 text-white text-lg font-bold focus:outline-none focus:border-[#F5C344] focus:ring-1 focus:ring-[#F5C344] transition-all cursor-pointer font-sans">
-                    <option value="Years" selected class="bg-[#122822] text-white">Years</option>
-                    <option value="Months" class="bg-[#122822] text-white">Months</option>
+                  <select id="emi-tenure-unit" class="w-full linen-input rounded-xl px-4 py-3.5 text-pine text-lg font-bold bg-white border border-[#D5C9B8] focus:outline-none focus:border-[#B85D26] focus:ring-2 focus:ring-[#B85D26]/20 transition-all cursor-pointer font-sans shadow-xs">
+                    <option value="Years" selected class="bg-white text-pine">Years</option>
+                    <option value="Months" class="bg-white text-pine">Months</option>
                   </select>
                 </div>
               </div>
 
               <!-- Buttons -->
               <div class="flex items-center gap-3 sm:gap-4 font-sans">
-                <button type="button" id="emi-calc-btn" class="bg-[#F5C344] hover:bg-[#e6b435] text-[#0E1E1A] font-bold text-base sm:text-lg px-7 py-3.5 rounded-xl shadow-md transition-all active:scale-95">
+                <button type="button" id="emi-calc-btn" class="btn-terracotta-primary font-bold text-base sm:text-lg px-7 py-3.5 rounded-xl shadow-md transition-all active:scale-95 cursor-pointer">
                   Calculate EMI
                 </button>
-                <button type="button" id="emi-reset-btn" class="bg-[#122822] hover:bg-[#1a3830] border border-[#2A4B42] text-white font-bold text-base sm:text-lg px-6 py-3.5 rounded-xl transition-all active:scale-95">
+                <button type="button" id="emi-reset-btn" class="btn-pine-outline font-bold text-base sm:text-lg px-6 py-3.5 rounded-xl transition-all active:scale-95 cursor-pointer bg-white hover:bg-[#FAF4EB] border border-[#D5C9B8]">
                   Reset
                 </button>
               </div>
 
               <!-- Results Display -->
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-2 font-sans">
-                <div class="bg-[#0d1d19] border border-white/10 rounded-2xl p-4 sm:p-5 text-left">
-                  <span class="block text-base font-bold uppercase tracking-wider text-[#CBD5E1]">MONTHLY EMI</span>
-                  <span id="emi-monthly-result" class="font-sans text-2xl sm:text-3xl font-bold text-[#F5C344] mt-1 block">₹44,986</span>
+                <div class="card-result-emi rounded-2xl p-4 sm:p-5 text-left border-2 border-clay shadow-sm" style="background: linear-gradient(135deg, #FFFDF8 0%, #FAF0E4 100%);">
+                  <span class="block text-xs sm:text-sm font-bold uppercase tracking-wider text-clay">MONTHLY EMI</span>
+                  <span id="emi-monthly-result" class="font-display text-2xl sm:text-3xl font-bold text-clay mt-1 block">₹44,986</span>
                 </div>
-                <div class="bg-[#0d1d19] border border-white/10 rounded-2xl p-4 sm:p-5 text-left">
-                  <span class="block text-base font-bold uppercase tracking-wider text-[#CBD5E1]">TOTAL INTEREST</span>
-                  <span id="emi-interest-result" class="font-sans text-2xl sm:text-3xl font-bold text-[#F5C344] mt-1 block">₹57,96,711</span>
+                <div class="card-result-secondary bg-white border border-[#E5DCCE] rounded-2xl p-4 sm:p-5 text-left shadow-xs">
+                  <span class="block text-xs sm:text-sm font-bold uppercase tracking-wider text-pine-muted">TOTAL INTEREST</span>
+                  <span id="emi-interest-result" class="font-display text-2xl sm:text-3xl font-bold text-pine-heading mt-1 block">₹57,96,711</span>
                 </div>
-                <div class="bg-[#0d1d19] border border-white/10 rounded-2xl p-4 sm:p-5 text-left">
-                  <span class="block text-base font-bold uppercase tracking-wider text-[#CBD5E1]">TOTAL PAYMENT</span>
-                  <span id="emi-total-result" class="font-sans text-2xl sm:text-3xl font-bold text-[#F5C344] mt-1 block">₹1,07,96,711</span>
+                <div class="card-result-secondary bg-white border border-[#E5DCCE] rounded-2xl p-4 sm:p-5 text-left shadow-xs">
+                  <span class="block text-xs sm:text-sm font-bold uppercase tracking-wider text-pine-muted">TOTAL PAYMENT</span>
+                  <span id="emi-total-result" class="font-display text-2xl sm:text-3xl font-bold text-pine-heading mt-1 block">₹1,07,96,711</span>
                 </div>
               </div>
 
-              <p class="text-base text-[#B0BFB8] leading-relaxed pt-2 font-sans">
+              <p class="text-sm sm:text-base text-pine-muted leading-relaxed pt-2 font-sans">
                 Disclaimer: This EMI calculation is an estimate for illustrative purposes only. Actual EMI may vary based on bank policies, interest rates, processing fees, and eligibility criteria.
               </p>
 
-              <div class="font-sans pt-2">
-                <a href="https://wa.me/919632734110?text=Hi%20Global%20Mahanshi%20Builders%2C%20I%20need%20expert%20guidance%20on%20choosing%20the%20right%20home%20loan%20and%20understanding%20EMI%20options." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-base sm:text-lg font-bold text-[#F5C344] hover:underline transition-all">
-                  Need help choosing the right loan? Talk to our loan experts →
+              <div class="font-sans pt-1">
+                <a href="https://wa.me/919632734110?text=Hi%20Global%20Mahanshi%20Builders%2C%20I%20need%20expert%20guidance%20on%20choosing%20the%20right%20home%20loan%20and%20understanding%20EMI%20options." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-base sm:text-lg font-bold text-clay hover:text-pine-heading transition-colors hover:underline">
+                  <span>Need help choosing the right loan? Talk to our loan experts</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </a>
               </div>
             </div>
@@ -596,6 +801,87 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
     <span>Chat on WhatsApp</span>
   </a>
+
+  <!-- Lightbox Modal for Package Images -->
+  <div id="package-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/92 p-4 backdrop-blur-md transition-all">
+    <div class="relative max-w-5xl w-full flex flex-col items-center">
+      <!-- Close Button -->
+      <button id="package-lightbox-close" class="absolute -top-12 right-0 sm:right-2 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold transition-all shadow-lg">
+        ✕
+      </button>
+
+      <!-- Image Container -->
+      <div class="w-full flex justify-center items-center overflow-hidden rounded-2xl bg-black/40 p-2 shadow-2xl border border-white/10 max-h-[75vh]">
+        <img id="package-lightbox-img" src="" alt="Package View" class="max-h-[72vh] max-w-full object-contain rounded-xl shadow-lg" />
+      </div>
+
+      <!-- Caption & Inquiry Bar -->
+      <div class="mt-4 w-full flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#122822]/90 border border-white/15 rounded-2xl px-6 py-4 text-linen shadow-xl backdrop-blur-md">
+        <div class="text-center sm:text-left">
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <span class="inline-block rounded-full bg-clay px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-white">CONSTRUCTION PACKAGE</span>
+            <span class="text-xs text-amber-300 font-bold uppercase tracking-wider">Global Mahanshi Builders</span>
+          </div>
+          <h4 id="package-lightbox-title" class="font-display text-lg sm:text-xl font-bold text-white mt-1"></h4>
+          <p id="package-lightbox-sub" class="text-xs sm:text-sm text-linen/80 mt-0.5"></p>
+        </div>
+        <div class="shrink-0 flex items-center gap-3">
+          <a id="package-lightbox-wa" href="#" target="_blank" rel="noopener noreferrer" class="sweep inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1ebe5b] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all">
+            <span>Inquire on WhatsApp</span>
+            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const pLightbox = document.getElementById('package-lightbox');
+      const pImg = document.getElementById('package-lightbox-img');
+      const pTitle = document.getElementById('package-lightbox-title');
+      const pSub = document.getElementById('package-lightbox-sub');
+      const pWa = document.getElementById('package-lightbox-wa');
+      const pClose = document.getElementById('package-lightbox-close');
+
+      document.querySelectorAll('.package-img-trigger').forEach(el => {
+        el.addEventListener('click', () => {
+          const src = el.dataset.src;
+          const title = el.dataset.title || 'Construction Package Specification';
+          const sub = el.dataset.sub || 'Global Mahanshi Builders residential package';
+          if (pImg) pImg.src = src;
+          if (pTitle) pTitle.textContent = title;
+          if (pSub) pSub.textContent = sub;
+          if (pWa) {
+            pWa.href = 'https://wa.me/919632734110?text=' + encodeURIComponent("Hi Global Mahanshi Builders, I am inquiring about the package detail: '" + title + "'.");
+          }
+          if (pLightbox) {
+            pLightbox.classList.remove('hidden');
+            pLightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      function closePackageLightbox() {
+        if (pLightbox) {
+          pLightbox.classList.add('hidden');
+          pLightbox.classList.remove('flex');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (pClose) pClose.addEventListener('click', closePackageLightbox);
+      if (pLightbox) {
+        pLightbox.addEventListener('click', (e) => {
+          if (e.target === pLightbox) closePackageLightbox();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePackageLightbox();
+      });
+    });
+  </script>
 
   <script src="app.js?v=20261012-v4"></script>
 </body>

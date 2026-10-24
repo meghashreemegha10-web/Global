@@ -1,8 +1,9 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const BASE_DIR = __dirname;
 
 const MIME_TYPES = {
@@ -91,10 +92,25 @@ function handleRequest(req, res) {
   });
 }
 
+function getNetworkIp() {
+  const nets = os.networkInterfaces();
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      if (net.family === 'IPv4' && !net.internal) {
+        return net.address;
+      }
+    }
+  }
+  return 'localhost';
+}
+
 const server = http.createServer(handleRequest);
 
 server.listen(PORT, '0.0.0.0', () => {
+  const netIp = getNetworkIp();
+  console.log(`\n==================================================`);
   console.log(`Global Mahanshi Builders server running at:`);
   console.log(`  - Local:   http://localhost:${PORT}/`);
-  console.log(`  - Network: http://192.168.1.21:${PORT}/`);
+  console.log(`  - Network: http://${netIp}:${PORT}/`);
+  console.log(`==================================================\n`);
 });

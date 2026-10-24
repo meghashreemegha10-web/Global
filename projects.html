@@ -53,8 +53,9 @@
     }
   </script>
   <link rel="stylesheet" href="linen-theme.css?v=20261013-v3" />
+  <link rel="stylesheet" href="light-theme.css?v=20261019-v5" />
 </head>
-<body class="bg-[#1F3630] font-sans text-pine-body antialiased">
+<body class="page-projects bg-[#F7F3EB] font-sans text-pine-body antialiased">
 
   <!-- ==================== TOP NAVIGATION HEADER (TRANSPARENT BACKGROUND) ==================== -->
   <header class="absolute top-0 inset-x-0 z-50 h-20 sm:h-22 lg:h-24 border-b border-white/10 bg-transparent text-[#FDFCEE] transition-all">
@@ -62,7 +63,7 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3.5 group">
-        <img src="images/logo-emblem.png" alt="Global Mahanshi Builders Emblem" class="h-10 sm:h-12 w-auto object-contain filter drop-shadow transition-transform group-hover:scale-105" />
+        <img src="images/logo-emblem.png" alt="Global Mahanshi Builders Logo" class="brand-top-logo" />
         <div class="flex flex-col">
           <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">Global Mahanshi</span>
           <span class="brand-subtitle text-[11px] sm:text-xs font-bold uppercase text-amber-300">Builders</span>
@@ -70,15 +71,15 @@
       </a>
 
       <!-- Primary Navigation -->
-      <nav class="hidden items-center gap-3.5 lg:gap-4 xl:gap-6 2xl:gap-8 lg:flex" aria-label="Primary Navigation">
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="index.html">Home</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="about.html">About Us</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="services.html">Services</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-bold tracking-wide text-amber-300 border-b-2 border-amber-300 pb-0.5" href="projects.html">Projects</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="packages.html">Packages</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="leadership.html">Leadership</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="gallery.html">Gallery</a>
-        <a class="whitespace-nowrap text-[15px] xl:text-[17px] 2xl:text-lg font-semibold tracking-wide transition-colors text-linen/90 hover:text-amber-300" href="contact.html">Contact</a>
+      <nav class="hidden items-center gap-2 lg:gap-2.5 xl:gap-3 lg:flex" aria-label="Primary Navigation">
+        <a class="nav-option-pill nav-opt-home" href="index.html"><span>Home</span></a>
+        <a class="nav-option-pill nav-opt-about" href="about.html"><span>About Us</span></a>
+        <a class="nav-option-pill nav-opt-services" href="services.html"><span>Services</span></a>
+        <a class="nav-option-pill nav-opt-projects" href="projects.html"><span>Projects</span></a>
+        <a class="nav-option-pill nav-opt-packages" href="packages.html"><span>Packages</span></a>
+        <a class="nav-option-pill nav-opt-leadership" href="leadership.html"><span>Leadership</span></a>
+        <a class="nav-option-pill nav-opt-gallery" href="gallery.html"><span>Gallery</span></a>
+        <a class="nav-option-pill nav-opt-contact" href="contact.html"><span>Contact</span></a>
       </nav>
 
       <!-- Action Button & WhatsApp -->
@@ -101,15 +102,15 @@
 
     <!-- Mobile Drawer -->
     <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-white/15 bg-[#1F3630] px-6 py-6 text-linen shadow-2xl">
-      <nav class="flex flex-col gap-4 text-base font-medium">
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="index.html">Home</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="about.html">About Us</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="services.html">Services &amp; Themes</a>
-        <a class="text-amber-300 py-1 font-bold text-lg" href="projects.html">Active Projects</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="packages.html">Packages &amp; Estimate</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="leadership.html">Leadership</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="gallery.html">Project Gallery</a>
-        <a class="text-linen/85 hover:text-amber-300 py-1 text-base font-semibold" href="contact.html">Contact &amp; Site Visit</a>
+      <nav class="flex flex-col gap-2 text-base font-medium">
+        <a class="nav-option-pill nav-opt-home" href="index.html"><span>Home</span></a>
+        <a class="nav-option-pill nav-opt-about" href="about.html"><span>About Us</span></a>
+        <a class="nav-option-pill nav-opt-services" href="services.html"><span>Services</span></a>
+        <a class="nav-option-pill nav-opt-projects" href="projects.html"><span>Projects</span></a>
+        <a class="nav-option-pill nav-opt-packages" href="packages.html"><span>Packages</span></a>
+        <a class="nav-option-pill nav-opt-leadership" href="leadership.html"><span>Leadership</span></a>
+        <a class="nav-option-pill nav-opt-gallery" href="gallery.html"><span>Gallery</span></a>
+        <a class="nav-option-pill nav-opt-contact" href="contact.html"><span>Contact</span></a>
         <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
           <button type="button" class="open-login-modal-btn w-full inline-flex items-center justify-center gap-2 rounded-full border border-amber-300/40 bg-white/5 py-2.5 text-sm font-bold uppercase text-amber-200 hover:bg-white/10">
             <svg class="size-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -129,7 +130,7 @@
     <!-- ==================== PAGE BANNER (TRANSPARENT BACKGROUND & BACKDROP) ==================== -->
     <section class="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[580px] flex items-center bg-[#0e221c] text-white pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 overflow-hidden border-b border-white/15">
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="photos/site-road-demarcated-plots.jpeg" alt="Global Mahanshi Projects" class="h-full w-full object-cover object-center filter brightness-95 contrast-105 opacity-85" />
+        <img src="photos/ai-nav-projects.jpg" alt="Global Mahanshi Landmark Plotted Projects &amp; Layouts" class="h-full w-full object-cover object-center filter brightness-90 contrast-105 opacity-65" />
         <div class="hero-plain-backdrop"></div>
       </div>
 
@@ -280,71 +281,311 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
           
           <!-- Left: Official Layout Blueprint Card -->
-          <div class="bg-[#162723] border border-white/15 rounded-3xl p-6 sm:p-8 bracket-frame shadow-2xl flex flex-col justify-between text-white">
+          <div class="card-calculator-warm rounded-3xl p-6 sm:p-8 bracket-frame shadow-xl border-2 border-[#D6C2AB] text-pine flex flex-col justify-between" style="background: linear-gradient(145deg, #FAF4EB 0%, #F1E5D6 100%);">
             <div class="flex flex-wrap justify-between items-center gap-3 mb-4">
               <div class="flex items-center gap-2.5">
-                <h4 class="text-white font-bold text-lg sm:text-xl">Official Layout Blueprint</h4>
-                <span class="inline-flex items-center gap-1 text-sm font-bold bg-[#122822] border border-[#2A4B42] text-[#F5C344] px-3.5 py-1 rounded-full">
+                <h4 id="blueprint-card-title" class="text-pine-heading font-display font-bold text-lg sm:text-xl">Official Layout Blueprint</h4>
+                <span id="blueprint-north-badge" class="inline-flex items-center gap-1 text-sm font-bold bg-white border border-[#D6C2AB] text-clay px-3.5 py-1 rounded-full shadow-xs">
                   🧭 0° TRUE NORTH
                 </span>
               </div>
-              <span class="text-base font-bold text-[#F5C344] tracking-wider">DC Converted · E-Khata</span>
+              <span id="blueprint-legal-badge" class="text-base font-bold text-clay tracking-wider">DC Converted · E-Khata</span>
             </div>
 
-            <!-- View Switcher Tabs -->
+            <!-- View Switcher Tabs: Sai Roots & Sri Sai Prashanthi & Compare Both & Master Grid -->
             <div class="flex flex-wrap items-center gap-2 mb-3">
-              <button type="button" id="tab-btn-sketch" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#F5C344] text-[#122822] shadow transition-all">
-                📜 Sanctioned Layout Sketch (Gram Panchayat Seal)
+              <button type="button" id="tab-btn-sairoots" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-clay text-white shadow transition-all cursor-pointer">
+                🌳 Sai Roots (53 Plots)
               </button>
-              <button type="button" id="tab-btn-master" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/10 text-white/80 hover:bg-white/20 transition-all">
-                🎨 Plotted Master Grid
+              <button type="button" id="tab-btn-saiprashanthi" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white text-pine border border-[#D6C2AB] hover:bg-[#FAF4EB] transition-all cursor-pointer">
+                👑 Sri Sai Prashanthi (27 Plots)
+              </button>
+              <button type="button" id="tab-btn-compare" class="px-3 py-1.5 rounded-full text-xs font-bold bg-white text-pine border border-[#D6C2AB] hover:bg-[#FAF4EB] transition-all cursor-pointer">
+                👁️ Compare Both Plans
+              </button>
+              <button type="button" id="tab-btn-master" class="px-3 py-1.5 rounded-full text-xs font-bold bg-white text-pine border border-[#D6C2AB] hover:bg-[#FAF4EB] transition-all cursor-pointer">
+                🎨 Master Grid
               </button>
             </div>
 
-            <div class="relative overflow-hidden rounded-2xl border border-white/15 cursor-pointer group bracket-frame bg-[#091511] flex items-center justify-center p-3" id="blueprint-zoom-trigger">
-              <img id="blueprint-display-img" src="photos/sai_roots_gate.jpg" alt="Sai Roots Official Layout Blueprint" class="w-full max-h-[520px] object-contain transition-transform duration-500 group-hover:scale-102" />
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 text-center text-sm sm:text-base font-bold text-white group-hover:text-[#F5C344] transition-colors pointer-events-none">
-                🔍 Click to zoom full-resolution official layout sketch
+            <!-- Single Blueprint View Container (Medium Compact: max-h-[380px]) -->
+            <div id="single-blueprint-view" class="relative overflow-hidden rounded-2xl border border-[#E6DCD0] cursor-pointer group bracket-frame bg-white flex items-center justify-center p-2.5 sm:p-3 shadow-xs">
+              <img id="blueprint-display-img" src="photos/sai_roots_gate.jpg" alt="Official Layout Blueprint" class="w-full h-auto max-h-[380px] object-contain transition-transform duration-500 group-hover:scale-102" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#142822]/85 via-[#142822]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-4 pointer-events-none">
+                <span id="blueprint-zoom-text" class="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-amber-300 bg-[#1F3630]/90 px-4 py-2 rounded-full shadow-lg border border-amber-300/30 backdrop-blur-sm">
+                  🔍 Click to zoom full-resolution official layout sketch
+                </span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-[#1F3630]/85 text-amber-300 text-xs font-bold px-3 py-1.5 rounded-full shadow border border-amber-300/30 flex items-center gap-1.5 backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                🔍 Click to Zoom
+              </span>
+            </div>
+
+            <!-- Dual Side-by-Side Blueprint View (Medium Compact: max-h-[220px] each, hidden by default) -->
+            <div id="dual-blueprint-view" class="hidden grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="relative overflow-hidden rounded-2xl border border-[#E6DCD0] cursor-pointer group bracket-frame bg-white flex flex-col items-center p-2.5 shadow-xs" id="dual-trigger-sairoots">
+                <div class="w-full flex items-center justify-between text-[11px] font-bold text-pine-muted mb-1 px-1">
+                  <span>🌳 Sai Roots (53 Plots)</span>
+                  <span class="text-clay">Jigani</span>
+                </div>
+                <img src="photos/sai_roots_gate.jpg" alt="Sai Roots Official Layout" class="w-full h-auto max-h-[220px] object-contain transition-transform duration-500 group-hover:scale-102" />
+                <span class="mt-1 text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">🔍 Zoom Sai Roots</span>
+              </div>
+              <div class="relative overflow-hidden rounded-2xl border border-[#E6DCD0] cursor-pointer group bracket-frame bg-white flex flex-col items-center p-2.5 shadow-xs" id="dual-trigger-saiprashanthi">
+                <div class="w-full flex items-center justify-between text-[11px] font-bold text-pine-muted mb-1 px-1">
+                  <span>👑 Sri Sai Prashanthi (27 Plots)</span>
+                  <span class="text-amber-700">Koppa</span>
+                </div>
+                <img src="photos/global-sai-prashanthi-layout-plan.jpg" alt="Sri Sai Prashanthi Official Layout" class="w-full h-auto max-h-[220px] object-contain transition-transform duration-500 group-hover:scale-102" />
+                <span class="mt-1 text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">🔍 Zoom Sai Prashanthi</span>
               </div>
             </div>
 
-            <p class="text-base sm:text-lg text-[#CBD5E1] mt-4 leading-relaxed heading-explanation">
+            <!-- Dynamic Caption Description -->
+            <p id="blueprint-caption-text" class="text-base sm:text-lg text-pine-copy mt-4 leading-relaxed font-sans heading-explanation">
               Gram Panchayat Sanctioned Layout in Sy.No. 41/1, Bukkasagara, Jigani Hobli. 53 residential sites, 50 ft main road, 40 ft entrance arch, 25 ft internal concrete roads, parks, and underground services.
             </p>
           </div>
 
           <!-- Right: Plot Availability Tracker Card -->
-          <div class="bg-[#162723] border border-white/15 rounded-3xl p-6 sm:p-8 bracket-frame shadow-2xl flex flex-col justify-between text-white">
-            <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
-              <h4 class="text-white font-bold text-lg sm:text-xl">Plot Availability Tracker</h4>
-              <div class="flex items-center gap-5 text-base font-semibold">
+          <div class="card-calculator-warm rounded-3xl p-6 sm:p-8 bracket-frame shadow-xl border-2 border-[#D6C2AB] text-pine flex flex-col justify-between" style="background: linear-gradient(145deg, #FAF4EB 0%, #F1E5D6 100%);">
+            <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+              <h4 id="tracker-title" class="text-pine-heading font-display font-bold text-lg sm:text-xl">Plot Availability Tracker</h4>
+              <div class="flex items-center gap-4 sm:gap-5 text-sm sm:text-base font-semibold">
                 <div class="flex items-center gap-1.5">
-                  <span class="w-3.5 h-3.5 rounded bg-emerald-500/30 border border-emerald-500"></span>
-                  <span class="text-white">Available</span>
+                  <span class="w-3.5 h-3.5 rounded bg-emerald-100 border-2 border-emerald-600"></span>
+                  <span class="text-pine">Available</span>
                 </div>
                 <div class="flex items-center gap-1.5">
-                  <span class="w-3.5 h-3.5 rounded bg-amber-500/30 border border-amber-500"></span>
-                  <span class="text-white">Booked</span>
+                  <span class="w-3.5 h-3.5 rounded bg-amber-100 border-2 border-amber-600"></span>
+                  <span class="text-pine">Booked</span>
                 </div>
                 <div class="flex items-center gap-1.5">
-                  <span class="w-3.5 h-3.5 rounded bg-slate-500/30 border border-slate-500"></span>
-                  <span class="text-white">Sold</span>
+                  <span class="w-3.5 h-3.5 rounded bg-slate-200 border-2 border-slate-400"></span>
+                  <span class="text-pine">Sold</span>
                 </div>
               </div>
             </div>
 
-            <div id="plotGridVisual" class="grid grid-cols-7 sm:grid-cols-9 md:grid-cols-11 gap-2 p-3.5 bg-[#0d1d19] rounded-2xl border border-white/10 max-h-[340px] overflow-y-auto">
+            <!-- Project Selector for Tracker -->
+            <div class="flex items-center gap-2 mb-3">
+              <button type="button" id="tracker-btn-sairoots" class="px-3 py-1 rounded-full text-xs font-bold bg-clay text-white shadow transition-all cursor-pointer">
+                🌳 Sai Roots (53 Plots)
+              </button>
+              <button type="button" id="tracker-btn-saiprashanthi" class="px-3 py-1 rounded-full text-xs font-bold bg-white text-pine border border-[#D6C2AB] hover:bg-[#FAF4EB] transition-all cursor-pointer">
+                👑 Sri Sai Prashanthi (27 Plots)
+              </button>
+            </div>
+
+            <div id="plotGridVisual" class="grid grid-cols-7 sm:grid-cols-9 md:grid-cols-11 gap-2 p-3.5 bg-white rounded-2xl border border-[#E6DCD0] shadow-xs max-h-[340px] overflow-y-auto">
               <!-- Rendered via JavaScript -->
             </div>
 
             <div id="plotSelectedDetail" class="mt-4">
-              <div class="text-center py-4 px-4 bg-[#0d1d19] border border-white/10 rounded-2xl text-lg sm:text-xl text-[#CBD5E1]">
+              <div class="text-center py-4 px-4 bg-white border border-[#E6DCD0] rounded-2xl text-base sm:text-lg text-pine font-semibold shadow-xs">
                 👆 Click any numbered green plot above to view exact dimensions &amp; book a site visit.
               </div>
             </div>
           </div>
 
         </div>
+
+        <!-- ==================== CO-FLAGSHIP PROJECT: SRI SAI PRASHANTHI ==================== -->
+        <section id="sri-sai-prashanthi" class="scroll-mt-28 mb-16">
+          <div class="card-linen-white rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-400/60 p-6 sm:p-8 lg:p-12 relative" style="background: linear-gradient(160deg, #FFFFFF 0%, #FBF7F0 60%, #F5EDE0 100%);">
+            
+            <!-- Royal Header Badge & Details Banner -->
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-amber-300/40 pb-6 mb-8">
+              <div>
+                <div class="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-400/15 px-4 py-1.5 text-xs sm:text-sm font-black uppercase tracking-widest text-amber-900 mb-2">
+                  <span>👑👑 SRI SAI PRASHANTHI</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                  <span>GATED COMMUNITY</span>
+                </div>
+                <h3 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-pine-heading tracking-tight flex items-center gap-2 flex-wrap">
+                  <span>SRI SAI PRASHANTHI</span>
+                  <span class="text-2xl sm:text-3xl text-amber-600">👑👑</span>
+                </h3>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-clay mt-1.5 flex items-center gap-2 flex-wrap">
+                  <span>📌📌 LOCATION : KOPPA RAMASANDRA ROAD, KOPPA 🚧🚧</span>
+                </p>
+                <div class="mt-2 inline-flex items-center gap-2 bg-[#1F3630] text-amber-300 px-4 py-1.5 rounded-full text-sm sm:text-base font-extrabold shadow-sm">
+                  <span>📐 PLOT SIZES: 20×40 = 800 SQ.FT</span>
+                </div>
+              </div>
+
+              <!-- Big Pricing Highlight Pill -->
+              <div class="text-right bg-gradient-to-br from-amber-500 via-amber-400 to-amber-600 text-slate-950 p-4 sm:p-5 rounded-2xl shadow-lg border border-amber-300">
+                <span class="block text-xs font-black uppercase tracking-wider text-slate-900">All-Inclusive Offer</span>
+                <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black leading-tight text-slate-950">
+                  ₹52 LAKHS💰
+                </span>
+                <span class="block text-xs sm:text-sm font-black text-slate-900 uppercase tracking-wide">
+                  SITE + CONSTRUCTION ONWARDS
+                </span>
+                <span class="mt-1 block text-xs font-extrabold bg-slate-950 text-amber-300 px-2.5 py-0.5 rounded-full">
+                  💳 Down Payment: 15 Lakhs
+                </span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+              
+              <!-- Left Column (7 Cols): Interactive Full-Image Showcase (NO CROPPING) -->
+              <div class="lg:col-span-7 space-y-4">
+                
+                <!-- Main Full Uncropped Display Box -->
+                <div class="relative w-full h-[380px] sm:h-[460px] lg:h-[500px] bg-[#142822] rounded-3xl overflow-hidden flex items-center justify-center p-3 sm:p-5 border-2 border-[#D6C2AB] shadow-xl group cursor-pointer" id="sp-main-view-box">
+                  <img id="sp-main-img" src="photos/sai-prashanthi-grand-entrance-arch.jpg" alt="Sri Sai Prashanthi Grand Entrance Arch - Full View" class="w-full h-full object-contain transition-all duration-300 select-none" />
+                  
+                  <!-- Top Floating Info Pill -->
+                  <div class="absolute top-4 left-4 z-10 flex flex-wrap gap-2 pointer-events-none">
+                    <span id="sp-img-badge" class="rounded-full bg-amber-500/95 backdrop-blur-md px-3.5 py-1 text-xs sm:text-sm font-black text-slate-950 uppercase shadow">
+                      Grand Entrance Arch
+                    </span>
+                    <span class="rounded-full bg-black/70 backdrop-blur-md px-3 py-1 text-xs font-bold text-white border border-white/20">
+                      100% Full Image (Uncropped)
+                    </span>
+                  </div>
+
+                  <!-- Zoom Button -->
+                  <button type="button" id="sp-zoom-btn" class="absolute bottom-4 right-4 z-10 inline-flex items-center gap-1.5 rounded-full bg-[#1F3630]/90 hover:bg-[#1F3630] border border-amber-300/40 text-amber-300 px-4 py-2 text-xs sm:text-sm font-bold shadow-lg transition-transform hover:scale-105 backdrop-blur-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+                    <span>Click to Zoom Fullscreen</span>
+                  </button>
+                </div>
+
+                <!-- 5 Uncropped Thumbnails Row -->
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-pine-muted block mb-2">
+                    Click to switch photo (All 5 photos shown full &amp; uncropped):
+                  </span>
+                  <div class="grid grid-cols-5 gap-2 sm:gap-3" id="sp-thumbnails">
+                    
+                    <!-- Thumb 1 -->
+                    <button type="button" class="sp-thumb-btn active rounded-xl border-2 border-clay overflow-hidden bg-[#142822] p-1 aspect-[4/3] flex items-center justify-center transition-all hover:scale-105 cursor-pointer" data-src="photos/sai-prashanthi-grand-entrance-arch.jpg" data-title="Grand Entrance Arch &amp; Security Gates" data-badge="Grand Entrance Arch">
+                      <img src="photos/sai-prashanthi-grand-entrance-arch.jpg" alt="Entrance Arch" class="w-full h-full object-contain pointer-events-none" />
+                    </button>
+
+                    <!-- Thumb 2 -->
+                    <button type="button" class="sp-thumb-btn rounded-xl border-2 border-transparent hover:border-clay overflow-hidden bg-[#142822] p-1 aspect-[4/3] flex items-center justify-center transition-all hover:scale-105 cursor-pointer" data-src="photos/sai-prashanthi-house-construction.jpg" data-title="Active House Construction (G+1 Villa)" data-badge="House Construction">
+                      <img src="photos/sai-prashanthi-house-construction.jpg" alt="House Construction" class="w-full h-full object-contain pointer-events-none" />
+                    </button>
+
+                    <!-- Thumb 3 -->
+                    <button type="button" class="sp-thumb-btn rounded-xl border-2 border-transparent hover:border-clay overflow-hidden bg-[#142822] p-1 aspect-[4/3] flex items-center justify-center transition-all hover:scale-105 cursor-pointer" data-src="photos/sai-prashanthi-plots-concrete-road.jpg" data-title="30 Ft Concrete Road, Drainage &amp; Plot Demarcation" data-badge="30 Ft Roads &amp; Drainage">
+                      <img src="photos/sai-prashanthi-plots-concrete-road.jpg" alt="30 Ft Roads &amp; Plots" class="w-full h-full object-contain pointer-events-none" />
+                    </button>
+
+                    <!-- Thumb 4 -->
+                    <button type="button" class="sp-thumb-btn rounded-xl border-2 border-transparent hover:border-clay overflow-hidden bg-[#142822] p-1 aspect-[4/3] flex items-center justify-center transition-all hover:scale-105 cursor-pointer" data-src="photos/sai-prashanthi-columns-footings-sump.jpg" data-title="Heavy RCC Footings, Columns &amp; Borewell Infrastructure" data-badge="RCC Footings &amp; Sump">
+                      <img src="photos/sai-prashanthi-columns-footings-sump.jpg" alt="RCC Footings" class="w-full h-full object-contain pointer-events-none" />
+                    </button>
+
+                    <!-- Thumb 5 -->
+                    <button type="button" class="sp-thumb-btn rounded-xl border-2 border-transparent hover:border-clay overflow-hidden bg-[#142822] p-1 aspect-[4/3] flex items-center justify-center transition-all hover:scale-105 cursor-pointer" data-src="photos/sai-prashanthi-excavator-blocks.jpg" data-title="Heavy Earthmoving Excavation &amp; Material Staging" data-badge="Excavation &amp; Blocks">
+                      <img src="photos/sai-prashanthi-excavator-blocks.jpg" alt="Excavation Work" class="w-full h-full object-contain pointer-events-none" />
+                    </button>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Column (5 Cols): Complete Verified Information & Financial Breakdown -->
+              <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                
+                <!-- Financials & Payment Terms Box -->
+                <div class="rounded-2xl border-2 border-amber-400 bg-amber-500/10 p-5 sm:p-6 shadow-md space-y-3">
+                  <div class="flex items-center gap-2 text-clay font-black text-sm uppercase tracking-wider">
+                    <span>💰💰💰 EXCLUSIVE COMBO OFFER 💰💰💰</span>
+                  </div>
+                  
+                  <div class="text-2xl sm:text-3xl font-display font-black text-pine-heading leading-snug">
+                    SITE + CONSTRUCTION JUST 52 LAKHS💰💰💰
+                    <span class="block text-xl font-bold text-clay">ONWARDS....</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    <div class="rounded-xl bg-white border border-amber-200 p-3 shadow-xs">
+                      <span class="text-xs font-bold uppercase text-pine-muted block">Down Payment</span>
+                      <span class="text-base sm:text-lg font-black text-emerald-800">💳 JUST PAY 15 LAKHS</span>
+                    </div>
+                    <div class="rounded-xl bg-white border border-amber-200 p-3 shadow-xs">
+                      <span class="text-xs font-bold uppercase text-pine-muted block">Booking Token</span>
+                      <span class="text-base sm:text-lg font-black text-amber-700">💰 BOOKING AMOUNT 2 LAKHS</span>
+                    </div>
+                  </div>
+
+                  <div class="rounded-xl bg-emerald-800 text-white px-4 py-3 text-center font-extrabold text-sm sm:text-base tracking-wide shadow-xs">
+                    🏡🏡🏡🏡🏡🏡 READY FOR REGISTRATION AND CONSTRUCTION 🏡🏡🏡🏡🏡🏡
+                  </div>
+                </div>
+
+                <!-- Verified Amenities & Features (Exact List Provided by User) -->
+                <div class="rounded-2xl bg-white border border-[#E6DCD0] p-5 sm:p-6 shadow-sm">
+                  <h4 class="font-display text-lg font-bold text-pine-heading border-b border-linen-edge pb-2 mb-3.5 flex items-center justify-between">
+                    <span>Approved Amenities &amp; Infrastructure</span>
+                    <span class="text-xs font-bold text-clay uppercase">7 Verified Points</span>
+                  </h4>
+
+                  <ul class="space-y-3 text-base sm:text-lg text-pine-copy font-semibold">
+                    <li class="flex items-start gap-2.5">
+                      <span class="text-emerald-600 font-black text-xl leading-none">✅</span>
+                      <span>INDUSVAL KAVERI WATER CONNECTION &amp; 24*7 water supply TOTAL SITE 3 BORES</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <span class="text-emerald-600 font-black text-xl leading-none">✅</span>
+                      <span>GATED COMMUNITY</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <span class="text-emerald-600 font-black text-xl leading-none">✅</span>
+                      <span>UNDER GROUND DRAINAGE</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <span class="text-emerald-600 font-black text-xl leading-none">✅</span>
+                      <span>30 FT ROADS</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <span class="text-emerald-600 font-black text-xl leading-none">✅</span>
+                      <span>NEAR MULTIPLE INDUSTRIES</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <span class="text-emerald-600 font-black text-xl leading-none">✅</span>
+                      <span>STREET LIGHTS</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <span class="text-emerald-600 font-black text-xl leading-none">✅</span>
+                      <span>24*7 SECURITY</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Action CTA Buttons -->
+                <div class="space-y-3 pt-1">
+                  <a href="https://wa.me/919632734110?text=Hi%20Global%20Mahanshi%20Builders%2C%20I%20am%20interested%20in%20Sri%20Sai%20Prashanthi%20on%20Koppa%20Ramasandra%20Road.%20Please%20share%20the%20details%20for%20the%2052%20Lakhs%20Site%20%2B%20Construction%20offer." target="_blank" rel="noopener noreferrer" class="sweep group inline-flex w-full items-center justify-center gap-3 rounded-full bg-clay px-6 py-4 text-base sm:text-lg font-black tracking-wider uppercase text-white shadow-xl transition-all hover:bg-terracotta hover:text-pine">
+                    <span>Chat on WhatsApp for ₹52L Offer</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                  </a>
+
+                  <div class="grid grid-cols-2 gap-3">
+                    <a href="tel:+919632734110" class="btn-pine-outline inline-flex items-center justify-center gap-2 rounded-full py-3 text-sm sm:text-base font-bold uppercase tracking-wider text-center">
+                      <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      <span>Call Director</span>
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center justify-center gap-1.5 rounded-full border border-clay text-clay hover:bg-clay hover:text-white py-3 text-sm sm:text-base font-bold uppercase tracking-wider transition-all text-center">
+                      <span>Book Site Visit</span>
+                      <span>→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </section>
 
         <!-- ==================== 4 PROJECTS GRID ==================== -->
         <div class="mb-8">
@@ -356,20 +597,53 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Project 1: Sri Sai Prasanthi -->
-          <div class="card-linen-white rounded-2xl overflow-hidden shadow-sm transition-all hover:shadow-md">
-            <div class="relative aspect-[4/3] overflow-hidden">
-              <img src="photos/images-sri-sai-prasanthi-entrance.webp" alt="Sri Sai Prasanthi Layout, Ramasandra Jigani" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
-              <div class="absolute top-3 right-3">
-                <span class="rounded bg-clay px-3 py-1 text-sm font-bold text-white uppercase">Plots Available</span>
+          <!-- Project 1: Sri Sai Prashanthi -->
+          <div class="card-linen-white rounded-2xl overflow-hidden shadow-md transition-all hover:shadow-xl border-2 border-amber-400/50 relative group flex flex-col justify-between">
+            <div>
+              <div class="relative aspect-[4/3] bg-[#142822] flex items-center justify-center p-2 overflow-hidden">
+                <img src="photos/sai-prashanthi-grand-entrance-arch.jpg" alt="Sri Sai Prashanthi Gated Community Grand Entrance Arch, Koppa Ramasandra Road" class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute top-3 left-3">
+                  <span class="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-red-600 to-amber-600 px-3 py-1 text-xs font-black text-white uppercase tracking-wider shadow-md">
+                    👑 Gated Community
+                  </span>
+                </div>
+                <div class="absolute top-3 right-3">
+                  <span class="rounded bg-emerald-700 px-2.5 py-1 text-xs font-bold text-white uppercase shadow">Ready to Register</span>
+                </div>
+              </div>
+              <div class="p-5">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-clay">📌 Koppa Ramasandra Road, Koppa</span>
+                <h4 class="font-display text-xl sm:text-2xl font-bold text-pine-heading mt-0.5">SRI SAI PRASHANTHI 👑👑</h4>
+                <div class="mt-2 text-sm font-black text-amber-900 bg-amber-100 px-3 py-1.5 rounded-xl border border-amber-300">
+                  <span>📐 Plot Sizes: 20×40 = 800 SQ.FT</span>
+                </div>
+                <div class="mt-2.5 p-3 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 text-xs text-amber-950 font-medium space-y-1.5">
+                  <div class="flex justify-between items-baseline font-black text-pine">
+                    <span class="text-xs uppercase">💰 Site + Construction:</span>
+                    <span class="text-base text-clay font-black">Just ₹52 Lakhs* Onwards</span>
+                  </div>
+                  <div class="flex justify-between text-xs font-bold text-emerald-800 border-t border-amber-200/60 pt-1">
+                    <span>💳 Down Payment:</span>
+                    <span>Just 15 Lakhs</span>
+                  </div>
+                  <div class="flex justify-between text-xs font-bold text-amber-900">
+                    <span>💰 Booking Amount:</span>
+                    <span>2 Lakhs</span>
+                  </div>
+                  <div class="text-[11px] text-emerald-900 font-extrabold text-center pt-1 border-t border-amber-200/60">
+                    🏡 READY FOR REGISTRATION &amp; CONSTRUCTION
+                  </div>
+                </div>
+                <p class="text-xs sm:text-sm text-pine-copy mt-3 leading-relaxed font-semibold">
+                  ✅ Kaveri water &amp; 3 bores · ✅ 30 ft roads · ✅ UGD · ✅ Street lights · ✅ Near multiple industries · ✅ 24/7 security.
+                </p>
               </div>
             </div>
-            <div class="p-5">
-              <span class="text-sm sm:text-base font-bold uppercase tracking-wider text-clay">Ramasandra, Jigani</span>
-              <h4 class="font-display text-xl sm:text-2xl font-bold text-pine-heading mt-0.5">Sri Sai Prasanthi</h4>
-              <p class="text-base text-pine-muted mt-1 font-bold">Panchayath Approved Gated Layout</p>
-              <p class="text-base sm:text-lg lg:text-[18.5px] text-pine-copy mt-2 leading-relaxed heading-explanation">Serene plotted enclave with complete street lighting, concrete roads, and peaceful residential setting.</p>
-              <a href="contact.html" class="mt-3 inline-flex items-center gap-1 text-base font-bold text-clay hover:underline">View Details →</a>
+            <div class="p-5 pt-0">
+              <a href="#sri-sai-prashanthi" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 py-2.5 text-sm font-black uppercase tracking-wider text-slate-900 shadow hover:brightness-105 transition-all">
+                <span>View Full Showcase &amp; 5 Photos</span>
+                <span>↓</span>
+              </a>
             </div>
           </div>
 

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1.0" />
+  <title>Poster 1: Sri Sai Prashanthi - Royal Diwali Dhamaka (Midnight Blue & Gold)</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Cinzel', 'serif'],
+            sans: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      margin: 0;
+      padding: 0;
+      background: #060B18;
+      font-family: 'Outfit', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #FFFFFF;
+    }
+    .poster-container {
+      width: 1080px;
+      height: 1750px;
+      background: radial-gradient(circle at 50% 15%, #162447 0%, #0F172A 45%, #060B18 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 12px solid #F5C344;
+      box-shadow: 0 0 80px rgba(245, 195, 68, 0.35);
+    }
+    .gold-foil-text {
+      background: linear-gradient(135deg, #FFF6D1 0%, #F5C344 40%, #E6A117 70%, #FFF3B0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-glow {
+      filter: drop-shadow(0 0 16px rgba(245, 195, 68, 0.8));
+    }
+    .red-ribbon {
+      background: linear-gradient(135deg, #DC2626 0%, #B91C1C 50%, #7F1D1D 100%);
+      box-shadow: 0 8px 24px rgba(185, 28, 28, 0.5);
+    }
+    .spotlight-yellow {
+      background: linear-gradient(135deg, #FFF5C0 0%, #FADB3A 35%, #F5B800 100%);
+      color: #0F172A;
+      box-shadow: 0 12px 35px rgba(250, 219, 58, 0.45);
+    }
+    .hanging-chain {
+      width: 2px;
+      background: linear-gradient(to bottom, #F5C344, rgba(245, 195, 68, 0.4));
+    }
+  </style>
+</head>
+<body>
+
+  <div class="poster-container">
+    
+    <!-- Top Hanging Diyas Left & Right -->
+    <div class="absolute top-0 left-12 flex flex-col items-center z-20">
+      <div class="hanging-chain h-28"></div>
+      <div class="text-4xl gold-glow -mt-1">🪔</div>
+    </div>
+    <div class="absolute top-0 left-28 flex flex-col items-center z-20">
+      <div class="hanging-chain h-44"></div>
+      <div class="text-3xl gold-glow -mt-1">🪔</div>
+    </div>
+    <div class="absolute top-0 right-12 flex flex-col items-center z-20">
+      <div class="hanging-chain h-28"></div>
+      <div class="text-4xl gold-glow -mt-1">🪔</div>
+    </div>
+    <div class="absolute top-0 right-28 flex flex-col items-center z-20">
+      <div class="hanging-chain h-44"></div>
+      <div class="text-3xl gold-glow -mt-1">🪔</div>
+    </div>
+
+    <!-- Festive Corner Rangoli Ornaments -->
+    <svg class="absolute top-0 left-0 w-44 h-44 opacity-25 pointer-events-none" viewBox="0 0 100 100" fill="#F5C344">
+      <circle cx="0" cy="0" r="80" fill="none" stroke="#F5C344" stroke-width="2" stroke-dasharray="4 4" />
+      <circle cx="0" cy="0" r="60" fill="none" stroke="#F5C344" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#F5C344" stroke-width="1" />
+      <path d="M0,0 L80,0 A80,80 0 0,1 0,80 Z" fill="url(#goldGrad)" opacity="0.15" />
+    </svg>
+    <svg class="absolute top-0 right-0 w-44 h-44 opacity-25 pointer-events-none rotate-90" viewBox="0 0 100 100" fill="#F5C344">
+      <circle cx="0" cy="0" r="80" fill="none" stroke="#F5C344" stroke-width="2" stroke-dasharray="4 4" />
+      <circle cx="0" cy="0" r="60" fill="none" stroke="#F5C344" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#F5C344" stroke-width="1" />
+    </svg>
+
+    <!-- ==================== HEADER BRANDING ==================== -->
+    <header class="pt-8 pb-4 px-12 text-center relative z-10">
+      <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-amber-400/40 rounded-full px-7 py-2.5 mb-3 shadow-lg">
+        <img src="images/logo-emblem.png" alt="Logo" class="h-10 w-auto object-contain filter drop-shadow" />
+        <span class="text-sm font-extrabold uppercase tracking-[0.22em] text-amber-300">
+          GLOBAL MAHANSHI BUILDERS &amp; ARCHITECTS
+        </span>
+      </div>
+
+      <!-- Main Project Title -->
+      <h1 class="font-display text-6xl font-black uppercase tracking-wider gold-foil-text drop-shadow-[0_4px_20px_rgba(245,195,68,0.4)]">
+        SRI SAI PRASHANTHI 👑
+      </h1>
+      
+      <!-- Location Badge -->
+      <div class="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 via-amber-500/30 to-amber-500/20 border border-amber-400/60 rounded-full px-6 py-1.5 text-base font-extrabold text-amber-200 uppercase tracking-wide">
+        <span>📍 LOCATION : KOPPA RAMASANDRA ROAD, KOPPA 🚧</span>
+      </div>
+    </header>
+
+    <!-- ==================== DIWALI SPECIAL OFFER RIBBON ==================== -->
+    <div class="mx-10 my-2 relative z-10">
+      <div class="flex items-center justify-center gap-6">
+        
+        <!-- Big Stylized DIWALI Text with Diya -->
+        <div class="text-center">
+          <div class="inline-block relative">
+            <span class="font-display text-7xl font-black uppercase tracking-widest text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.7)]" style="letter-spacing: 0.18em;">
+              DIWALI
+            </span>
+            <!-- Flame on the I -->
+            <span class="absolute top-1 right-[2px] text-2xl animate-pulse">🔥</span>
+          </div>
+        </div>
+
+        <!-- Red Folded Ribbon Badge -->
+        <div class="red-ribbon px-8 py-3 rounded-2xl border-2 border-amber-300 transform -rotate-2">
+          <span class="block text-xs font-black uppercase tracking-widest text-amber-200">LIMITED PERIOD</span>
+          <span class="block text-3xl font-black uppercase tracking-wider text-white">SPECIAL OFFER</span>
+        </div>
+
+      </div>
+
+      <!-- Price Slash & Savings Banner (Pattern of Reference Image 1) -->
+      <div class="mt-4 flex items-center justify-center gap-4 flex-wrap">
+        
+        <!-- Strike Price -->
+        <div class="relative px-5 py-2">
+          <span class="font-display text-4xl font-extrabold text-slate-400 line-through">₹5,299</span>
+          <span class="absolute inset-0 flex items-center justify-center text-red-500 text-5xl font-black opacity-80">✕</span>
+        </div>
+
+        <!-- Highlight Spotlight Yellow Box -->
+        <div class="spotlight-yellow px-8 py-3 rounded-2xl flex items-baseline gap-2 border-2 border-white shadow-2xl">
+          <span class="font-display text-6xl font-black tracking-tight text-slate-900">₹4,699</span>
+          <span class="text-2xl font-black text-slate-800">/ sq.ft</span>
+        </div>
+
+        <!-- Big Green Savings Tag -->
+        <div class="bg-gradient-to-r from-emerald-600 to-green-700 border-2 border-emerald-400 px-6 py-3 rounded-2xl text-center shadow-lg">
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-100 block">FESTIVAL SAVINGS</span>
+          <span class="text-2xl font-black uppercase tracking-wide text-white">SAVE ₹600 / SQ.FT</span>
+        </div>
+
+      </div>
+
+      <!-- Government / Legal Badges Strip -->
+      <div class="mt-3 flex items-center justify-center gap-4 text-xs font-black uppercase tracking-wider text-amber-300">
+        <span class="bg-white/10 px-4 py-1 rounded-full border border-amber-400/30">✔ DC CONVERTED</span>
+        <span class="bg-white/10 px-4 py-1 rounded-full border border-amber-400/30">✔ INDIVIDUAL E-KHATA</span>
+        <span class="bg-white/10 px-4 py-1 rounded-full border border-amber-400/30">✔ GATED COMMUNITY PLOTS</span>
+      </div>
+    </div>
+
+    <!-- ==================== CENTER HERO IMAGE WITH LOCATION PIN ==================== -->
+    <div class="mx-10 my-3 relative rounded-3xl overflow-hidden border-4 border-amber-400/80 shadow-2xl bg-black">
+      <img src="photos/sai_prashanthi_user_1.jpg" alt="Sri Sai Prashanthi Grand Entrance Arch" class="w-full h-[460px] object-cover object-center" />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#060B18] via-transparent to-black/30"></div>
+      
+      <!-- Actual Live Site Watermark Badge -->
+      <div class="absolute top-4 right-4 bg-emerald-600/95 border-2 border-white text-white px-5 py-2 rounded-2xl font-black text-sm uppercase tracking-wider shadow-2xl backdrop-blur-md flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-white animate-ping"></span>
+        <span>ON-SITE ACTUAL GRAND ENTRANCE ARCH</span>
+      </div>
+
+      <!-- Floating Location Pin (Pattern of Reference Image 1) -->
+      <div class="absolute top-6 left-6 flex items-center gap-3 bg-red-700/95 border-2 border-white text-white px-5 py-2.5 rounded-2xl shadow-2xl backdrop-blur-md">
+        <span class="text-2xl">📍</span>
+        <div>
+          <span class="text-[11px] font-black uppercase tracking-widest text-amber-300 block">LOCATION</span>
+          <span class="text-sm font-extrabold block">Koppa Ramasandra Rd, Koppa</span>
+        </div>
+      </div>
+
+      <!-- Plot Size Spotlight Overlay (Bottom Left) -->
+      <div class="absolute bottom-5 left-6 bg-[#0B1528]/90 border-2 border-amber-400 px-6 py-3 rounded-2xl backdrop-blur-md shadow-2xl">
+        <span class="text-xs font-black uppercase tracking-widest text-amber-300 block">PREMIUM PLOT DIMENSIONS</span>
+        <span class="font-display text-3xl font-black text-white">20 × 40 = 800 SQ.FT</span>
+      </div>
+
+      <!-- Ready Status Badge (Bottom Right) -->
+      <div class="absolute bottom-5 right-6 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 px-6 py-3 rounded-2xl font-black text-sm uppercase tracking-wider shadow-2xl">
+        🏡 READY FOR REGISTRATION &amp; CONSTRUCTION
+      </div>
+    </div>
+
+    <!-- ==================== FINANCIAL SPOTLIGHT GRID (3 MEGA CARDS) ==================== -->
+    <div class="mx-10 my-2 grid grid-cols-3 gap-4 text-center">
+      
+      <!-- Card 1: Site + Construction -->
+      <div class="bg-gradient-to-b from-[#182848] to-[#0F172A] border-2 border-emerald-400 rounded-3xl p-5 shadow-xl relative overflow-hidden">
+        <div class="absolute -top-3 right-4 bg-emerald-600 text-white text-[10px] font-black uppercase px-3 py-0.5 rounded-full">
+          BEST VALUE COMBO
+        </div>
+        <span class="text-xs font-black uppercase tracking-wider text-emerald-300 block mb-1">
+          SITE + CONSTRUCTION 💰
+        </span>
+        <div class="font-display text-4xl font-black text-white">
+          ₹52 LAKHS
+        </div>
+        <span class="text-xs font-extrabold text-amber-300 uppercase tracking-widest block mt-1">
+          ONWARDS (TURNKEY READY)
+        </span>
+      </div>
+
+      <!-- Card 2: Down Payment -->
+      <div class="bg-gradient-to-b from-[#182848] to-[#0F172A] border-2 border-amber-400 rounded-3xl p-5 shadow-xl">
+        <span class="text-xs font-black uppercase tracking-wider text-amber-300 block mb-1">
+          EASY DOWN PAYMENT 💳
+        </span>
+        <div class="font-display text-4xl font-black text-amber-400">
+          ₹15 LAKHS
+        </div>
+        <span class="text-xs font-extrabold text-slate-300 uppercase tracking-widest block mt-1">
+          BANK LOAN ASSISTANCE AVAILABLE
+        </span>
+      </div>
+
+      <!-- Card 3: Booking Amount -->
+      <div class="bg-gradient-to-b from-[#182848] to-[#0F172A] border-2 border-amber-400 rounded-3xl p-5 shadow-xl">
+        <span class="text-xs font-black uppercase tracking-wider text-amber-300 block mb-1">
+          BOOKING AMOUNT 💰
+        </span>
+        <div class="font-display text-4xl font-black text-white">
+          ₹2 LAKHS
+        </div>
+        <span class="text-xs font-extrabold text-emerald-300 uppercase tracking-widest block mt-1">
+          INSTANT SPOT REGISTRATION ALLOTMENT
+        </span>
+      </div>
+
+    </div>
+
+    <!-- ==================== AMENITIES & INFRASTRUCTURE CHECKLIST ==================== -->
+    <div class="mx-10 my-2 bg-gradient-to-r from-[#0E1A33] via-[#142344] to-[#0E1A33] border-2 border-amber-400/60 rounded-3xl p-6 shadow-2xl">
+      <div class="text-center mb-4">
+        <span class="text-xs font-black uppercase tracking-[0.25em] text-amber-400 block">
+          ★ PROJECT HIGHLIGHTS &amp; INFRASTRUCTURE ★
+        </span>
+        <h3 class="font-display text-2xl font-black uppercase text-white mt-0.5">
+          EVERYTHING READY ON-SITE FOR YOUR FAMILY
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-2 gap-x-6 gap-y-3 font-bold text-sm sm:text-base">
+        
+        <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl p-3.5">
+          <span class="text-emerald-400 text-xl font-black">✅</span>
+          <div>
+            <span class="text-white block font-extrabold">INDIVIDUAL KAVERI WATER CONNECTION</span>
+            <span class="text-xs text-amber-300 font-bold block mt-0.5">24×7 Water Supply · Total Site 3 Dedicated Bores</span>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl p-3.5">
+          <span class="text-emerald-400 text-xl font-black">✅</span>
+          <div>
+            <span class="text-white block font-extrabold">30 FT WIDE ROADS</span>
+            <span class="text-xs text-amber-300 font-bold block mt-0.5">Heavy-Duty Concrete Asphalt Roads with Curbs</span>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl p-3.5">
+          <span class="text-emerald-400 text-xl font-black">✅</span>
+          <div>
+            <span class="text-white block font-extrabold">UNDER GROUND DRAINAGE (UGD)</span>
+            <span class="text-xs text-amber-300 font-bold block mt-0.5">Complete Underground Sanitary Sewage &amp; Rainwater Storm</span>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl p-3.5">
+          <span class="text-emerald-400 text-xl font-black">✅</span>
+          <div>
+            <span class="text-white block font-extrabold">SECURE GATED COMMUNITY</span>
+            <span class="text-xs text-amber-300 font-bold block mt-0.5">Grand Entrance Arch with Gates &amp; 24×7 Security Guard</span>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl p-3.5">
+          <span class="text-emerald-400 text-xl font-black">✅</span>
+          <div>
+            <span class="text-white block font-extrabold">STREET LIGHTS &amp; POWER</span>
+            <span class="text-xs text-amber-300 font-bold block mt-0.5">Illuminated LED Street Lighting with On-Site Transformer</span>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl p-3.5">
+          <span class="text-emerald-400 text-xl font-black">✅</span>
+          <div>
+            <span class="text-white block font-extrabold">NEAR MULTIPLE INDUSTRIES</span>
+            <span class="text-xs text-amber-300 font-bold block mt-0.5">Jigani &amp; Bommasandra Hub · Fast Capital Appreciation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== ON-SITE CONSTRUCTION GALLERY PROOF STRIP ==================== -->
+    <div class="mx-10 my-2 grid grid-cols-3 gap-3">
+      <div class="relative h-28 rounded-2xl overflow-hidden border-2 border-amber-400/50">
+        <img src="photos/sai_prashanthi_user_2.jpg" alt="Active House Construction" class="w-full h-full object-cover" />
+        <span class="absolute bottom-1 inset-x-1 bg-black/80 text-[10px] text-center font-bold text-amber-200 rounded py-0.5">
+          House Construction on Site
+        </span>
+      </div>
+      <div class="relative h-28 rounded-2xl overflow-hidden border-2 border-amber-400/50">
+        <img src="photos/sai-prashanthi-layout-plan-horizontal.png" alt="Sanctioned Plan" class="w-full h-full object-cover bg-white" />
+        <span class="absolute bottom-1 inset-x-1 bg-black/80 text-[10px] text-center font-bold text-amber-200 rounded py-0.5">
+          Sanctioned 27-Plot Layout
+        </span>
+      </div>
+      <div class="relative h-28 rounded-2xl overflow-hidden border-2 border-amber-400/50">
+        <img src="photos/sai_prashanthi_user_3.jpg" alt="RCC Footings & Sump" class="w-full h-full object-cover" />
+        <span class="absolute bottom-1 inset-x-1 bg-black/80 text-[10px] text-center font-bold text-amber-200 rounded py-0.5">
+          RCC Columns &amp; Water Sump
+        </span>
+      </div>
+    </div>
+
+    <!-- ==================== BOTTOM CALL TO ACTION BAR ==================== -->
+    <footer class="mt-auto bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-slate-950 px-10 py-5 flex items-center justify-between border-t-4 border-white shadow-2xl">
+      <div>
+        <span class="block text-xs font-black uppercase tracking-[0.2em] text-slate-900">
+          BOOK YOUR FREE SITE VISIT TODAY
+        </span>
+        <div class="flex items-center gap-3 mt-0.5">
+          <span class="text-3xl">📞</span>
+          <span class="font-display text-4xl font-black text-slate-950 tracking-tight">
+            +91 96327 34110
+          </span>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <div class="flex items-center justify-end gap-2">
+          <img src="images/logo-emblem.png" alt="Logo" class="h-9 w-auto object-contain" />
+          <span class="font-display text-xl font-black text-slate-950">
+            GLOBAL MAHANSHI BUILDERS
+          </span>
+        </div>
+        <p class="text-xs font-bold text-slate-800 mt-0.5">
+          Site Office: Sri Sai Prashanthi, Koppa Ramasandra Road, Koppa, Bengaluru
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
