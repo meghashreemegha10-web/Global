@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.globalmahanshibuilders.com/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.globalmahanshibuilders.com/photos/site-entrance-arch-cropped.jpeg</image:loc>
+      <image:title>Sai Roots Layout Demarcated Residential Sites</image:title>
+    </image:image>
+  </url>
+
+  <!-- Projects (Sai Roots & Sri Sai Prashanthi) -->
+  <url>
+    <loc>https://www.globalmahanshibuilders.com/projects.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.globalmahanshibuilders.com/photos/site-infrastructure-drainage.jpeg</image:loc>
+      <image:title>Sai Roots Master Layout &amp; 53 Plots Availability</image:title>
+    </image:image>
+  </url>
+
+  <!-- Construction Packages -->
+  <url>
+    <loc>https://www.globalmahanshibuilders.com/packages.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.globalmahanshibuilders.com/photos/package-standard-granite.jpg</image:loc>
+      <image:title>Turnkey Home Construction Packages ₹2200 and ₹2500/sq.ft</image:title>
+    </image:image>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://www.globalmahanshibuilders.com/services.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contact & Site Visits -->
+  <url>
+    <loc>https://www.globalmahanshibuilders.com/contact.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Authentic Gallery -->
+  <url>
+    <loc>https://www.globalmahanshibuilders.com/gallery.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- About Company -->
+  <url>
+    <loc>https://www.globalmahanshibuilders.com/about.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Leadership -->
+  <url>
+    <loc>https://www.globalmahanshibuilders.com/leadership.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>

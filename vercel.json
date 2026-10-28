@@ -2,19 +2,41 @@
   "version": 2,
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(.*)\\.(jpg|jpeg|png|webp|svg|ico|mp4|webm|woff2|woff)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
+          "value": "public, max-age=2592000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(css|js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
         },
         {
-          "key": "Pragma",
-          "value": "no-cache"
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
         },
         {
-          "key": "Expires",
-          "value": "0"
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
         }
       ]
     }

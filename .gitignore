@@ -4,4 +4,8 @@ node_modules/
 .vscode/
 .idea/
 *.pem
-.vercel
+.vercel/
+.env*
+data/
+*.ps1
+start_server.bat

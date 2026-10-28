@@ -54,6 +54,26 @@
   </script>
   <link rel="stylesheet" href="linen-theme.css?v=20261013-v3" />
   <link rel="stylesheet" href="light-theme.css?v=20261019-v5" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalmahanshibuilders.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Construction Packages",
+        "item": "https://www.globalmahanshibuilders.com/packages.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="page-packages bg-[#EEF3F0] font-sans text-pine-body antialiased">
 
@@ -118,7 +138,7 @@
           </button>
           <div class="flex items-center justify-between">
             <a href="tel:+919632734110" class="text-base font-bold text-white">+91 96327 34110</a>
-            <a href="https://wa.me/919632734110" target="_blank" class="rounded-full bg-clay px-5 py-2.5 text-base font-bold uppercase text-white">WhatsApp</a>
+            <a href="https://wa.me/919632734110" target="_blank" rel="noopener noreferrer" class="rounded-full bg-clay px-5 py-2.5 text-base font-bold uppercase text-white">WhatsApp</a>
           </div>
         </div>
       </nav>
@@ -139,6 +159,12 @@
           
           <!-- Left Column: Big Bold Typography & Pricing Philosophy (7 Cols) -->
           <div class="lg:col-span-7 space-y-4">
+            <nav aria-label="Breadcrumb" class="page-breadcrumb">
+              <a href="index.html">Home</a>
+              <span class="crumb-separator">/</span>
+              <span class="crumb-active" aria-current="page">Construction Packages</span>
+            </nav>
+
             <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-amber-400/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-[#F5C344]">
               <span class="w-2.5 h-2.5 rounded-full bg-[#F5C344]"></span>
               <span>TRANSPARENT PRICING · MILESTONE BILLING</span>
@@ -334,7 +360,7 @@
               </div>
 
               <div class="pt-2 flex flex-wrap items-center gap-3">
-                <a href="https://wa.me/919632734110?text=Hi%20Global%20Mahanshi%20Builders%2C%20I%20am%20interested%20in%20Sri%20Sai%20Prashanthi%2052%20Lakhs%20Site%20%2B%20Construction%20combo.%20Please%20share%20all%20details." target="_blank" class="sweep group inline-flex items-center gap-2 rounded-full bg-clay px-6 py-3.5 text-sm sm:text-base font-black tracking-wider uppercase text-white shadow-lg hover:bg-terracotta hover:text-pine transition-all">
+                <a href="https://wa.me/919632734110?text=Hi%20Global%20Mahanshi%20Builders%2C%20I%20am%20interested%20in%20Sri%20Sai%20Prashanthi%2052%20Lakhs%20Site%20%2B%20Construction%20combo.%20Please%20share%20all%20details." target="_blank" rel="noopener noreferrer" class="sweep group inline-flex items-center gap-2 rounded-full bg-clay px-6 py-3.5 text-sm sm:text-base font-black tracking-wider uppercase text-white shadow-lg hover:bg-terracotta hover:text-pine transition-all">
                   <span>Claim ₹52L Combo on WhatsApp</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
                 </a>

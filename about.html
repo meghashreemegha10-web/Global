@@ -54,6 +54,26 @@
   </script>
   <link rel="stylesheet" href="linen-theme.css?v=20261013-v3" />
   <link rel="stylesheet" href="light-theme.css?v=20261019-v9" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalmahanshibuilders.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://www.globalmahanshibuilders.com/about.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="page-about bg-[#FAF7F0] font-sans text-pine-body antialiased">
 
@@ -118,7 +138,7 @@
           </button>
           <div class="flex items-center justify-between">
             <a href="tel:+919632734110" class="text-base font-bold text-white">+91 96327 34110</a>
-            <a href="https://wa.me/919632734110" target="_blank" class="rounded-full bg-clay px-5 py-2.5 text-base font-bold uppercase text-white">WhatsApp</a>
+            <a href="https://wa.me/919632734110" target="_blank" rel="noopener noreferrer" class="rounded-full bg-clay px-5 py-2.5 text-base font-bold uppercase text-white">WhatsApp</a>
           </div>
         </div>
       </nav>
@@ -139,6 +159,12 @@
           
           <!-- Left Column: Big Bold Typography & Credibility (7 Cols) -->
           <div class="lg:col-span-7 space-y-4">
+            <nav aria-label="Breadcrumb" class="page-breadcrumb">
+              <a href="index.html">Home</a>
+              <span class="crumb-separator">/</span>
+              <span class="crumb-active" aria-current="page">About Us</span>
+            </nav>
+
             <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-amber-400/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-[#F5C344]">
               <span class="w-2.5 h-2.5 rounded-full bg-[#F5C344]"></span>
               <span>WHO WE ARE · ESTABLISHED JANUARY 2026 · BENGALURU</span>

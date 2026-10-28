@@ -1,0 +1,109 @@
+# ==============================================================================
+# Global Mahanshi Builders & Architects
+# Hostinger Production Web Server Configuration (.htaccess)
+# ==============================================================================
+
+# Set Default Index file (Prevents 403 Directory Listing Denied)
+DirectoryIndex index.html index.php
+Options -Indexes
+
+RewriteEngine On
+
+# ------------------------------------------------------------------------------
+# 1. Enforce HTTPS Connection
+# ------------------------------------------------------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ------------------------------------------------------------------------------
+# 2. Block Hidden Files (.git, .env, etc.) except .well-known for SSL
+# ------------------------------------------------------------------------------
+RewriteRule (^|/)\.(?!well-known/) - [F,L]
+
+# ------------------------------------------------------------------------------
+# 3. Clean API Routing & URL Rewrites
+# ------------------------------------------------------------------------------
+# Route clean /api/enquiry directly to api/enquiry.php
+RewriteRule ^api/enquiry/?$ api/enquiry.php [L,QSA]
+
+# Pricing redirect to packages
+RewriteRule ^pricing/?$ packages.html [R=301,L]
+RewriteRule ^pricing\.html$ packages.html [R=301,L]
+
+# Clean extensionless HTML routing
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Block internal data folder, scripts, configs, and server code
+<FilesMatch "\.(ps1|bat|log|sql|bak|sh|json|md|swp|ini|conf)$">
+    Require all denied
+</FilesMatch>
+
+<Files "server.js">
+    Require all denied
+</Files>
+
+# ------------------------------------------------------------------------------
+# 4. HTTP Security Headers
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    Header set Content-Security-Policy "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src 'self' https:;"
+    Header unset X-Powered-By
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 5. High-Performance Browser Caching (Prevent Hostinger Bandwidth Exhaustion)
+# ------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 2 days"
+
+    # Images & Icons (1 Month)
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+
+    # Videos & Heavy Media (1 Month)
+    ExpiresByType video/mp4 "access plus 1 month"
+    ExpiresByType video/webm "access plus 1 month"
+
+    # Web Fonts (1 Month)
+    ExpiresByType font/woff2 "access plus 1 month"
+    ExpiresByType font/woff "access plus 1 month"
+    ExpiresByType application/font-woff2 "access plus 1 month"
+
+    # CSS & JavaScript (1 Week)
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+
+    # HTML & API (Never cache stale lead forms)
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType application/json "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico|mp4|webm|woff2|woff)$">
+        Header set Cache-Control "public, max-age=2592000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 6. Disable Directory Browsing
+# ------------------------------------------------------------------------------
+Options -Indexes

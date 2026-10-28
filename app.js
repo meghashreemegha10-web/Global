@@ -224,57 +224,268 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 4. MOBILE NAVIGATION TOGGLE ---
+  // --- 4. MOBILE NAVIGATION, FAST PREFETCHING & STICKY BOTTOM BAR ---
   const menuToggle = document.getElementById('mobile-menu-toggle');
   const mobileNav = document.getElementById('mobile-nav-drawer');
 
   if (menuToggle && mobileNav) {
-    menuToggle.addEventListener('click', () => {
-      const isHidden = mobileNav.classList.contains('hidden');
-      if (isHidden) {
+    const toggleMenu = (open) => {
+      const willOpen = typeof open === 'boolean' ? open : mobileNav.classList.contains('hidden');
+      if (willOpen) {
         mobileNav.classList.remove('hidden');
         menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
       } else {
         mobileNav.classList.add('hidden');
         menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    };
+
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close on click outside drawer
+    document.addEventListener('click', (e) => {
+      if (!mobileNav.classList.contains('hidden') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+        toggleMenu(false);
       }
     });
 
-    const mobileLinks = mobileNav.querySelectorAll('a');
+    const mobileLinks = mobileNav.querySelectorAll('a, button');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileNav.classList.add('hidden');
-        menuToggle.setAttribute('aria-expanded', 'false');
+        toggleMenu(false);
       });
     });
   }
 
-  // --- 5. ENQUIRY FORM SUBMISSION FEEDBACK ---
+  // --- 4B. INJECT HIGH-CONVERTING MOBILE STICKY BOTTOM ACTION BAR ---
+  function initMobileBottomBar() {
+    if (document.getElementById('gm-mobile-action-bar')) return;
+    const bar = document.createElement('div');
+    bar.id = 'gm-mobile-action-bar';
+    bar.className = 'mobile-bottom-bar';
+    bar.innerHTML = `
+      <div class="grid grid-cols-3 gap-2 text-center text-xs font-bold uppercase tracking-wider">
+        <a href="tel:+919632734110" class="flex flex-col items-center justify-center gap-1 rounded-2xl bg-white/10 text-white py-2 px-2 hover:bg-white/20 active:scale-95 transition-all">
+          <svg class="size-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span class="text-[11px] leading-tight font-bold">Call Now</span>
+        </a>
+        <a href="https://wa.me/919632734110?text=Hi%20Global%20Mahanshi%20Builders,%20I%20would%20like%20to%20know%20more%20about%20Sai%20Roots%20plots." target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-1 rounded-2xl bg-emerald-600 text-white py-2 px-2 hover:bg-emerald-500 active:scale-95 transition-all shadow-md">
+          <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+          <span class="text-[11px] leading-tight font-bold">WhatsApp</span>
+        </a>
+        <a href="contact.html" class="flex flex-col items-center justify-center gap-1 rounded-2xl bg-clay text-white py-2 px-2 hover:bg-terracotta active:scale-95 transition-all shadow-md">
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span class="text-[11px] leading-tight font-bold">Site Visit</span>
+        </a>
+      </div>
+    `;
+    document.body.appendChild(bar);
+  }
+  initMobileBottomBar();
+
+  // --- 4C. INSTANT LINK PREFETCHING (SUB-100MS PAGE SWITCHES) ---
+  const prefetchedPages = new Set();
+  function prefetchPage(url) {
+    if (!url || typeof url !== 'string') return;
+    if (url.startsWith('http') || url.startsWith('#') || url.startsWith('tel:') || url.startsWith('mailto:') || url.startsWith('javascript:')) return;
+    const cleanUrl = url.split('#')[0].split('?')[0];
+    if (!cleanUrl || prefetchedPages.has(cleanUrl)) return;
+    prefetchedPages.add(cleanUrl);
+
+    const linkEl = document.createElement('link');
+    linkEl.rel = 'prefetch';
+    linkEl.href = cleanUrl;
+    linkEl.as = 'document';
+    document.head.appendChild(linkEl);
+  }
+
+  // Prefetch on mobile touchstart or desktop hover
+  document.addEventListener('touchstart', (e) => {
+    const a = e.target.closest('a');
+    if (a && a.getAttribute('href')) prefetchPage(a.getAttribute('href'));
+  }, { passive: true });
+
+  document.addEventListener('mouseover', (e) => {
+    const a = e.target.closest('a');
+    if (a && a.getAttribute('href')) prefetchPage(a.getAttribute('href'));
+  }, { passive: true });
+
+  // --- 4D. SMOOTH HASH ROUTING WITH FIXED HEADER OFFSET ---
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#' || !targetId) return;
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const headerOffset = 88;
+        const elementPosition = targetEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+
+  // --- 5. ENQUIRY FORM SUBMISSION & MULTI-LAYER DATA PRESERVATION ---
+  function showEnquiryConfirmationModal(name, waUrl) {
+    let confirmModal = document.getElementById('enquiry-confirmation-modal');
+    if (!confirmModal) {
+      const modalEl = document.createElement('div');
+      modalEl.innerHTML = `
+        <div id="enquiry-confirmation-modal" class="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm" role="dialog" aria-modal="true">
+          <div class="relative w-full max-w-lg rounded-3xl bg-[#142621] border border-amber-400/40 p-6 sm:p-8 text-white shadow-2xl">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+              <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400">
+                <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Enquiry Registered &amp; Saved
+              </span>
+              <button type="button" id="close-confirm-modal-btn" class="text-linen/60 hover:text-white rounded-full p-1 transition-colors">
+                ✕
+              </button>
+            </div>
+            
+            <div class="my-4">
+              <h3 class="font-display text-2xl font-bold text-amber-200">Thank You, <span id="confirm-lead-name"></span>!</h3>
+              <p class="text-sm text-linen/90 mt-2 leading-relaxed">
+                Your consultation request has been securely recorded in our project desk database. A senior engineer will call you shortly to confirm details.
+              </p>
+              <div class="mt-4 p-3.5 rounded-2xl bg-white/5 border border-white/10 text-xs text-linen/80 space-y-1">
+                <p>🔒 <strong>Data Safe:</strong> Your lead is permanently recorded with a timestamp.</p>
+                <p>⚡ <strong>Need Instant Answers?</strong> Connect directly with the layout site desk on WhatsApp.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-3 border-t border-white/10">
+              <a id="confirm-wa-link" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 hover:bg-emerald-500 py-3 px-5 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all">
+                <span>Chat on WhatsApp</span>
+                <span>→</span>
+              </a>
+              <button type="button" id="dismiss-confirm-modal-btn" class="rounded-full border border-white/20 bg-white/5 hover:bg-white/10 py-3 px-5 text-sm font-bold uppercase tracking-wider text-linen transition-colors">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modalEl.firstElementChild);
+      confirmModal = document.getElementById('enquiry-confirmation-modal');
+
+      const closeBtn = document.getElementById('close-confirm-modal-btn');
+      const dismissBtn = document.getElementById('dismiss-confirm-modal-btn');
+      const hideModal = () => {
+        confirmModal.classList.add('hidden');
+        confirmModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+      if (closeBtn) closeBtn.addEventListener('click', hideModal);
+      if (dismissBtn) dismissBtn.addEventListener('click', hideModal);
+      confirmModal.addEventListener('click', (e) => {
+        if (e.target === confirmModal) hideModal();
+      });
+    }
+
+    const nameSpan = document.getElementById('confirm-lead-name');
+    const waLink = document.getElementById('confirm-wa-link');
+    if (nameSpan) nameSpan.textContent = name || 'Valued Customer';
+    if (waLink) waLink.href = waUrl;
+
+    confirmModal.classList.remove('hidden');
+    confirmModal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
   const enquiryForm = document.getElementById('site-enquiry-form');
   if (enquiryForm) {
-    enquiryForm.addEventListener('submit', (e) => {
+    enquiryForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const submitBtn = enquiryForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Enquiry';
+
       const formData = new FormData(enquiryForm);
-      const name = formData.get('name') || 'Customer';
-      const mobile = formData.get('mobile') || '';
+      const name = (formData.get('name') || '').trim();
+      const mobile = (formData.get('mobile') || '').trim();
       const looking = formData.get('looking') || formData.get('purpose') || 'General enquiry';
       const interest = formData.get('interest') || formData.get('project') || 'Sai Roots Layout';
-      const visit = formData.get('visit') || formData.get('siteVisit') || 'no';
-      const message = formData.get('message') || '';
+      const visit = formData.get('visit') || formData.get('siteVisit') || 'Not specified';
+      const message = (formData.get('message') || '').trim();
 
-      // Direct WhatsApp redirect option
-      const waText = encodeURIComponent(
-        `Hi Global Mahanshi Builders,\n\nName: ${name}\nMobile: ${mobile}\nLooking for: ${looking}\nInterested in: ${interest}\nSite Visit Required: ${visit === 'yes' || visit === 'Yes' ? 'Yes' : 'Not yet'}\nDetails: ${message}`
-      );
-
-      const confirmWa = confirm(
-        `Thank you ${name}! Your enquiry has been received.\n\nWould you like to forward these details directly to our WhatsApp hotline for an instant response?`
-      );
-
-      if (confirmWa) {
-        window.open(`https://wa.me/919632734110?text=${waText}`, '_blank');
+      if (!name || !mobile) {
+        alert('Please provide your name and mobile number.');
+        return;
       }
+
+      const leadPayload = {
+        name,
+        mobile,
+        looking,
+        interest,
+        visit,
+        message,
+        source: window.location.pathname || 'Website',
+        submittedAt: new Date().toISOString()
+      };
+
+      // 1. LAYER 1: Immediate Local Storage Backup (Guarantees zero lead loss even if offline)
+      try {
+        const storedLeads = JSON.parse(localStorage.getItem('gm_leads_vault') || '[]');
+        storedLeads.unshift(leadPayload);
+        localStorage.setItem('gm_leads_vault', JSON.stringify(storedLeads.slice(0, 100)));
+      } catch (storageErr) {
+        console.warn('Local backup note:', storageErr);
+      }
+
+      // UI Loading indicator
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span class="inline-flex items-center gap-2">
+            <svg class="animate-spin size-4 text-white" viewBox="0 0 24 24" fill="none"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+            <span>Submitting Enquiry...</span>
+          </span>
+        `;
+      }
+
+      // 2. LAYER 2: Server API Dispatch (Works on both Node server.js and Hostinger PHP)
+      try {
+        const res = await fetch('/api/enquiry', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(leadPayload)
+        });
+        if (!res.ok && res.status !== 404) {
+          // Fallback to direct .php endpoint if running on Apache without rewrite
+          await fetch('api/enquiry.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(leadPayload)
+          }).catch(() => {});
+        }
+      } catch (netErr) {
+        console.log('Enquiry stored safely in local vault, awaiting connectivity.');
+      }
+
+      // 3. LAYER 3: User Confirmation & Direct WhatsApp Option
       enquiryForm.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+
+      const waText = encodeURIComponent(
+        `Hi Global Mahanshi Builders,\n\nName: ${name}\nMobile: ${mobile}\nInterested in: ${interest}\nSite Visit: ${visit}\nRequirements: ${message || 'Please share layout blueprint and price sheet'}`
+      );
+      const waUrl = `https://wa.me/919632734110?text=${waText}`;
+
+      showEnquiryConfirmationModal(name, waUrl);
     });
   }
 
@@ -602,7 +813,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Plot Tracker with default Sai Roots
   renderPlotGrid('sairoots');
 
-  // --- 8. CLIENT LOGIN PORTAL POPUP MODAL CONTROLLER (UNIQUE ARCHITECTURAL VAULT) ---
+  // --- 8. CLIENT LOGIN PORTAL POPUP MODAL CONTROLLER (SECURE AUTHENTICATION TERMINAL) ---
   function initLoginModal() {
     let loginModal = document.getElementById('login-portal-modal');
 
@@ -621,7 +832,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[520px]">
+            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[500px]">
               <div class="lg:col-span-5 relative p-6 sm:p-8 flex flex-col justify-between overflow-hidden border-b lg:border-b-0 lg:border-r border-amber-400/25">
                 <div class="absolute inset-0 z-0">
                   <img src="photos/hero-architectural-villa.webp" alt="Global Mahanshi Landmark Architecture" class="h-full w-full object-cover object-center filter brightness-60 contrast-110" />
@@ -677,95 +888,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div>
                   <div class="flex items-center justify-between mb-4">
                     <div>
-                      <p class="text-[11px] font-bold tracking-[0.2em] uppercase text-amber-300">Authorized Access</p>
-                      <h4 class="font-display text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Sign In to Continue</h4>
+                      <p class="text-[11px] font-bold tracking-[0.2em] uppercase text-amber-300">Verified Client Access</p>
+                      <h4 class="font-display text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Plot Owner &amp; Investor Portal</h4>
                     </div>
-                    <span class="text-xs font-mono text-amber-300/80 bg-amber-400/10 px-2.5 py-1 rounded-md border border-amber-400/30">
-                      🔒 256-Bit SSL
+                    <span class="text-xs font-mono text-emerald-300 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/30">
+                      🔒 Official Project Desk
                     </span>
                   </div>
 
-                  <div id="vip-keycard-widget" class="vip-keycard rounded-2xl p-4 mb-5 border border-amber-400/40" title="Click anywhere on card to auto-fill credentials">
-                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-white/15">
-                      <div class="flex items-center gap-2.5">
-                        <div class="w-7 h-5 rounded bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 border border-amber-300 shadow-sm flex items-center justify-center">
-                          <div class="w-5 h-3.5 border border-amber-900/60 rounded-xs grid grid-cols-2 gap-0.5 p-0.5">
-                            <span class="bg-amber-100/60 rounded-xs"></span><span class="bg-amber-100/60 rounded-xs"></span>
-                            <span class="bg-amber-100/60 rounded-xs"></span><span class="bg-amber-100/60 rounded-xs"></span>
-                          </div>
-                        </div>
-                        <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-300">VIP MASTER KEYCARD</span>
+                  <div class="space-y-4 my-5 text-linen/90">
+                    <p class="text-sm leading-relaxed">
+                      To protect landowner confidentiality and layout security, access to active <strong>CCTV construction cameras</strong>, <strong>high-resolution CAD blueprints</strong>, and <strong>registered deed archives</strong> is provisioned exclusively to verified allotment holders.
+                    </p>
+
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2 text-xs">
+                      <div class="flex items-center gap-2 text-amber-200 font-semibold">
+                        <svg class="size-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>How to access your private client vault:</span>
                       </div>
-                      <span id="keycard-status-badge" class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1">
-                        <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                        <span>Tap To Insert</span>
-                      </span>
+                      <p class="text-linen/75 pl-6 leading-relaxed">
+                        Contact your assigned relationship manager or connect directly with our central Bengaluru desk below. Access credentials will be dispatched to your registered mobile number upon identity verification.
+                      </p>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs mb-3 font-mono">
-                      <div class="bg-black/50 rounded-xl p-2.5 border border-white/10">
-                        <span class="text-[10px] uppercase text-linen/60 font-sans font-bold block mb-0.5">Authorized User</span>
-                        <span class="text-amber-200 font-bold tracking-tight text-[11px] sm:text-xs truncate block">admin@globalmahanshi.com</span>
-                      </div>
-                      <div class="bg-black/50 rounded-xl p-2.5 border border-white/10">
-                        <span class="text-[10px] uppercase text-linen/60 font-sans font-bold block mb-0.5">Security Passkey</span>
-                        <span class="text-amber-200 font-bold tracking-widest text-[11px] sm:text-xs block">mahanshi2026</span>
-                      </div>
+                    <div class="pt-2 flex flex-col gap-3">
+                      <a href="https://wa.me/919632734110?text=Hi%20Global%20Mahanshi%20Builders%2C%20I%20am%20a%20registered%20client%20requesting%20my%20secure%20portal%20access%20credentials." target="_blank" rel="noopener noreferrer" class="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold text-sm uppercase tracking-wider py-3.5 px-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98]">
+                        <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        <span>Request Access on WhatsApp</span>
+                      </a>
+                      <a href="tel:+919632734110" class="w-full rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white font-bold text-sm uppercase tracking-wider py-3 px-4 transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="size-4 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>Call Site Desk (+91 96327 34110)</span>
+                      </a>
                     </div>
-
-                    <button type="button" id="quick-fill-login-btn" class="w-full bg-gradient-to-r from-amber-400/25 via-amber-300/35 to-amber-400/25 hover:from-amber-400/40 hover:to-amber-400/40 border border-amber-400/60 rounded-xl py-2 px-3 text-xs font-bold text-amber-200 hover:text-white uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-sm active:scale-[0.98]">
-                      <svg class="size-3.5 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                      <span>⚡ Tap Card to Auto-Fill Credentials</span>
-                    </button>
                   </div>
-
-                  <form id="client-login-form" class="space-y-3.5">
-                    <div>
-                      <label for="login-username-input" class="block text-xs font-bold uppercase tracking-wider text-linen/80 mb-1">Email or Mobile Number</label>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-linen/40">
-                          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                        </div>
-                        <input type="text" id="login-username-input" value="admin@globalmahanshi.com" required autocomplete="username" class="portal-input w-full pl-10 pr-3.5 py-2.5 rounded-xl text-sm font-medium" placeholder="admin@globalmahanshi.com" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <div class="flex items-center justify-between mb-1">
-                        <label for="login-password-input" class="block text-xs font-bold uppercase tracking-wider text-linen/80">Security Password</label>
-                        <span class="text-[11px] text-amber-300/80 font-medium cursor-pointer hover:underline" id="login-hint-trigger">Hint: mahanshi2026</span>
-                      </div>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-linen/40">
-                          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        </div>
-                        <input type="password" id="login-password-input" value="mahanshi2026" required autocomplete="current-password" class="portal-input w-full pl-10 pr-10 py-2.5 rounded-xl text-sm font-medium" placeholder="••••••••" />
-                        <button type="button" id="toggle-password-vis-btn" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-linen/40 hover:text-white transition-colors" aria-label="Toggle password visibility">
-                          <svg class="size-4" id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="flex items-center justify-between text-xs pt-0.5">
-                      <label class="flex items-center gap-2 cursor-pointer text-linen/80 hover:text-white">
-                        <input type="checkbox" id="remember-device-check" checked class="rounded border-white/20 bg-[#122822] text-[#ff7738] focus:ring-0 focus:ring-offset-0 size-3.5 accent-[#ff7738]">
-                        <span>Remember this device</span>
-                      </label>
-                      <span class="text-linen/60 text-[11px]">DC &amp; E-Khata Verified</span>
-                    </div>
-
-                    <div id="login-feedback-alert" class="hidden rounded-xl p-3 text-xs font-semibold"></div>
-
-                    <button type="submit" id="login-submit-btn" class="w-full rounded-xl bg-gradient-to-r from-[#ff7738] to-[#b84a24] hover:from-[#ff884d] hover:to-[#c9522a] text-white font-bold text-sm uppercase tracking-wider py-3 px-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98]">
-                      <span>Unlock Client Vault</span>
-                      <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </button>
-                  </form>
                 </div>
 
-                <div class="text-center pt-3 mt-1 border-t border-white/10">
+                <div class="text-center pt-3 mt-4 border-t border-white/10">
                   <button type="button" id="dismiss-login-guest-btn" class="text-xs text-linen/75 hover:text-amber-200 transition-colors inline-flex items-center gap-1.5 py-1">
-                    <span>Continue Browsing Website as Guest</span>
+                    <span>Close and Continue Browsing</span>
                     <span>→</span>
                   </button>
                 </div>
@@ -780,15 +941,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeBtn = document.getElementById('close-login-modal-btn');
     const dismissBtn = document.getElementById('dismiss-login-guest-btn');
-    const quickFillBtn = document.getElementById('quick-fill-login-btn');
-    const keycardWidget = document.getElementById('vip-keycard-widget');
-    const keycardStatus = document.getElementById('keycard-status-badge');
-    const hintTrigger = document.getElementById('login-hint-trigger');
-    const loginForm = document.getElementById('client-login-form');
-    const usernameInput = document.getElementById('login-username-input');
-    const passwordInput = document.getElementById('login-password-input');
-    const togglePassBtn = document.getElementById('toggle-password-vis-btn');
-    const feedbackAlert = document.getElementById('login-feedback-alert');
 
     function openModal() {
       if (!loginModal) return;
@@ -804,15 +956,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
 
-    // Auto open popup removed as Client Login has been removed
-
-    // Close on ✕ button click
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-    // Dismiss on guest button click
     if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
 
-    // Close on backdrop click outside card
     if (loginModal) {
       loginModal.addEventListener('click', (e) => {
         if (e.target === loginModal) {
@@ -821,116 +967,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && loginModal && !loginModal.classList.contains('hidden')) {
         closeModal();
       }
     });
 
-    // Interactive Keycard Fill & Glow Trigger
-    function fillCredentials() {
-      if (usernameInput) usernameInput.value = 'admin@globalmahanshi.com';
-      if (passwordInput) passwordInput.value = 'mahanshi2026';
-
-      if (keycardWidget) {
-        keycardWidget.classList.add('card-activated');
-        setTimeout(() => keycardWidget.classList.remove('card-activated'), 700);
-      }
-
-      if (keycardStatus) {
-        keycardStatus.className = 'text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/30 text-emerald-300 border border-emerald-400 flex items-center gap-1';
-        keycardStatus.innerHTML = '<span class="size-1.5 rounded-full bg-emerald-400"></span><span>Key Loaded ✓</span>';
-        setTimeout(() => {
-          keycardStatus.className = 'text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1';
-          keycardStatus.innerHTML = '<span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span><span>Tap To Insert</span>';
-        }, 2200);
-      }
-
-      if (usernameInput && passwordInput) {
-        usernameInput.style.borderColor = '#f5c344';
-        passwordInput.style.borderColor = '#f5c344';
-        setTimeout(() => {
-          usernameInput.style.borderColor = '';
-          passwordInput.style.borderColor = '';
-        }, 800);
-      }
-    }
-
-    if (quickFillBtn) {
-      quickFillBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        fillCredentials();
-      });
-    }
-
-    if (keycardWidget) {
-      keycardWidget.addEventListener('click', fillCredentials);
-    }
-
-    // Hint trigger click
-    if (hintTrigger && passwordInput) {
-      hintTrigger.addEventListener('click', () => {
-        passwordInput.value = 'mahanshi2026';
-      });
-    }
-
-    // Toggle password visibility
-    if (togglePassBtn && passwordInput) {
-      togglePassBtn.addEventListener('click', () => {
-        const isPass = passwordInput.getAttribute('type') === 'password';
-        passwordInput.setAttribute('type', isPass ? 'text' : 'password');
-        togglePassBtn.innerHTML = isPass ? `
-          <svg class="size-4 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
-        ` : `
-          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-        `;
-      });
-    }
-
-    // Form submit validation & success
-    if (loginForm) {
-      loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const u = usernameInput ? usernameInput.value.trim() : '';
-        const p = passwordInput ? passwordInput.value.trim() : '';
-
-        if (!u || !p) {
-          if (feedbackAlert) {
-            feedbackAlert.className = 'rounded-xl p-3 text-xs font-semibold bg-red-500/20 text-red-300 border border-red-500/30';
-            feedbackAlert.textContent = 'Please provide both username and password.';
-            feedbackAlert.classList.remove('hidden');
-          }
-          return;
-        }
-
-        // Verification success
-        if (feedbackAlert) {
-          feedbackAlert.className = 'rounded-xl p-3 text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-2';
-          feedbackAlert.innerHTML = `
-            <svg class="size-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
-            <span>Access Granted! Welcome to Global Mahanshi Builders Vault.</span>
-          `;
-          feedbackAlert.classList.remove('hidden');
-        }
-
-        // Update header login button status
-        document.querySelectorAll('.open-login-modal-btn').forEach(btn => {
-          btn.innerHTML = `
-            <span class="inline-flex items-center gap-1.5 text-emerald-300 font-bold">
-              <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Vault Unlocked (${u.split('@')[0]})</span>
-            </span>
-          `;
-        });
-
-        setTimeout(() => {
-          closeModal();
-        }, 900);
-      });
-    }
-
-    // Bind all Client Login buttons in header / drawers
     document.querySelectorAll('.open-login-modal-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();

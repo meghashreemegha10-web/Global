@@ -1,0 +1,12 @@
+# Global Mahanshi Builders & Architects
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /.git/
+Disallow: /.vercel/
+Disallow: /api/
+Disallow: /render_*
+Disallow: /posters.html
+
+Sitemap: https://www.globalmahanshibuilders.com/sitemap.xml
+
