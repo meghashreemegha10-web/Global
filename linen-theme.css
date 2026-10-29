@@ -27,7 +27,7 @@
 }
 
 html {
-  font-size: 18px !important;
+  font-size: 17px !important;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -105,7 +105,7 @@ body {
 .heading-explanation,
 .card-explanation,
 .card-desc {
-  font-size: 1.05rem !important;
+  font-size: 1.02rem !important;
   line-height: 1.68 !important;
 }
 
@@ -674,13 +674,13 @@ p {
 .card-explanation,
 .card-desc,
 .hero-explanation {
-  font-size: 1.05rem !important; /* ~19px (+2.5px boost over 16.5px) */
+  font-size: 1.02rem !important; /* ~19px (+2.5px boost over 16.5px) */
   line-height: 1.68 !important;
 }
 
 .story-lead-copy,
 .story-quote-copy {
-  font-size: 1.15rem !important; /* ~20.7px (+2.7px boost) */
+  font-size: 1.10rem !important; /* ~20.7px (+2.7px boost) */
   line-height: 1.72 !important;
 }
 
@@ -735,7 +735,7 @@ div[class*="bottom-5 sm:bottom-6 lg:bottom-7"] {
 }
 
 .glass-panel .grid p.font-display {
-  font-size: 1.45rem !important; /* ~26px */
+  font-size: 1.35rem !important; /* ~26px */
 }
 
 .glass-panel .grid p.uppercase {
@@ -746,7 +746,7 @@ div[class*="bottom-5 sm:bottom-6 lg:bottom-7"] {
 /* Mobile Screen Tuning (<= 768px) */
 @media (max-width: 768px) {
   html {
-    font-size: 17px !important; /* Balanced for phone viewports */
+    font-size: 16px !important; /* Balanced for phone viewports */
   }
   h1, .font-display.text-3xl, .font-display.text-4xl {
     font-size: 1.85rem !important;
